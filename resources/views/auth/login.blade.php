@@ -7,8 +7,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    
+    </div> 
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-6">
             <form method="POST" action="{{ route('login') }}" class="shadow rounded p-5">
@@ -22,7 +21,6 @@
                 <label  class="form-label">Password</label>
                 <input type="password" class="form-control" name="password">
             </div>
-           
             <button type="submit" class="btn btn-primary">Accedi</button>
         </form>
     </div>

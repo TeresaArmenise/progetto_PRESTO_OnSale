@@ -7,8 +7,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    
+    </div> 
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-6">
             <form method="POST" action="{{ route('register') }}" class="shadow rounded p-5">

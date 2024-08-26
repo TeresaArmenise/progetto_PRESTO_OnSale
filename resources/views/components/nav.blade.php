@@ -29,14 +29,14 @@
         </div>
         @guest
          <div>
-            <a href="">Accedi</a>
+            <a href="{{route('login')}}">Accedi</a>
         </div>
         <div>
-            <a href="">Registrati</a>
+            <a href="{{route('register')}}">Registrati</a>
         </div>
             @else
             <div>
-                <a href="">Esci</a>
+                <a href="{{route('logout')}}">Esci</a>
             </div>
         @endguest
        

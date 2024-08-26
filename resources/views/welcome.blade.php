@@ -7,8 +7,7 @@
             </div>
         </div>
     </div>
-
-
-
-
+    @auth
+    <button type="button" class="btn btn-primary">Aggiungi Articolo</button>
+    @endauth
 </x-layout>
