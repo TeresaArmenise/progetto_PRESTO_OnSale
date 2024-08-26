@@ -7,7 +7,7 @@
             </div>
         </div>
     </div>
-    @auth
-    <button type="button" class="btn btn-primary">Aggiungi Articolo</button>
-    @endauth
+    {{-- @auth --}}
+    <a href="{{route('create')}}" type="button" class="btn btn-primary">Aggiungi Articolo</a>
+    {{-- @endauth --}}
 </x-layout>
