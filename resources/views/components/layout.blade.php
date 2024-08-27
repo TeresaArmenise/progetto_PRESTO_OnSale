@@ -8,11 +8,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    @if (session('message'))
-    <div class="alert alert-success fs-1">
-        <p>{{ session('message') }}</p>
-    </div>        
-    @endif
     <div class="min-vh-100">
         {{$slot}}
     </div>
