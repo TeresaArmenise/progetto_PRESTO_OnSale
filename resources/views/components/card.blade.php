@@ -2,12 +2,11 @@
   <img src="https://picsum.photos/900" class="card-img-top" alt="{{$article->title}}">
   <div class="card-body text-center">
     <h5 class="card-title bold">{{$article->title}}</h5>
-    <p class="card-text">{{$article->price}} €</p>
-    <p class="card-text">{{$article->category['name']}}</p>
+    <h6 class="card-text">{{$article->price}} €</h6>
+    <a href="{{route('byCategory', ['category'=> $article->category])}}" class="text-decoration-none small">{{$article->category['name']}}</a>
     <p class="card-text small">{{$article->getSubstring()}}</p>
-    <div class="d-flex justify-content-evenly">
-      <a href="{{route('show', compact('article'))}}" class="btn btn-outline-warning">Dettaglio</a>
-      <a href="#" class="btn btn-outline-warning">Categoria</a>
+    <div class="text-center">
+      <a href="{{route('show', compact('article'))}}" class="btn colorBtn">Dettaglio</a>
     </div>
   </div>
 </div>

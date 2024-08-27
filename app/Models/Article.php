@@ -23,8 +23,8 @@ class Article extends Model
     }
 
     public function getSubstring(){
-        if (strlen($this->description) > 15) {
-            return substr($this->description,0 , 20) . '...';
+        if (strlen($this->description) > 25) {
+            return substr($this->description,0 , 25) . '...';
         }else{
             return $this->description;
         }

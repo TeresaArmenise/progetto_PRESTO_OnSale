@@ -5,7 +5,7 @@
 }
 
 /* CSS used here will be applied after bootstrap.css */
-.carousel {
+.carouselCustom {
 	margin-top: 20px;
 }
 .item .thumb {
@@ -96,18 +96,17 @@
 
 
 
-/* BUTTON */
+/* BUTTON WELCOME PAGE*/
 
 
 .link-area
 {
-	position:fixed;
-	top: 35vh;
-	left: 45px;  
+position: absolute;
+top: 30vh;
+left: 12vw;  
 }
 
 .frame {
-	width: 90%;
 	margin: 0px auto;
 }
 
@@ -123,7 +122,7 @@ button {
 	padding: 10px 25px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 500;
-	background: #7b8ea0;
+	background: rgb(251,33,117);
 	cursor: pointer;
 	transition: all 0.3s ease;
 	position: relative;
@@ -134,37 +133,51 @@ button {
 	outline: none;
 }
 
-.btn-16 {
+.btn-11 {
 	border: none;
-	color: white;
+	background: rgb(251,33,117);
+	background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+	color: #fff;
+	overflow: hidden;
+}
+.btn-11:hover {
+	text-decoration: none;
+	color: #fff;
+}
+.btn-11:before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	top: -180px;
+	left: 0;
+	width: 30px;
+	height: 100%;
+	background-color: #fff;
+	animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-11:hover{
+	opacity: .7;
+}
+.btn-11:active{
+	box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+	-4px -4px 6px 0 rgba(116, 125, 136, .2), 
+	inset -4px -4px 6px 0 rgba(255,255,255,.2),
+	inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
 
-.btn-16:after {
-	position: absolute;
-	content: "";
-	width: 0;
-	height: 100%;
-	top: 0;
-	left: 0;
-	direction: rtl;
-	z-index: -1;
-	box-shadow:
-	-7px -7px 20px 0px #fff9,
-	-4px -4px 5px 0px #fff9,
-	7px 7px 20px 0px #fff9,
-	4px 4px 5px 0px #fff9;
-	transition: all 0.3s linear;
+
+@-webkit-keyframes shiny-btn1 {
+	0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+	80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+	81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+	100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
 }
-.btn-16:hover {
-	color: white;
-}
-.btn-16:hover:after {
-	left: auto;
-	right: 0;
-	width: 100%;
-}
-.btn-16:active {
-	top: 2px;
+
+@keyframes shiny-btn1 {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
 }
 
 
@@ -180,4 +193,29 @@ ol{
 
 #carouselExampleIndicators{
 	margin-bottom: 10vh;
+}
+
+.hover:hover{
+	color: red !important;
+}
+
+.colorCustom{
+	color: rgb(251,33,117);
+}
+
+/* GENERIC  */
+
+.marginCustom{
+	margin-top: 10vh;
+}
+
+.colorBtn{
+	background-color: transparent;
+	color: rgb(251,33,117);
+	border: 1px solid rgb(251,33,117);
+}
+
+.colorBtn:hover{
+	background-color: rgb(251,33,117);
+	color: white;
 }

@@ -84,11 +84,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mb-5 text-start">
-                {{-- @auth --}}
+                @auth
                 <a href="{{route('create')}}" type="button" class="btn btn-outline-primary">Aggiungi Articolo</a>
-                {{-- @endauth --}}
+                @endauth
             </div>
         </div>
     </div>
-      
+    
 </x-layout>

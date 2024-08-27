@@ -1,21 +1,26 @@
 <x-layout>
     <x-nav />
-<div class="row justify-content-center text-center">
-    <h1 class="display-1">Tutti gli articoli</h1>
-</div>
-
-<div class="row justify-content-center align-items-center">
-    @forelse ($articles as $article)
-        <div class= "col-12 col-md-3">
-        <x-card :article="$article" />
+    <div class="container marginCustom">
+        <div class="row justify-content-center text-center">
+            <div class="col-12">
+                <h1 class="display-4">Tutti gli articoli</h1>
+            </div>
+        </div>
     </div>
-    @empty  
-    <div class="col-12">
-        <h3>Non sono ancora stati creati articoli</h3>
+    <div class="container marginCustom">
+        <div class="row">
+            @forelse ($articles as $article)
+            <div class= "col-12 col-md-3 d-flex justify-content-evenly">
+                <x-card :article="$article" />
+            </div>
+            @empty  
+            <div class="col-12">
+                <h3>Non sono ancora stati creati articoli</h3>
+            </div>
+            @endforelse
+            <div class="justify-content-center">
+                {{ $articles->links() }}
+            </div>
+        </div>
     </div>
-    @endforelse
-    <div class="justify-content-center">
-        {{ $articles->links() }}
-    </div>
-</div>
 </x-layout>
