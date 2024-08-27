@@ -1,13 +1,12 @@
 <x-layout>
+    <x-nav/>
     <div class="container">
-        <div class="row height-custom justify-content-center align-items-center text-center">
+        <div class="row height-custom justify-content-center align-items-center text-center mt-5">
             <div class="col-12">
                 <h1> {{ $article->title }}</h1>
             </div>
         </div>
     </div>
-
-
 
       <div class="container">
   <div class="row">

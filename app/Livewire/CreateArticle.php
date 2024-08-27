@@ -37,6 +37,8 @@ class CreateArticle extends Component
             'user_id'=> Auth::id()
         ]);
         /*  $this->cleanForm(); */
+
+        dd($this->article);
         $this->title= '';
         $this->description= '';
         $this->category= '';

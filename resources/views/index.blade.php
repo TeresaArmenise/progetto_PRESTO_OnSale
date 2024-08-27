@@ -1,4 +1,5 @@
 <x-layout>
+    <x-nav />
 <div class="row justify-content-center text-center">
     <h1 class="display-1">Tutti gli articoli</h1>
 </div>

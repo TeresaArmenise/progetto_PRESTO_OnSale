@@ -13,12 +13,20 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'price'];
+    protected $fillable = ['title', 'description', 'price', 'category_id', 'user_id'];
 
     public function user(): BelongsTo {
         return $this->belongsTo(User::class);
     }
     public function category(): BelongsTo {
         return $this->belongsTo(Category::class);
+    }
+
+    public function getSubstring(){
+        if (strlen($this->description) > 15) {
+            return substr($this->description,0 , 20) . '...';
+        }else{
+            return $this->description;
+        }
     }
 }
