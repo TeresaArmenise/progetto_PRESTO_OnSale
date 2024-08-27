@@ -1,5 +1,5 @@
 <x-layout>
-
+    
     <x-nav/>
     
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -38,57 +38,61 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
     </div>
-
+    
     <div class="link-area frame">
         <button href="{{route('index')}}" class="custom-btn btn-16" target="_blank">Esplora</button>
     </div>
-
     
     
     
     
     
-<div class="link-area frame">
+    
+    <div class="link-area frame">
         <button href="{{route('index')}}" class="custom-btn btn-11">Esplora<div class="dot"></div></button>
     </div>
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     {{-- CONTAINER PER CARDS  --}}
-
+    
     <div class="container my-5">
-        <div class="row justify-content-evenly"> 
+        <div class="row"> 
             <div class="col-12 text-center">
                 <p class="display-6">I nostri prodotti</p>
             </div>
-
-            {{-- CARD  --}}
+        </div>
+    </div>
+    
+    {{-- CARD  --}}
+    <div class="container">
+        <div class="row justify-content-evenly">  
             @forelse ($articles as $article)
-                <div class= "col-12 col-md-3 mt-5">
-                    <x-card 
-                    :article="$article"
-                    />
-                </div>
-
+            <div class= "col-12 col-md-4 d-flex justify-content-evenly">
+                <x-card 
+                :article="$article"
+                />
+            </div>
+            
             @empty
-                <div class="col-6">
-                    <h3>Non sono ancora stati creati articoli</h3>
-                </div>
+            <div class="col-6">
+                <h3>Non sono ancora stati creati articoli</h3>
+            </div>
             @endforelse 
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-12 mb-5 text-start">
+            <div class="col-12 mb-5 text-center">
                 @auth
                 <a href="{{route('create')}}" type="button" class="btn btn-outline-primary">Aggiungi Articolo</a>
                 @endauth
             </div>
         </div>
     </div>
-    
+
 </x-layout>

@@ -1,14 +1,14 @@
 <x-layout>
     <x-nav />
     <div class="container marginCustom">
-        <div class="row justify-content-center text-center">
+        <div class="row text-center">
             <div class="col-12">
                 <h1 class="display-4">Tutti gli articoli</h1>
             </div>
         </div>
     </div>
     <div class="container marginCustom">
-        <div class="row">
+        <div class="row justify-content-center">
             @forelse ($articles as $article)
             <div class= "col-12 col-md-3 d-flex justify-content-evenly">
                 <x-card :article="$article" />
