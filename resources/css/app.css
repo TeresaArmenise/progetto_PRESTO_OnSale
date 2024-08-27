@@ -1,8 +1,12 @@
 @import 'bootstrap';
 
+*{
+	font-family: Lato;
+}
+
 /* CSS used here will be applied after bootstrap.css */
 .carousel {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 .item .thumb {
 	width: 25%;
@@ -15,4 +19,165 @@
 }
 .item img {
 	width: 100%;	
+}
+
+
+/* CSS FOR NAVBAR  */
+
+.carousel-item {
+	margin-top: 54px;
+	height: 35vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.carousel-caption {
+	bottom: 100px;
+	
+}
+
+.carousel-caption h5 {
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: start;
+}
+
+.carousel-caption p {
+	width: 75%;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.navbar-light .navbar-brand {
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+	color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+
+.navbar-toggler {
+	background: #fff;
+}
+
+.navbar-nav {
+	text-align: center;
+}
+
+.nav-link {
+	padding: .2rem 1rem;
+}
+
+.nav-link.active,.nav-link:focus{
+	color: #fff;
+}
+
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+
+
+
+/* BUTTON */
+
+
+.link-area
+{
+	position:fixed;
+	top: 35vh;
+	left: 45px;  
+}
+
+.frame {
+	width: 90%;
+	margin: 0px auto;
+}
+
+button {
+	margin: 20px;
+}
+
+.custom-btn {
+	width: 130px;
+	height: 40px;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 25px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	background: #7b8ea0;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	7px 7px 20px 0px rgba(0,0,0,.1),
+	4px 4px 5px 0px rgba(0,0,0,.1);
+	outline: none;
+}
+
+.btn-16 {
+	border: none;
+	color: white;
+}
+
+.btn-16:after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	direction: rtl;
+	z-index: -1;
+	box-shadow:
+	-7px -7px 20px 0px #fff9,
+	-4px -4px 5px 0px #fff9,
+	7px 7px 20px 0px #fff9,
+	4px 4px 5px 0px #fff9;
+	transition: all 0.3s linear;
+}
+.btn-16:hover {
+	color: white;
+}
+.btn-16:hover:after {
+	left: auto;
+	right: 0;
+	width: 100%;
+}
+.btn-16:active {
+	top: 2px;
+}
+
+
+/* NAVBAR  */
+
+.custom{
+	background-color: none !important;
+}
+
+ol{
+	list-style: none !important;
+}
+
+#carouselExampleIndicators{
+	margin-bottom: 10vh;
 }
