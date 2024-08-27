@@ -43,7 +43,7 @@ class CreateArticle extends Component
         $this->price= '';
         session()->flash('message', 'Creazione articolo avvenuta con successo');
 
-        return redirect()->to('/home');
+        return redirect()->to('/');
     }
     
     public function render()
