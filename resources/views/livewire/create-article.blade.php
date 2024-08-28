@@ -2,11 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 col-md-6 w-100">
-                @if (session()->has('message'))
-                <div class="alert alert-success fs-1">
-                    {{ session('message') }}
-                </div>        
-                @endif
+               
 
 
                 <form wire:submit="save" class="shadow rounded p-5">

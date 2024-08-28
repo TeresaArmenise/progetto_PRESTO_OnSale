@@ -45,10 +45,19 @@
                 <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">Registrati</a>
             </div>
         @else
+        
+            @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-success btn-sm position-relative" href="{{route('revisor.index')}}">Zona revisione</a>
+                </li>
+            @endif
+
             <div>
                 <div class="text-light text-wrap pe-4 text-center">Ciao <div class="fst-italic colorCustom">{{Auth::user()->name}}</div></div>
 
                 {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
+
+            
                 
             </div>
             {{-- <div> --}}
