@@ -48,7 +48,9 @@
         
             @if (Auth::user()->is_revisor)
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-success btn-sm position-relative" href="{{route('revisor.index')}}">Zona revisione</a>
+                    <a class="btn btn-success position-relative" href="{{route('revisor.index')}}">Zona revisione
+                    <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                </a>
                 </li>
             @endif
 

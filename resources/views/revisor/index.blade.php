@@ -19,7 +19,7 @@
     <div class="row justify-content-center-pt-5">
         <div class="col-md-8">
             <div class="row justify-content-center">
-                @for ($i = 0; $i < 6; $i++)
+                @for ($i = 0; $i < 2; $i++)
                 <div class="col-6 ocl-md-4 mb-4 text-center">
                     <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
                 </div>

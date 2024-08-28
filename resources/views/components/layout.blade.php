@@ -24,6 +24,11 @@
         {{ session('message') }}
     </div>        
     @endif
+    @if (session()->has('errorMessage'))
+    <div class="alert alert-danger fs-1 text-center">
+        {{ session('errorMessage') }}
+    </div>        
+    @endif
     <div class="min-vh-100">
         {{$slot}}
     </div>
