@@ -10,7 +10,7 @@
     <div class="container marginCustom">
         <div class="row justify-content-center">
             @forelse ($articles as $article)
-            <div class= "col-12 col-md-3 d-flex justify-content-evenly">
+            <div class= "col-12 col-md-3 d-flex justify-content-evenly my-3">
                 <x-card :article="$article" />
             </div>
             @empty  

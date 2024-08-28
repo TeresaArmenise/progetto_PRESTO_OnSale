@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Presto</title>
-    <link rel="icon img-fluid" type="image/png" href="media\IconTab.png">
+    <link rel="icon img-fluid" type="image/png" href="{{ asset('media/IconTab.png') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 
     {{-- BOOTSTRAP ICON CDN  --}}
