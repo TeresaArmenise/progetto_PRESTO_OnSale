@@ -78,7 +78,7 @@
             </div>
             
             @empty
-            <div class="col-6">
+            <div class="col-6 text-center">
                 <h3>Non sono ancora stati creati articoli</h3>
             </div>
             @endforelse 
@@ -89,13 +89,15 @@
         <div class="row">
             <div class="col-12 mb-5 text-center">
                 @auth
-                <a href="{{route('create')}}" type="button" class="btn btn-outline-primary">Aggiungi Articolo</a>
+                <a href="{{route('create')}}" type="button" class="btn btn-outline-primary">+ Aggiungi Articolo</a>
                 @endauth
             </div>
         </div>
     </div>
 
-
+    <div class="col-12 w-100 text-center bg-dark">
+        <a href="" class="text-decoration-none"> Torna su </a>
+    </div>
     <x-footer />
 
 </x-layout>

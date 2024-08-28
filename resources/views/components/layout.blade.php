@@ -20,12 +20,14 @@
 </head>
 <body>
     @if (session()->has('message'))
-    <div class="alert alert-success fs-1 text-center">
-        {{ session('message') }}
+    <div class="alert alert-success fs-1 text-center" tabindex="-1" >
+        <div class="modal-body">
+            {{ session('message') }}
+        </div>
     </div>        
     @endif
     @if (session()->has('errorMessage'))
-    <div class="alert alert-danger fs-1 text-center">
+    <div class="alert alert-danger fs-1 text-center" tabindex="-1">
         {{ session('errorMessage') }}
     </div>        
     @endif
