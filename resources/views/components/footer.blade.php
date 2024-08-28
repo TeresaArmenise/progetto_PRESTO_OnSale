@@ -35,7 +35,7 @@
                     <a href="" class="text-decoration-none text-light">About</a>
                 </div>
                 <div class="d-flex flex-column gap-2 text-white">
-                    <a href="" class="text-decoration-none text-light">Lavora con Noi</a> 
+                    <a href="{{route('workwithus')}}" class="text-decoration-none text-light">Lavora con Noi</a> 
                     {{-- IMPLEMENTARE CON IL CONTACT FORM? --}}
                     <a href="" class="text-decoration-none text-light">Community</a>
                     <a href="" class="text-decoration-none text-light">Privacy Policy</a>

@@ -30,7 +30,7 @@ class MakeUserRevisor extends Command
         if(!$user){
         $this->error('Utente non trovato');
         return;
-     }
+    }
         $user->is_revisor = true;
         $user->save();
         $this->info( $user->name . ', ora  sei un revisore!');
