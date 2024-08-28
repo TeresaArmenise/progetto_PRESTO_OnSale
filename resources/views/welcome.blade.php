@@ -71,7 +71,7 @@
     <div class="container">
         <div class="row justify-content-evenly">  
             @forelse ($articles as $article)
-            <div class= "col-12 col-md-4 d-flex justify-content-evenly">
+            <div class= "col-12 col-md-4 d-flex justify-content-evenly my-3">
                 <x-card 
                 :article="$article"
                 />
@@ -94,5 +94,8 @@
             </div>
         </div>
     </div>
+
+
+    <x-footer />
 
 </x-layout>

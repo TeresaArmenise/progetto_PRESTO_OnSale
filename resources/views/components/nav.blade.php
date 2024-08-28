@@ -51,9 +51,12 @@
                 {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
                 
             </div>
-            <div>
-                <a class="text-decoration-none text-light fst-italic pe-2 hover" href="{{route('logout')}}">Esci</a>
-            </div>
+            {{-- <div> --}}
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn text-light fst-italic pe-2 hover">Esci</button>
+                </form>
+            {{-- </div> --}}
         @endguest
     </div>
 </nav>

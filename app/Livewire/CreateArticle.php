@@ -38,7 +38,7 @@ class CreateArticle extends Component
         ]);
         /*  $this->cleanForm(); */
 
-        dd($this->article);
+        // dd($this->article);
         $this->title= '';
         $this->description= '';
         $this->category= '';

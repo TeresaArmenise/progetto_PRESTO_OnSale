@@ -1,6 +1,6 @@
 <x-layout>
     <x-nav />
-    <div class="container mt-5">
+    <div class="container marginCustom">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="display-4 pt-t">
