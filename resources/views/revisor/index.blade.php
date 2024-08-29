@@ -10,12 +10,12 @@
         </div>
     </div>
     @if (session()->has('message'))
-<div class="row justify-content-center">
-    <div class="col-5 alert alert-success text-center shadow rounded">
-        {{ session('message') }}
+    <div class="row justify-content-center">
+        <div class="col-5 alert alert-success text-center shadow rounded">
+            {{ session('message') }} 
+        </div>
     </div>
-</div>
-@endif
+    @endif
     @if ($article_to_check)
     <div class="row justify-content-center-pt-5">
         <div class="col-md-8">
@@ -30,8 +30,8 @@
         <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
             <div>
                 <h1>{{$article_to_check->title}}</h1>
-                <h3>Atutore:{{$article_to_check->user->name}}</h3>
-                <h4>{{$article_to_check->user->price}}€</h4>
+                <h3>Atutore: {{$article_to_check->user->name}}</h3>
+                <h4>{{$article_to_check->price}} €</h4>
                 <h4 class="fst-italic text-muted">#{{$article_to_check->category->name}}</h4>
                 <p class="h6">{{$article_to_check->description}}</p>
             </div>
@@ -49,7 +49,18 @@
             </div>
         </div>
     </div>
-    @else
+    @endif
+    @if ($article_revisioned)
+    <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
+        @csrf
+        @method('PATCH')
+        <div class="col-12 text-center">
+            <h2>Premi il pulsante per annullare la modifica:</h2>
+            <button type="submit" class="btn colorBtn" > anulla </button>
+        </div>
+    </form>
+    @endif
+    @if (!$article_to_check)
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
             <h1 class="fst-italic display-4">

@@ -14,8 +14,9 @@ class RevisorController extends Controller
 
     public function index()
     {
+        $article_revisioned=Article::whereNotNull('is_accepted')->get()->last();
         $article_to_check=Article::where('is_accepted',null)->orderBy('created_at', 'asc')->first();
-        return view('revisor.index', compact('article_to_check'));
+        return view('revisor.index', compact('article_to_check', 'article_revisioned'));
     }
 
     public function accept(Article $article)
@@ -62,6 +63,13 @@ class RevisorController extends Controller
     }
     public function WorkWithUs(){
         return view('workwithus');
+    }
+
+    public function undo(Article $article){
+        $article->setAccepted(null);
+        return redirect()
+        ->back()
+        ->with('message', "Hai annullato l'ultima modifica");
     }
 
 }

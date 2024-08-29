@@ -19,3 +19,4 @@ Route::get('/workwithus/revisor', [RevisorController::class, 'WorkWithUs'])->mid
 Route::post('/workwithus/submit', [RevisorController::class, 'becomeRevisor'])->name('submit');
 
 Route::get('/Search/Article', [PublicController::class, 'search'])->name('search');
+Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo');
