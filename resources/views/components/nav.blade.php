@@ -13,13 +13,7 @@
                         <a class="nav-link" href="{{route('home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{route('index')}}">Index</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +39,12 @@
                 <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">Registrati</a>
             </div>
         @else
-        
+        <div>
+            <form class="d-flex" role="search" action="{{route('search')}}">
+                <input class="form-control me-2 searchInput" type="search" placeholder="Search" aria-label="Search" name="query">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
             @if (Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="btn btn-success position-relative" href="{{route('revisor.index')}}">Zona revisione

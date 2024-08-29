@@ -96,6 +96,8 @@
     </div>
 
     <div class="col-12 w-100 text-center bg-dark">
+        
+        {{-- EFFETTO SCROLL DA IMPLEMENTARE  --}}
         <a href="" class="text-decoration-none"> Torna su </a>
     </div>
     <x-footer />

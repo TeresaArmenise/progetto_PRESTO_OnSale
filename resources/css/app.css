@@ -242,6 +242,10 @@ ol{
 	border: 1px solid #212529 !important;
 }
 
+/* .searchInput{
+	
+} */
+
 
 
 /* FOOTER ICONS */
@@ -249,3 +253,8 @@ ol{
 .fsCustom{
 	font-size: 35px;
 }
+
+/* .capitalize{
+	text-transform: capitalize;
+} */
+
