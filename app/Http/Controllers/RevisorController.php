@@ -32,7 +32,7 @@ class RevisorController extends Controller
         $article->setAccepted(false);
         return redirect()
         ->back()
-        ->with('message', "Hai rifiutato l'articolo : $article->title");
+        ->with('rejectMessage', "Hai rifiutato l'articolo : $article->title");
     }
     
     public function becomeRevisor(Request $request) {
@@ -69,7 +69,7 @@ class RevisorController extends Controller
         $article->setAccepted(null);
         return redirect()
         ->back()
-        ->with('message', "Hai annullato l'ultima modifica");
+        ->with('warning', "Hai annullato l'ultima modifica");
     }
 
 }

@@ -1,7 +1,7 @@
 <x-layout>
     
     <x-nav/>
-    
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -39,6 +39,22 @@
         </a>
     </div>
     
+    @if (session()->has('message'))
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-5 alert alert-success text-center shadow rounded">
+                {{ session('message') }} 
+            </div>
+        </div>       
+    </div>
+    @endif
+    @if (session()->has('errorMessage'))
+    <div class="alert alert-danger fs-1 text-center">
+        {{ session('errorMessage') }}
+    </div>        
+    @endif
+
+
     <div class="link-area frame">
         <button href="{{route('index')}}" class="custom-btn btn-16" target="_blank">Esplora</button>
     </div>
