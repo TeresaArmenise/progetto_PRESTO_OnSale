@@ -32,13 +32,14 @@
                         
                     </div>
                     <div class="mb-3">
-                        <select id="category" wire:model.blur="category" class="form-control @error('category') is-invalid @enderror">
-                            <option class="fst-italic text-secondary" label>Seleziona una categoria</option>
+                        <select id="category"  class="form-control @error('category') is-invalid @enderror" wire:model.blur="category">
+                            <option class="fst-italic text-secondary" label value="">Seleziona una categoria</option>
+                            
                             @foreach ($categories as $cat)
                             <option value="{{$cat->id}}">{{$cat->name}}</option>
                             @endforeach
+
                         </select>
-                        
                         @error('category')
                         <p class="fst-italic text-danger">{{$message}}</p>
                         @enderror
