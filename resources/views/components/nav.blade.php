@@ -8,7 +8,7 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex w-100 justify-content-center">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('home')}}">Home</a>
                     </li>
@@ -21,52 +21,50 @@
                         </a>
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
-                                <li><a class="dropdown-item text-dark" href="{{route('byCategory', ['category'=> $category])}}">{{$category->name}}</a></li>
-                                @if (!$loop->last)
-                                    <hr class="dropdown-divider">
-                                @endif
+                            <li><a class="dropdown-item text-dark" href="{{route('byCategory', ['category'=> $category])}}">{{$category->name}}</a></li>
+                            @if (!$loop->last)
+                            <hr class="dropdown-divider">
+                            @endif
                             @endforeach
                         </ul>
+                    </li>
+                    <li>
+                        <form class="d-flex align-items-center ms-4" role="search" action="{{route('search')}}">
+                            <input class="form-control me-0 searchInput w-50 h-50 rounded-pill" type="search" placeholder="Search" aria-label="Search" name="query">
+                            <button class="btn colorBtn py-1 px-3 rounded-pill" type="submit"><i class="bi bi-search"></i></button>
+                        </form> 
                     </li>
                 </ul>
             </div>
         </div>
         @guest
-            <div class="me-3">
-                <a class="text-decoration-none text-light fst-italic" href="{{route('login')}}">Accedi</a>
-            </div>
-            <div>
-                <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">Registrati</a>
-            </div>
-        @else
-        <div>
-            <form class="d-flex" role="search" action="{{route('search')}}">
-                <input class="form-control me-2 searchInput" type="search" placeholder="Search" aria-label="Search" name="query">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+        <div class="me-3">
+            <a class="text-decoration-none text-light fst-italic" href="{{route('login')}}">Accedi</a>
         </div>
-            @if (Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="btn btn-success position-relative" href="{{route('revisor.index')}}">Zona revisione
-                    <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
-                </a>
-                </li>
-            @endif
-
-            <div>
-                <div class="text-light text-wrap pe-4 text-center">Ciao <div class="fst-italic colorCustom">{{Auth::user()->name}}</div></div>
-
-                {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
-
+        <div>
+            <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">Registrati</a>
+        </div>
+        @else
+        @if (Auth::user()->is_revisor)
+        <li class="nav-item">
+            <a class="btn btn-success position-relative" href="{{route('revisor.index')}}">Zona revisione
+                <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+            </a>
+        </li>
+        @endif
+        
+        <div>
+            <div class="text-light text-wrap pe-4 text-center">Ciao <div class="fst-italic colorCustom">{{Auth::user()->name}}</div></div>
             
-                
-            </div>
-            {{-- <div> --}}
-                <form action="{{route('logout')}}" method="POST">
-                    @csrf
-                    <button type="submit" class="btn text-light fst-italic pe-2 hover">Esci</button>
-                </form>
+            {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
+            
+        </div>
+        {{-- <div> --}}
+            <form action="{{route('logout')}}" method="POST">
+                @csrf
+                <button type="submit" class="btn text-light fst-italic pe-2 hover">Esci</button>
+            </form>
             {{-- </div> --}}
-        @endguest
-    </div>
-</nav>
+            @endguest
+        </div>
+    </nav>
