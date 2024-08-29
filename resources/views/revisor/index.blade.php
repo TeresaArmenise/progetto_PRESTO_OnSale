@@ -1,6 +1,6 @@
 <x-layout>
     <x-nav/>
-    <div class="container-fluid pt-5">
+    <div class="container-fluid marginCustom">
         <div class="row">
             <div class="col-3">
                 <div class="rounded shadow bg-body-secondary">
