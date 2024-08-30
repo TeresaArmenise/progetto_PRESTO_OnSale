@@ -61,11 +61,67 @@
         </a>
     </div>
     @endauth
-    
+
+                                            {{-- VARIAZIONE  --}}
+
+    <div class="container mb-5">
+        <div class="row"> 
+            <div class="col-12 text-center">
+                <p class="display-6">LE NOSTRE CATEGORIE</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-evenly">  
+            <div class="card-container">
+                <div class="card-header">
+                    Esplora le nostre categorie
+                </div>
+                <div class="card-grid">
+                    <img src="oggarrmus\23ai-24-bottles-clima-bottle-050galileo.jpg" alt="CatArredo">
+                    <img src="oggarrmus\GAGB28FVEW-1.jpg" alt="CatArredo">
+                    <img src="oggarrmus\Diego-Chair-scaled.jpg" alt="CatArredo">
+                    <img src="oggarrmus\Closet-Libano-3-cuerpos-3.jpg" alt="CatArredo">
+                </div>
+                <div class="card-footer">
+                    <a href="#">Vedi tutti i prodotti</a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card-header">
+                    Esplora le nostre categorie
+                </div>
+                <div class="card-grid">
+                    <img src="oggarrmus\oggettistica-tp-17-orologio-da-muro-tondo-con-pannello-posteriore-spettacolo-shop-for-store.webp" alt="Catogg">
+                    <img src="oggarrmus\oggettistica-swarovski-idyllia.jpg" alt="Catogg">
+                    <img src="oggarrmus\Oggettistica_vasi4-1024x683.jpg" alt="Catogg">
+                    <img src="oggarrmus\23ai-24-bottles-clima-bottle-050galileo.jpg" alt="Catogg">
+                </div>
+                <div class="card-footer">
+                    <a href="#">Vedi tutti i prodotti</a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card-header">
+                    Esplora le nostre categorie
+                </div>
+                <div class="card-grid">
+                    <img src="oggarrmus\oggettistica-tp-17-orologio-da-muro-tondo-con-pannello-posteriore-spettacolo-shop-for-store.webp" alt="Catogg">
+                    <img src="oggarrmus\oggettistica-swarovski-idyllia.jpg" alt="Catogg">
+                    <img src="oggarrmus\Oggettistica_vasi4-1024x683.jpg" alt="Catogg">
+                    <img src="oggarrmus\23ai-24-bottles-clima-bottle-050galileo.jpg" alt="Catogg">
+                </div>
+                <div class="card-footer">
+                    <a href="#">Vedi tutti i prodotti</a>
+                </div>
+            </div>
+            
+                                                {{-- END  --}}
     
     {{-- CONTAINER PER CARDS  --}}
     
-    <div class="container my-5">
+    <div class="container marginCustom">
         <div class="row"> 
             <div class="col-12 text-center">
                 <p class="display-6">I nostri prodotti</p>

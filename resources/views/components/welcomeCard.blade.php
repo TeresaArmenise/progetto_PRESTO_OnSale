@@ -8,6 +8,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$article->title}}</h5>
                     <p class="card-text">{{$article->description}}</p>
+                    <h6 class="card-text">{{$article->category['name']}}</h6>
                     <p class="card-text"><small class="text-muted">Prezzo: {{$article->price}} €</small></p>
                     <a href="{{route('show', compact('article'))}}" class="btn rounded-pill colorBtn ">Dettaglio</a>
                 </div>

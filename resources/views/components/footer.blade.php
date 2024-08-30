@@ -1,5 +1,5 @@
 <footer class="bg-dark">
-    <div class="col-12 w-100 text-center bg-black py-2">
+    <div class="col-12 w-100 text-center bg-black py-2 marginCustom">
         
         {{-- EFFETTO SCROLL DA IMPLEMENTARE  --}}
         <a id="scrollToTop" class="text-decoration-none text-white "><i  class="bi bi-arrow-up-circle text-light fs-2"></i></a>
