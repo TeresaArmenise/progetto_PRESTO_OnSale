@@ -1,7 +1,7 @@
 <x-layout>
     
     <x-nav/>
-
+    
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -53,7 +53,7 @@
         {{ session('errorMessage') }}
     </div>        
     @endif
-
+    
     @auth
     <div class="link-area frame">
         <a href="{{route('create')}}">
@@ -61,9 +61,9 @@
         </a>
     </div>
     @endauth
-
-                                            {{-- VARIAZIONE  --}}
-
+    
+    {{-- VARIAZIONE  --}}
+    
     <div class="container mb-5">
         <div class="row"> 
             <div class="col-12 text-center">
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container">
         <div class="row justify-content-evenly">  
             <div class="card-container">
@@ -116,38 +116,38 @@
                     <a href="#">Vedi tutti i prodotti</a>
                 </div>
             </div>
-            
-                                                {{-- END  --}}
-    
-    {{-- CONTAINER PER CARDS  --}}
-    
-    <div class="container marginCustom">
-        <div class="row"> 
-            <div class="col-12 text-center">
-                <p class="display-6">I nostri prodotti</p>
-            </div>
         </div>
     </div>
-    
-    {{-- CARD  --}}
-    <div class="container">
-        <div class="row justify-content-evenly">  
-            @forelse ($articles as $article)
-            <div class= "col-12 d-flex justify-content-evenly my-3">
-                <x-welcomeCard 
-                :article="$article"
-                />
+            
+            {{-- END  --}}
+            
+            {{-- CONTAINER PER CARDS  --}}
+            
+            <div class="container marginCustom">
+                <div class="row"> 
+                    <div class="col-12 text-center">
+                        <p class="display-6">I nostri prodotti</p>
+                    </div>
+                </div>
             </div>
             
-            @empty
-            <div class="col-6 text-center">
-                <h3>Non sono ancora stati creati articoli</h3>
+            {{-- CARD  --}}
+            <div class="container">
+                <div class="row justify-content-evenly">  
+                    @forelse ($articles as $article)
+                    <div class= "col-12 d-flex justify-content-evenly my-3">
+                        <x-welcomeCard 
+                        :article="$article"
+                        />
+                    </div>
+                    
+                    @empty
+                    <div class="col-6 text-center">
+                        <h3>Non sono ancora stati creati articoli</h3>
+                    </div>
+                    @endforelse 
+                </div>
             </div>
-            @endforelse 
-        </div>
-    </div>
-
-   
-    <x-footer />
-
-</x-layout>
+            <x-footer />
+            
+        </x-layout>
