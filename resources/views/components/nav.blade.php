@@ -45,26 +45,51 @@
             <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">Registrati</a>
         </div>
         @else
-        @if (Auth::user()->is_revisor)
-        <li class="nav-item">
-            <a class="btn btn-success position-relative me-5" href="{{route('revisor.index')}}">Zona revisione
-                <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger ">{{\App\Models\Article::toBeRevisedCount()}}</span>
-            </a>
-        </li>
-        @endif
         
-        <div>
-            <div class="text-light text-wrap pe-4 text-center">Ciao <div class="fst-italic colorCustom">{{Auth::user()->name}}</div></div>
-            
-            {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
+        
+        {{-- <div>
+            <div class="text-light text-wrap pe-4 text-center">Ciao <div class="fst-italic colorCustom">{{Auth::user()->name}}</div>
             
         </div>
-        {{-- <div> --}}
-            <form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button type="submit" class="btn text-light fst-italic pe-2 hover">Esci</button>
-            </form>
-            {{-- </div> --}}
-            @endguest
+         </div> --}}
+        
+        {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
+        <div class="dropdown">
+            <button class="dropbtn">Hover here</button>
+            <div class="dropdown-content">
+              <a href="#">Hello.</a>
+              <a href="#">World.</a>
+            </div>
+          </div>
+        {{-- <div class="nav-item dropdown">
+            
+            <a class=" text-decoration-none dropdown-toggle colorCustom dropbtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="text-light text-wrap pe-4 text-center ">Ciao </div>{{Auth::user()->name}}
+            </a>
+            
+            <ul class="dropdown-menu">
+                
+                <li class="dropdown-content"><a class="dropdown-item text-dark" href="">Profilo</a></li>
+                <hr class="dropdown-divider">
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item dropdown-content">
+                    <a class=" text-decoration-none dropdown-item position-relative me-5" href="{{route('revisor.index')}}">Zona revisione
+                        <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger ">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                    </a>
+                </li>
+                @endif
+                <hr class="dropdown-divider">
+                <li  class="dropdown-content"><a class="dropdown-item text-dark" href="">I miei articoli</a></li>
+            </ul>
         </div>
-    </nav>
+    --}}
+    
+    {{-- <div> --}}
+        <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="btn text-light fst-italic pe-2 hover">Esci</button>
+        </form>
+        {{-- </div> --}}
+        @endguest
+    </div>
+</nav>

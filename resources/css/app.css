@@ -207,6 +207,60 @@ ol{
 	color: rgb(251,33,117);
 }
 
+.dropbtn {
+	font-family: montserrat;
+	background-color: #222228;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	border-radius: 10px 10px 10px 10px;
+	width: 150px;
+	box-shadow: 0px 0px 100px rgba(190, 200, 255, 0.6);
+  }
+  
+  .dropdown {
+	color: black;
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #222228;
+	min-width: 150px;
+	z-index: 1;
+	border-radius: 0px 0px 14px 14px;
+	box-shadow: 0px 0px 100px rgba(190, 200, 255, 0.25);
+  }
+  
+  .dropdown-content a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	border-radius: 10px;
+	margin: 5px;
+  }
+  
+  .dropdown-content a:hover {
+	background-color: #33333f;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+	background-color: #222228;
+	border-radius: 10px 10px 0px 0px;
+	border-bottom: none;
+  }
+
 /* GENERIC  */
 
 .marginCustom{

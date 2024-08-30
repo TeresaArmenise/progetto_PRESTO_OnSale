@@ -17,10 +17,10 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="media\GamingWeek.jpg" alt="Second slide">
+                <img class="d-block w-100" src="media\Gaming.webp" alt="Second slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
-                    <h5 class="text-light text-center">TECNOLOGIA E GAMING</h5>
-                    <p class="fst-italic text-light m-auto">Esplora la sezione per scopire le ultime novità</p>
+                    <h5 class="text-light text-end">TECNOLOGIA E GAMING</h5>
+                    <p class="fst-italic text-light text-end w-100">Esplora la sezione per scopire le ultime novità</p>
                 </div>
             </div>
             <div class="carousel-item ">
