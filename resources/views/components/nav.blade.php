@@ -12,14 +12,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="w-100">
                 <ul class="navbar-nav">
-                    <div class="d-flex ps-5  w-100 justify-content-evenly">
-                        <li class="nav-item">
+                    <div class="d-flex ps-5  w-100 justify-content-center">
+                        <li class="nav-item me-5">
                             <a class="nav-link" href="{{route('home')}}">Home</a>
                         </li>
-                        <li class="nav-item ps-4">
+                        <li class="nav-item ps-4 me-5 ">
                             <a class="nav-link" href="{{route('index')}}">Articoli</a>
                         </li>
-                        <li class="nav-item ps-4">
+                        <li class="nav-item ps-4 me-5">
                             <a class="nav-link" href="{{route('workwithus')}}">Lavora con noi</a>
                         </li>
                         <li class="nav-item dropdown">
