@@ -1,4 +1,10 @@
 <footer class="bg-dark">
+    <div class="col-12 w-100 text-center bg-black py-2">
+        
+        {{-- EFFETTO SCROLL DA IMPLEMENTARE  --}}
+        <a id="scrollToTop" class="text-decoration-none text-white "><i  class="bi bi-arrow-up-circle text-light fs-2"></i></a>
+    </div>
+
     <div class="container d-flex flex-column-reverse justify-content-between px-5 py-5 mx-auto gap-5">
         <div class="d-flex flex-column-reverse align-items-center justify-content-between gap-3">
             <div class="mx-auto text-center text-white">

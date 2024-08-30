@@ -54,23 +54,13 @@
     </div>        
     @endif
 
-
+    @auth
     <div class="link-area frame">
-        <button href="{{route('index')}}" class="custom-btn btn-16" target="_blank">Esplora</button>
+        <a href="{{route('create')}}">
+            <button  class="custom-btn btn-11">+ Aggiungi Articolo<div class="dot"></div></button>
+        </a>
     </div>
-    
-    
-    
-    
-    
-    
-    <div class="link-area frame">
-        <button href="{{route('index')}}" class="custom-btn btn-11">Esplora<div class="dot"></div></button>
-    </div>
-    
-    
-    
-    
+    @endauth
     
     
     {{-- CONTAINER PER CARDS  --}}
@@ -101,21 +91,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12 mb-5 text-center">
-                @auth
-                <a href="{{route('create')}}" type="button" class="btn btn-outline-primary">+ Aggiungi Articolo</a>
-                @endauth
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 w-100 text-center bg-dark">
-        
-        {{-- EFFETTO SCROLL DA IMPLEMENTARE  --}}
-        <a href="" class="text-decoration-none"> Torna su </a>
-    </div>
+   
     <x-footer />
 
 </x-layout>

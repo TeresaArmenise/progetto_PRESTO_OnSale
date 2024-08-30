@@ -15,25 +15,40 @@ class RevisorController extends Controller
     public function index()
     {
         $article_revisioned=Article::whereNotNull('is_accepted')->get()->last();
-        $article_to_check=Article::where('is_accepted',null)->orderBy('created_at', 'asc')->first();
+        $article_to_check=Article::where('is_accepted',null)
+        ->where('user_id', '!=', Auth::id())
+        ->orderBy('created_at', 'asc')
+        ->first();
         return view('revisor.index', compact('article_to_check', 'article_revisioned'));
     }
 
     public function accept(Article $article)
     {
+        if ($article->user_id === Auth::id()) {
+            // Puoi scegliere di reindirizzare l'utente o lanciare un'eccezione
+            return redirect()->back()->with('message', 'Non puoi revisionare i tuoi articoli.');
+        }
+        else {
         $article->setAccepted(true);
         return redirect()
         ->back()
         ->with('message', "Articolo accettato $article->title ");
     }
+}
 
     public function reject(Article $article)
     {
+        if ($article->user_id === Auth::id()) {
+            // Puoi scegliere di reindirizzare l'utente o lanciare un'eccezione
+            return redirect()->back()->with('message', 'Non puoi revisionare i tuoi articoli.');
+        }
+        else {
         $article->setAccepted(false);
         return redirect()
         ->back()
         ->with('rejectMessage', "Hai rifiutato l'articolo : $article->title");
     }
+}
     
     public function becomeRevisor(Request $request) {
         $email = $request->email;
