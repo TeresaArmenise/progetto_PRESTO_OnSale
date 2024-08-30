@@ -158,6 +158,50 @@
                     <a href="#">Vedi tutti i prodotti</a>
                 </div>
             </div>
+
+
+            <div class="card-container">
+                <div class="card-header">
+                    Esplora le nostre categorie
+                </div>
+                <div class="card-grid">
+                    <img src="abblibvincollez/jeans.jpg" alt="Catogg">
+                    <img src="abblibvincollez/felpa.webp" alt="Catogg">
+                    <img src="abblibvincollez/jeans.webp" alt="Catogg">
+                    <img src="abblibvincollez/maglia.webp" alt="Catogg">
+                </div>
+                <div class="card-footer">
+                    <a href="#">Vedi tutti i prodotti</a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card-header">
+                    Esplora le nostre categorie
+                </div>
+                <div class="card-grid">
+                    <img src="abblibvincollez/champ.jpg" alt="Catogg">
+                    <img src="elebicsport/panca.jpg" alt="Catogg">
+                    <img src="abblibvincollez/unnamed.jpg" alt="Catogg">
+                    <img src="abblibvincollez/vino.jpg" alt="Catogg">
+                </div>
+                <div class="card-footer">
+                    <a href="#">Vedi tutti i prodotti</a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card-header">
+                    Esplora le nostre categorie
+                </div>
+                <div class="card-grid">
+                    <img src="abblibvincollez/book.jpg" alt="Catogg">
+                    <img src="abblibvincollez/coin.jpg" alt="Catogg">
+                    <img src="abblibvincollez/fumetto.jpg" alt="Catogg">
+                    <img src="abblibvincollez/collection.jpg" alt="Catogg">
+                </div>
+                <div class="card-footer">
+                    <a href="#">Vedi tutti i prodotti</a>
+                </div>
+            </div>
         </div>
     </div>
             
