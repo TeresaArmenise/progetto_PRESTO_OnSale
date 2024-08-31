@@ -74,134 +74,19 @@
     
     <div class="container">
         <div class="row justify-content-evenly">  
-            <div class="card-container mb-5">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="oggarrmus/gu1_82sfwo_oa_frontlow_default.webp" alt="CatArredo">
-                    <img src="oggarrmus\GAGB28FVEW-1.jpg" alt="CatArredo">
-                    <img src="oggarrmus\Diego-Chair-scaled.jpg" alt="CatArredo">
-                    <img src="oggarrmus\Closet-Libano-3-cuerpos-3.jpg" alt="CatArredo">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
-            <div class="card-container mb-5">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="oggarrmus\oggettistica-tp-17-orologio-da-muro-tondo-con-pannello-posteriore-spettacolo-shop-for-store.webp" alt="Catogg">
-                    <img src="oggarrmus\oggettistica-swarovski-idyllia.jpg" alt="Catogg">
-                    <img src="oggarrmus\Oggettistica_vasi4-1024x683.jpg" alt="Catogg">
-                    <img src="oggarrmus\23ai-24-bottles-clima-bottle-050galileo.jpg" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
-            <div class="card-container mb-5">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="oggarrmus/91BaaN3SStL._AC_UF1000,1000_QL80_.jpg" alt="Catogg">
-                    <img src="oggarrmus/60176_0073BMUS0_6338.jpg" alt="Catogg">
-                    <img src="oggarrmus/large-breakingbad04-breaking-bad-poster-breaking-bad-series-original-imafuc2fvfjyackz.webp" alt="Catogg">
-                    <img src="oggarrmus/gu1_82sfwo_oa_frontlow_default.webp" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
-            <div class="card-container mb-5">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="elebicsport/phone.jpg" alt="Catogg">
-                    <img src="elebicsport/pc.jpg" alt="Catogg">
-                    <img src="elebicsport/pad.jpg" alt="Catogg">
-                    <img src="elebicsport/iphone.webp" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="elebicsport/bici.jpg" alt="Catogg">
-                    <img src="elebicsport/mono.jpg" alt="Catogg">
-                    <img src="elebicsport/bici.webp" alt="Catogg">
-                    <img src="elebicsport/monop.jpg" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="elebicsport/racc.jpg" alt="Catogg">
-                    <img src="elebicsport/panca.jpg" alt="Catogg">
-                    <img src="elebicsport/camera.jpg" alt="Catogg">
-                    <img src="elebicsport/guanti.jpg" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
+            @foreach ($categs as $cat)
+            <div class="col-12 col-md-4">
+                
+                <x-categoryCard 
+    
+                :cat="$cat"
+    
+                />
 
-
-            <div class="card-container">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="abblibvincollez/jeans.jpg" alt="Catogg">
-                    <img src="abblibvincollez/felpa.webp" alt="Catogg">
-                    <img src="abblibvincollez/jeans.webp" alt="Catogg">
-                    <img src="abblibvincollez/maglia.webp" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
             </div>
-            <div class="card-container">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="abblibvincollez/champ.jpg" alt="Catogg">
-                    <img src="elebicsport/panca.jpg" alt="Catogg">
-                    <img src="abblibvincollez/unnamed.jpg" alt="Catogg">
-                    <img src="abblibvincollez/vino.jpg" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card-header">
-                    Esplora le nostre categorie
-                </div>
-                <div class="card-grid">
-                    <img src="abblibvincollez/book.jpg" alt="Catogg">
-                    <img src="abblibvincollez/coin.jpg" alt="Catogg">
-                    <img src="abblibvincollez/fumetto.jpg" alt="Catogg">
-                    <img src="abblibvincollez/collection.jpg" alt="Catogg">
-                </div>
-                <div class="card-footer">
-                    <a href="#">Vedi tutti i prodotti</a>
-                </div>
-            </div>
+            
+            @endforeach
+            
         </div>
     </div>
             
