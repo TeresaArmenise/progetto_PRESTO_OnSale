@@ -35,7 +35,14 @@ class ArticleController extends Controller
         
         return view('byCategory', compact('category', 'articles'));
 
-        //!! TO FIX, COMPAIONO ANCHE ARTICOLI RIFIUTATI
+    }
+
+
+    public function myArticles(){
+
+        $articles = Article::where('user_id', Auth::user()->id)->get()->sortDesc();
+
+        return view('myArticles', compact('articles'));
     }
 
 }

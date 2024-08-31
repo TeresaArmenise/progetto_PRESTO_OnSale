@@ -30,6 +30,10 @@ width: 100%;
 
 /* CSS FOR NAVBAR  */
 
+nav{
+	opacity: 0.94 !important;
+}
+
 .carousel-item {
 	margin-top: 74px;
 	height: 50vh;
@@ -100,7 +104,10 @@ width: 100%;
 	color: #fff;
 }
 
-
+.badgePosition{
+	top: 5px;
+	right: 10px;
+}
 
 /* BUTTON WELCOME PAGE*/
 
@@ -198,7 +205,7 @@ ol{
 }
 
 #carouselExampleIndicators{
-	margin-bottom: 5vh;
+	/* margin-bottom: 2vh; */
 }
 
 .hover:hover{
@@ -207,6 +214,23 @@ ol{
 
 .colorCustom{
 	color: rgb(251,33,117);
+}
+
+.btnAnnulla{
+	background-color: rgba(218, 165, 32, 0.582);
+}
+
+.btnAnnulla:hover{
+	background-color: rgb(243, 220, 9);
+}
+
+.marginDropdown{
+	margin-top: 2rem;
+}
+
+.paddingDropdown{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 /* DROP BUTTON PROFILE  */
@@ -262,8 +286,6 @@ ol{
 }
 
 .dropdown-content button {
-	background: rgba(251, 33, 116, 0.706);
-	color: white;
 	padding: 12px 50px;
 	display: block;
 	border: none;
@@ -285,9 +307,14 @@ ol{
 }
 
 .colorBtn{
-	background-color: transparent;
-	color: rgb(251,33,117);
-	border: 1px solid rgb(251,33,117);
+	background-color: transparent !important;
+	color: rgb(251,33,117) !important;
+	border: 1px solid rgb(251,33,117) !important;
+}
+
+.colorIconFooter{
+	background-color: transparent !important;
+	color: rgb(251,33,117) !important;
 }
 
 .colorBtn:hover{
@@ -302,7 +329,6 @@ ol{
 .colorBtn2:hover{
 	background-color: transparent;
 	color: rgb(251,33,117);
-	border: 1px solid rgb(251,33,117);
 }
 
 

@@ -42,5 +42,4 @@
     </div>
     
     
-    <x-footer />
 </x-layout>

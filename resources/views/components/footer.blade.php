@@ -1,5 +1,5 @@
 <footer class="bg-dark">
-    <div class="col-12 w-100 text-center bg-black py-2 marginCustom">
+    <div class="w-100 text-center bg-black py-2 marginCustom">
         
         {{-- EFFETTO SCROLL DA IMPLEMENTARE  --}}
         <a id="scrollToTop" class="text-decoration-none text-white "><i  class="bi bi-arrow-up-circle text-light fs-2"></i></a>
@@ -16,7 +16,7 @@
             <div class="d-flex justify-content-between gap-5">
                 <div class="d-flex flex-column gap-2 text-white">
                     <a href="" class="text-decoration-none text-light">Home</a>
-                    <a href="" class="text-decoration-none text-light">Pricing</a>
+                    <a href="{{route('index')}}" class="text-decoration-none text-light">Articoli</a>
                     <a href="" class="text-decoration-none text-light">Products</a>
                     <a href="" class="text-decoration-none text-light">About</a>
                 </div>
@@ -34,31 +34,21 @@
 
             <div class="flex justify-center my-4 d-flex align-items-center">
                 <a href="">
-                    <i class="bi bi-facebook colorBtn border-0 pe-3 fsCustom"></i>
+                    <i class="bi bi-facebook colorIconFooter border-0 pe-3 fsCustom"></i>
                 </a>
                 <a href="">
-                    <i class="bi bi-youtube colorBtn border-0 pe-3 fsCustom"></i>
+                    <i class="bi bi-youtube colorIconFooter border-0 pe-3 fsCustom"></i>
                 </a>
                 <a href="">
-                    <i class="bi bi-twitter colorBtn border-0 pe-3 fsCustom"></i>
+                    <i class="bi bi-twitter colorIconFooter border-0 pe-3 fsCustom"></i>
                 </a>
                 <a href="">
-                    <i class="bi bi-pinterest colorBtn border-0 pe-3 fsCustom"></i>
+                    <i class="bi bi-pinterest colorIconFooter border-0 pe-3 fsCustom"></i>
                 </a>
                 <a href="">
-                    <i class="bi bi-instagram colorBtn border-0 pe-3 fsCustom"></i>
+                    <i class="bi bi-instagram colorIconFooter border-0 pe-3 fsCustom"></i>
                 </a>
             </div>
-            {{-- <div class="d-flex flex-column justify-content-between">
-                <form action="">
-                    <div class="d-flex gap-3 justify-content-end mb-4">
-                        <input type="text" class="flex-1 px-4 rounded" placeholder="Updated in your inbox"/>
-                        <button class="px-5 py-2 text-white rounded colorBtn">
-                            Go
-                        </button>
-                    </div>
-                </form>
-            </div> --}}
         </div>        
     </div>
 </footer>

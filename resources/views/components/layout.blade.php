@@ -20,23 +20,12 @@
 </head>
 <body>
     
-    {{-- @if (session()->has('message'))
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-5 alert alert-success text-center shadow rounded">
-                {{ session('message') }} 
-            </div>
-        </div>       
-    </div>
-    @endif
-    
-    @if (session()->has('errorMessage'))
-    <div class="alert alert-danger fs-1 text-center" tabindex="-1">
-        {{ session('errorMessage') }}
-    </div>        
-    @endif --}}
+
     <div class="min-vh-100">
         {{$slot}}
     </div>
+
+    
+    <x-footer />
 </body>
 </html>

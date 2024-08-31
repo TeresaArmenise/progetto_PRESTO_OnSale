@@ -1,14 +1,15 @@
 <div class="card-container my-3">
     <div class="card-header">
-        {{$cat['name']}}
+        {{ $category->name }}
     </div>
+    <a href="{{ route('byCategory', $category->id) }}">
     <div class="card-grid">
-        <img src="{{ asset($cat['img1'])}}" alt=" Img categoria {{$cat['name']}}">
-        <img src="{{ asset($cat['img2'])}}" alt="Img categoria {{$cat['name']}}">
-        <img src="{{ asset($cat['img3'])}}" alt="Img categoria {{$cat['name']}}">
-        <img src="{{ asset($cat['img4'])}}" alt="Img categoria {{$cat['name']}}">
+        <img src="{{ $category->img1}}" alt="Img categoria {{ $category->name }}">
+        <img src="{{ asset($category->img2) }}" alt="Img categoria {{ $category->name }}">
+        <img src="{{ asset($category->img3) }}" alt="Img categoria {{ $category->name }}">
+        <img src="{{ asset($category->img4) }}" alt="Img categoria {{ $category->name }}">
     </div>
     <div class="card-footer">
-        <a href="#">Vedi tutti i prodotti</a>
+        Vedi tutti i prodotti</a>
     </div>
 </div>

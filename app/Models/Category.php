@@ -11,7 +11,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name','img1','img2','img3','img4'];
 
     public function articles(): HasMany{
         return $this->hasMany(Article::class);

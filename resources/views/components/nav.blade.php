@@ -7,12 +7,12 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="w-100">
                 <ul class="navbar-nav">
-                    <div class="d-flex ps-5  w-100 justify-content-center">
+                    <div class="d-flex ps-5 w-100 align-items-center justify-content-center">
                         <li class="nav-item me-5">
                             <a class="nav-link" href="{{route('home')}}">Home</a>
                         </li>
@@ -22,24 +22,24 @@
                         <li class="nav-item ps-4 me-5">
                             <a class="nav-link" href="{{route('workwithus')}}">Lavora con noi</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle dropbtn " role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorie
-                            </a>
-                            <ul class="dropdown-menu dropdown-content mt-4 overflow-y-scroll" style="height: 500px">
-                                @foreach ($categories as $category)
-                                <li><a class="px-4 py-2" href="{{route('byCategory', ['category'=> $category])}}">{{$category->name}}</a></li>
-                                @if (!$loop->last)
-                                <hr class="dropdown-divider">
-                                @endif
-                                @endforeach
-                            </ul>
+                        <li class="nav-item dropdown paddingDropdown">
+                            <div class="text-center">
+                                <a class="dropbtn text-decoration-none dropdown-toggle">Categorie</a>
+                                <div class="dropdown-content marginDropdown">
+                                    @foreach ($categories as $category)
+                                    <a class="px-4 py-2" href="{{route('byCategory', ['category'=> $category])}}">{{$category->name}}</a>
+                                    @if (!$loop->last)
+                                    <hr class="dropdown-divider">
+                                    @endif
+                                    @endforeach
+                                </div>
+                            </div>
                         </li>
                     </div>
                 </ul>
             </div>
         </div>
-
+        
         <div class="">
             <form class="d-flex align-items-center justify-content-end px-3" role="search" action="{{route('search')}}">
                 <input class="form-control me-0 searchInput w-50 h-50 rounded-pill" type="search" placeholder="Search" aria-label="Search" name="query">
@@ -57,20 +57,20 @@
         
         
         {{-- DA IMPLEMENTARE CON SEZIONE PROFILO  --}}
-        <div class="dropdown">
+        <div class="dropdown pe-5">
             <div class="text-center pt-3">
                 <a class="dropbtn text-decoration-none">Ciao <div class="text-decoration-none dropdown-toggle colorCustom">{{Auth::user()->name}}</div></a>
                 <div class="dropdown-content">
                     @if (Auth::user()->is_revisor)
                     <a href="{{route('revisor.index')}}" class="position-relative">Zona revisione</a>
-                    <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                    <span class="position-absolute badgePosition badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
                     @endif
-                    <a href="#">Profilo</a>
-                    <a href="#">I miei articoli</a>
+                    <a href="{{route('profile')}}">Profilo</a>
+                    <a href="{{route('myArticles')}}">I miei articoli</a>
                     <form action="{{route('logout')}}" method="POST">
                         @csrf
                         <div class="text-center">
-                            <button class="text-white fw-bold">Logout</button>
+                            <button class="text-white fw-bold colorBtn fst-italic">Logout</button>
                         </div>
                     </form>
                 </div>
@@ -78,8 +78,8 @@
         </div>
         
         {{-- <div> --}}
-
-
+            
+            
             {{-- </div> --}}
             @endguest
         </div>

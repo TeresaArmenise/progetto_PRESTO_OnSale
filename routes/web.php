@@ -20,3 +20,7 @@ Route::post('/workwithus/submit', [RevisorController::class, 'becomeRevisor'])->
 
 Route::get('/Search/Article', [PublicController::class, 'search'])->name('search');
 Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo');
+
+Route::get('/I-miei-articoli', [ArticleController::class, 'myArticles'])->name('myArticles');
+
+Route::get('/Profile', [PublicController::class, 'profile'])->middleware('auth')->name('profile');

@@ -40,7 +40,7 @@
     </div>
     
     @if (session()->has('message'))
-    <div class="container">
+    <div class="container mb-5">
         <div class="row justify-content-center">
             <div class="col-5 alert alert-success text-center shadow rounded">
                 {{ session('message') }} 
@@ -49,8 +49,12 @@
     </div>
     @endif
     @if (session()->has('errorMessage'))
-    <div class="alert alert-danger fs-1 text-center">
-        {{ session('errorMessage') }}
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-5 alert alert-danger text-center shadow rounded">
+                {{ session('errorMessage') }}
+            </div>
+        </div> 
     </div>        
     @endif
     
@@ -72,53 +76,51 @@
         </div>
     </div>
     
+    {{-- @dd($categories) --}}
+    
     <div class="container">
         <div class="row justify-content-evenly">  
-            @foreach ($categs as $cat)
+            @foreach ($categories as $category)
             <div class="col-12 col-md-4">
                 
                 <x-categoryCard 
-    
-                :cat="$cat"
-    
+                :category="$category"
                 />
-
+                
             </div>
-            
             @endforeach
-            
         </div>
     </div>
-            
-            {{-- END  --}}
-            
-            {{-- CONTAINER PER CARDS  --}}
-            
-            <div class="container marginCustom">
-                <div class="row"> 
-                    <div class="col-12 text-center">
-                        <p class="display-6">I nostri prodotti</p>
-                    </div>
-                </div>
+    
+    {{-- END  --}}
+    
+    {{-- CONTAINER PER CARDS  --}}
+    
+    <div class="container marginCustom">
+        <div class="row"> 
+            <div class="col-12 text-center">
+                <p class="display-6">I nostri prodotti</p>
+            </div>
+        </div>
+    </div>
+    
+    {{-- CARD  --}}
+    <div class="container">
+        <div class="row justify-content-evenly">  
+            @forelse ($articles as $article)
+            <div class= "col-12 d-flex justify-content-evenly my-3">
+                <x-welcomeCard 
+                :article="$article"
+                />
             </div>
             
-            {{-- CARD  --}}
-            <div class="container">
-                <div class="row justify-content-evenly">  
-                    @forelse ($articles as $article)
-                    <div class= "col-12 d-flex justify-content-evenly my-3">
-                        <x-welcomeCard 
-                        :article="$article"
-                        />
-                    </div>
-                    
-                    @empty
-                    <div class="col-6 text-center">
-                        <h3>Non sono ancora stati creati articoli</h3>
-                    </div>
-                    @endforelse 
-                </div>
+            @empty
+            <div class="col-6 text-center">
+                <h3>Non sono ancora stati creati articoli</h3>
             </div>
-            <x-footer />
-            
-        </x-layout>
+            @endforelse 
+        </div>
+    </div>
+
+    
+</x-layout>

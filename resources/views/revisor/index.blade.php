@@ -1,12 +1,15 @@
 <x-layout>
     <x-nav/>
-    <div class="container-fluid marginCustom mb-5">
-        <div class="row">
-            <div class="col-3">
-                <div class="rounded shadow bg-body-secondary">
-                    <h1>Area del revisore</h1>
+    <div class="container-fluid marginCustom px-5">
+        <div class="row px-5">
+            <div class="col-12 text-center mb-5">
+                <div class="rounded shadow bg-dark mt-5">
+                    <h1 class="text-light">Area del revisore</h1>
                 </div>
             </div>
+            <div class="col-12 text-center ps-5 pe-4">
+                <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> Annulla l'ultima azione </button>
+        </div>
         </div>
     </div>
     @if (session()->has('message'))
@@ -31,7 +34,7 @@
     </div>
     @endif
     @if ($article_to_check)
-    <div class="row justify-content-end pt-5">
+    <div class="row justify-content-end marginCustom">
         <div class="col-md-6">
             <div class="row justify-content-center">
                 @for ($i = 0; $i < 1; $i++)
@@ -64,26 +67,29 @@
         </div>
     </div>
     @endif
+
+    @if (!$article_to_check)
+    <div class="row justify-content-center align-items-center text-center">
+        <div class="col-12">
+            <h1 class="fst-italic display-4 marginCustom">
+                Nessun articolo da revisionare
+            </h1>
+        </div>
+    </div>
+    @endif
     @if ($article_revisioned)
     <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
         @csrf
         @method('PATCH')
-        <div class="col-10 text-start ps-5 mt-5">
-            <h6>Premi il pulsante per annullare la modifica:</h6>
-                <button type="submit" class="btn btn-outline-warning m-0 p-3 px-5" > Annulla </button>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center mt-5 ps-5">
+                    <a href="{{route('home')}}" class="my-5 btn colorBtn p-3 px-4">Torna all'homepage</a>
+                </div>
+            </div>
         </div>
     </form>
     @endif
-    @if (!$article_to_check)
-    <div class="row justify-content-center align-items-center text-center">
-        <div class="col-12">
-            <h1 class="fst-italic display-4">
-                Nessun articolo da revisionare
-            </h1>
-            <a href="{{route('home')}}" class="mt-5 btn btn-success">Torna all'homepage</a>
-        </div>
-    </div>
-    @endif
 </div>
-<x-footer/>
+
 </x-layout>

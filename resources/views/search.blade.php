@@ -29,4 +29,6 @@
         <div>
             {{ $articles->links() }}
         </div>
+
+
 </x-layout>
