@@ -32,7 +32,7 @@
                 @foreach ($articles as $article)
                 <div class="col-10 col-md-4">
     
-                <x-card 
+                <x-userCard
 
                 :article="$article"
 

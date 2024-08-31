@@ -11,9 +11,10 @@
 
         <div class="container my-5">
             <div class="row justify-content-center">
+            
                 @foreach ($articles as $article)
                 <div class="col-3 m-3">
-                    <x-card 
+                    <x-userCard 
                     
                     :article='$article'
 
