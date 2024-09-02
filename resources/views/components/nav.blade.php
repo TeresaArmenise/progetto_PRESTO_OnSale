@@ -46,20 +46,19 @@
         </div>
         @guest
 
-        <div class="d-flex bg-info justify-content-end">
+        <div class="d-flex justify-content-end">
             <div class="me-3">
                 <a class="text-decoration-none text-light fst-italic" href="{{route('login')}}">Accedi</a>
             </div>
             <div>
                 <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">Registrati</a>
             </div>
-            <div class="bg-dark">
-                <div class="text-end dropdown">
+            <div>
+                <div class="text-end dropdown dropdownLang">
                     <a class="dropbtn text-decoration-none dropdown-toggle"><x-_locale lang="it" /></a>
-                    <div class="dropdown-content" style="min-width: 50px">
+                    <div class="dropdown-content-lang">
                         <x-_locale lang="en" />
                         <x-_locale lang="es" />
-                        
                     </div>
                 </div>
             </div>
@@ -68,7 +67,7 @@
         @else
         
         
-        <div class="dropdown pe-5">
+        <div class="dropdown">
             <div class="text-center pt-3">
                 <a class="dropbtn text-decoration-none">Ciao <div class="text-decoration-none dropdown-toggle colorCustom">{{Auth::user()->name}}</div></a>
                 <div class="dropdown-content">
@@ -78,9 +77,11 @@
                     @endif
                     <a href="{{route('profile')}}">Profilo</a>
                     <a href="{{route('myArticles')}}">I miei articoli</a>
-                    
-                    {{-- @if (Auth::user()->is_admin) --}}
-                    {{-- DA IMPLEMENTARE  --}}
+
+                    @if (Auth::user()->is_admin)
+                    <a href="">Admin Area</a>
+                    @endif
+
                     
                     <form action="{{route('logout')}}" method="POST">
                         @csrf
@@ -91,13 +92,12 @@
                 </div>
             </div>
         </div>
-        <div class="dropdown">
-            <div class="text-end mx-0">
+        <div>
+            <div class="text-end dropdown dropdownLang mx-0">
                 <a class="dropbtn text-decoration-none dropdown-toggle"><x-_locale lang="it" /></a>
-                <div class="dropdown-content">
+                <div class="dropdown-content-lang">
                     <x-_locale lang="en" />
                     <x-_locale lang="es" />
-                    
                 </div>
             </div>
         </div>

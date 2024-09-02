@@ -30,6 +30,10 @@ width: 100%;
 
 /* CSS FOR NAVBAR  */
 
+li{
+	list-style: none;
+}
+
 nav{
 	opacity: 0.94 !important;
 }
@@ -287,6 +291,31 @@ button {
 	border: 1px solid rgba(251, 33, 116, 0.706);
 }
 
+.dropdownLang{
+	color: black;
+	margin-left: 30px;
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
+}
+
+.dropdown-content-lang {
+	display: none;
+	text-align: center;
+	padding: 10px 5px;
+	position: absolute;
+	background-color: #1d1f22d8;
+	min-width: 50px;
+	z-index: 1;
+	border-radius: 0px 0px 14px 14px;
+}
+
+.dropdownLang:hover .dropdown-content-lang {
+	display: flex;
+	flex-direction: column;
+}
 
 /* GENERIC  */
 
