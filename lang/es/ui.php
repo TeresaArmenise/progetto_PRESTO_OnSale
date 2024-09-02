@@ -3,69 +3,65 @@
 return 
 [
     'home' => 'home',
-    'articles' => 'Artículos',
-    'categories' => 'Categorías',
-    'hello' => 'Hola',
-    'add_Articles' => 'Agrega un artículo',
-    'our_categories' => 'Nuestras categorías',
-    'title_carousel' => 'Soluciones para el hogar',
-    undertitle_carousel => Explora nuestra sección para el hogar
-    title_carousel_2 => Tecnología y Gaming 
-    undertitle_carousel_2 => Explora nuestra sección para descubir las últimas novedades 
-    title_carousel_3 => Libros y Decoraciones
-    undertitle_carousel_3 => Encuentra todo lo que te sirve para la escuela y el tiempo libre 
+'articles' => 'Artículos',
+'categories' => 'Categorías',
+'hello' => 'Hola',
+'add_Articles' => 'Agrega un artículo',
+'our_categories' => 'Nuestras categorías',
+'title_carousel' => 'Soluciones para el hogar',
+'undertitle_carousel' => 'Explora nuestra sección para el hogar',
+'title_carousel_2' => 'Tecnología y Gaming', 
+'undertitle_carousel_2' => 'Explora nuestra sección para descubir las últimas novedades',
+'title_carousel_3' => 'Libros y Decoraciones',
+'undertitle_carousel_3' => 'Encuentra todo lo que te sirve para la escuela y el tiempo libre',
 
-    accessories => Accesorios
-    music => Música 
-    furniture => Muebles
-    books => Libros y Revistas
-    wines => Vinos
-    collections => Colecciones 
-    clothes => Ropa
-    Electronics =>Electrónicos
-    bicycles => Bicicletas 
-    sport => Deporte
+'accessories' => 'Accesorios',
+'music' => 'Música', 
+'furniture' => 'Muebles',
+'books' => 'Libros y Revistas',
+'wines' => 'Vinos',
+'collections' => 'Colecciones',
+'clothes' => 'Ropa',
+'Electronics' => 'Electrónicos',
+'bicycles' => 'Bicicletas', 
+'sport' => 'Deporte',
+'our_products' => 'Nuestros productos',
+'price' => 'Precio',
+'show_more' => 'Muestra más',
 
-    our_products => Nuestros productos 
+'all_articles' => 'Todos los artículos',
 
-    price => Precio
+'no_articles' => 'Aún no hay artículos',
 
-    show_more => Muestra más
+'publish' => 'Publica', 
 
-    all_articles => Todos los artículos
+'search' => 'Busca',
 
-    no_articles => Aún no hay artículos
+'revision_area' => 'Área de revisión',
 
-    publish => Publica 
+'profile' => 'Pérfil',
 
-    search => Busca
+'my_articles' => 'Mis artículos',
 
-    revision_area => Área de revisión
+'articles_by' => 'Artículo hecho por:',
 
-    profile => Pérfil
+'profile_of' => 'Perfíl de',
 
-    my_articles => Mis artículos
+'name' => 'Nombre',
 
-    articles_by => Artículo hecho por: 
+'registered' => 'Registrado',
 
-    profile_of
+'revisor_area' => 'Área del revisor',
 
-    name => Nombre
+'cancel_last' => 'Anula la última modificación', 
 
-    registered => Registrado
+'reject' => 'Rechaza',
 
-    revisor_area => Área del revisor
+'accept' => 'Acepta',
 
-    cancel_last => Anula la última modificación 
+'go_back' => 'Volver',
 
-    reject => Rechaza
+'login' => 'Inicia sesión',
 
-    accept => Acepta
-
-    go_back => Volver
-
-    login => Inicia sesión 
-
-    register => Registrate
-
+'register' => 'Registrate',
 ];
