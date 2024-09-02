@@ -2,71 +2,60 @@
 
 return 
 [
-    home => home 
-articles => articles
-categories => categories
-hello => hello
-add_Articles => add_Articles
-our_categories => our_categorie
+"accessories" => "Accessories",
+"music" => "Music, movies & television",
+"furniture" => "Furniture",
+"books" => "Books & Comics", 
+"wines" => "Wines",
+"collections" => "Collectibles",
+"clothes" => "Fashion",
+"electronics" => "Electronics & Smartphones",
+"bicycles" => "Bicycles & Electric scooters",
+"sport" => "Sport",
 
-title_carousel => tech & gaming
-undertitle_carousel => discover our new arrivals and latest products
-title_carousel_2 => books & accessories
-undertitle_carousel_2 => you can find everything you need for school and leisure time
-title_carousel_3 => furniture solutions
-undertitle_carousel_3 => Explore our home furnishing & interior design area
+"our_products"=> "Our products",
 
-accessories => accessories
-music => music
-furniture => furniture
-books => books 
-wines => wines
-collections => collections
-clothes => clothes
-electronics => electronics
-bicycles => bicycles
-sport => sport
+"price" => "Price",
 
-our_products=> out_products
+"show_more" => "Show more",
 
-price => price
+"all_articles" => "All articles",
 
-show_more => show_more
+"no_articles" => "There are no articles",
 
-all_articles => all_articles
+"publish" => "Publish",
 
-no_articles => no_articles
+"search" => "Search",
 
-publish => publish
+"revision_area" => "Revision area",
 
-search => search
+"profile" => "Profile",
 
-revision_area => revision_area
+"my_articles" => "My articles",
 
-profile => profile
+"articles_by" => "All articles posted by",
 
-my_articles => my_articles
+"profile_of" => "Profile area",
 
-articles_by => articles_by
+"name" => "Name",
 
-profile_of =>profile_of
+"registered" => "Registered" ,
 
-name => name
+"revisor_area" => "Revisor area",
 
-registered => registered 
+"no_articles_to_revise" => "No articles to be revised",
 
-revisor_area => revisor_area
+"cancel_last" => "Delete last action",
 
-cancel_last => cancel_last
+"reject" => "Reject",
 
-reject => reject
+"accept" => "Accept",
 
-accept => accept
+"go_back" => "Go back",
 
-go_back => go_back
+"login" => "Login",
 
-login => login
+"register" => "Register",
 
-register => register
 
 ];

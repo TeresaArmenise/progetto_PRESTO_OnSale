@@ -2,14 +2,14 @@
 
 return 
 [
-    'home' => 'home',
-    'articles' => 'Artículos',
-    'categories' => 'Categorías',
-    'hello' => 'Hola',
-    'add_Articles' => 'Agrega un artículo',
-    'our_categories' => 'Nuestras categorías',
-    'title_carousel' => 'Soluciones para el hogar',
-    undertitle_carousel => Explora nuestra sección para el hogar
+    "home" => "home",
+    "articles" => "Artículos",
+    "categories" => "Categorías",
+    "hello" => "Hola",
+    "add_Articles" => "Agrega un artículo",
+    "our_categories" => "Nuestras categorías",
+    "title_carousel" => "Soluciones para el hogar",
+    "undertitle_carousel" => "Explora nuestra sección para el hogar",
     title_carousel_2 => Tecnología y Gaming 
     undertitle_carousel_2 => Explora nuestra sección para descubir las últimas novedades 
     title_carousel_3 => Libros y Decoraciones
