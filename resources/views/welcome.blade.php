@@ -12,22 +12,22 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="media\TVAnnuncio.png" alt="First slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
-                    <h5 class="text-dark">SOLUZIONI PER L'ARREDO</h5>
-                    <p class="fst-italic text-dark text-start">Esplora la nostra sezione di arredamente e oggetti di design</p>
+                    <h5 class="text-dark">{{__('ui.title_carousel')}}</h5>
+                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel')}}</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="media\Gaming.webp" alt="Second slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
-                    <h5 class="text-light text-end">TECNOLOGIA E GAMING</h5>
-                    <p class="fst-italic text-light text-end w-100">Esplora la sezione per scopire le ultime novità</p>
+                    <h5 class="text-light text-end">{{__('ui.title_carousel_2')}}</h5>
+                    <p class="fst-italic text-light text-end w-100">{{__('ui.undertitle_carousel_2')}}</p>
                 </div>
             </div>
             <div class="carousel-item ">
                 <img class="d-block w-100" src="media\Annuncio1.png" alt="Third slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
-                    <h5 class="text-dark">LIBRI E OGGETTISTICA</h5>
-                    <p class="fst-italic text-dark text-start">Puoi trovare tutto quello che serve per scuola e tempo libero</p>
+                    <h5 class="text-dark">{{__('ui.title_carousel_3')}}</h5>
+                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_3')}}</p>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
     @auth
     <div class="link-area frame">
         <a href="{{route('create')}}">
-            <button  class="custom-btn btn-11">+ Aggiungi Articolo<div class="dot"></div></button>
+            <button  class="custom-btn btn-11">+ {{__('ui.Add_Art')}}<div class="dot"></div></button>
         </a>
     </div>
     @endauth
@@ -71,7 +71,7 @@
     <div class="container mb-5">
         <div class="row"> 
             <div class="col-12 text-center">
-                <p class="display-6">LE NOSTRE CATEGORIE</p>
+                <p class="display-6">{{__('ui.Our_Cat')}}</p>
             </div>
         </div>
     </div>
@@ -99,7 +99,7 @@
     <div class="container marginCustom">
         <div class="row"> 
             <div class="col-12 text-center">
-                <p class="display-6">I nostri prodotti</p>
+                <p class="display-6">{{__('ui.Our_Prodc')}}</p>
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@
             
             @empty
             <div class="col-6 text-center">
-                <h3>Non sono ancora stati creati articoli</h3>
+                <h3>{{__('ui.No_Art')}}</h3>
             </div>
             @endforelse 
         </div>

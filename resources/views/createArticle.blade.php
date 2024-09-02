@@ -3,7 +3,7 @@
     <div class="container text-center marginCustom mb-5">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-1">Crea Articolo</h1>
+                <h1 class="display-1">{{__('ui.Create_Art')}}</h1>
             </div>
         </div>
     </div>
@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-10 col-md-6 w-100">
-                    <a href="{{route('home')}}"><--Torna indietro</a>
+                    <a href="{{route('home')}}"><-- {{__('ui.Go_Back')}}</a>
                 </div>
             </div>
         </div>

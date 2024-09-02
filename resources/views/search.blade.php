@@ -3,7 +3,7 @@
         <div class="container marginCustom">
             <div class="row"> 
                 <div class="col-12 text-center mb-5">
-                    <h1 class="display-6">Risultati della ricerca:</h1>
+                    <h1 class="display-6">{{__('ui.Results')}}:</h1>
                     <span class="fst-italic fs-2 capitalize">{{ ucfirst($query) }}</span>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 
                 @empty
                 <div class="col-6 text-center">
-                    <h3>Non sono ancora stati creati articoli</h3>
+                    <h3>{{__('ui.No_Art')}}</h3>
                 </div>
                 @endforelse 
             </div>

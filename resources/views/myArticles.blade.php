@@ -4,7 +4,7 @@
         <div class="container marginCustom">
             <div class="row ">
                 <div class="col-12 text-center">
-                    <h1 class="mt-5"> TUTTI GLI ARTICOLI DI <div class="fst-italic colorCustom mt-2">{{Auth::user()->name}}</div> </h1>
+                    <h1 class="mt-5"> {{__('ui.All_Art_of')}} <div class="fst-italic colorCustom mt-2">{{Auth::user()->name}}</div> </h1>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
     <div class="container marginCustom">
         <div class="row text-center">
             <div class="col-12">
-                <h1 class="display-4">Tutti gli articoli</h1>
+                <h1 class="display-4">{{__('ui.All_Art')}}</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
             </div>
             @empty  
             <div class="col-12">
-                <h3>Non sono ancora stati creati articoli</h3>
+                <h3>{{__('ui.No_Art')}}</h3>
             </div>
             @endforelse
             <div class="justify-content-center">

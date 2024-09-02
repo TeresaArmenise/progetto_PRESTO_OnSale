@@ -9,7 +9,7 @@
     </div>
     
     <div class="container marginCustom">
-        <div class="row">
+        <div class="row no-wrap">
             <div class="col-sm-6">
                 {{-- <div id="carousel" class="carouselCustom slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -76,11 +76,11 @@
                     @if($article->images->count() > 1)
                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">{{__("ui.Prev")}}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">{{__("ui.Next")}}</span>
                     </button> 
                     @endif
                 </div>
@@ -108,7 +108,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="col-6 mt-5 text-start">
-                    <a class="btn colorBtn " href="{{route('home')}}">Torna alla home</a>
+                    <a class="btn colorBtn " href="{{route('home')}}">{{__("ui.Return_Home")}}</a>
                 </div>
             </div>
         </div>

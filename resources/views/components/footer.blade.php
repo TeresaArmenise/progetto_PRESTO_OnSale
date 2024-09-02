@@ -8,23 +8,23 @@
     <div class="container d-flex flex-column-reverse justify-content-between px-5 py-5 mx-auto gap-5">
         <div class="d-flex flex-column-reverse align-items-center justify-content-between gap-3">
             <div class="mx-auto text-center text-white">
-                Copyright &copy; 2022, All Rights Reserved to FastTrack-Coders
+                Copyright &copy; 2022, {{__("ui.Copyright")}} FastTrack-Coders
             </div>
         </div>
         <!-- List Container  -->
         <div class="d-flex justify-content-between gap-5 align-items-center fs-4">
             <div class="d-flex justify-content-between gap-5">
                 <div class="d-flex flex-column gap-2 text-white">
-                    <a href="" class="text-decoration-none text-light">Home</a>
-                    <a href="{{route('index')}}" class="text-decoration-none text-light">Articoli</a>
-                    <a href="" class="text-decoration-none text-light">Products</a>
-                    <a href="" class="text-decoration-none text-light">About</a>
+                    <a href="" class="text-decoration-none text-light">{{__('ui.Home')}}</a>
+                    <a href="{{route('index')}}" class="text-decoration-none text-light">{{__('ui.Articles')}}</a>
+                    <a href="" class="text-decoration-none text-light">{{__('ui.Products')}}</a>
+                    <a href="" class="text-decoration-none text-light">{{__('ui.About')}}</a>
                 </div>
                 <div class="d-flex flex-column gap-2 text-white">
-                    <a href="{{route('workwithus')}}" class="text-decoration-none text-light">Lavora con Noi</a> 
+                    <a href="{{route('workwithus')}}" class="text-decoration-none text-light">{{__('ui.Workwithus')}}</a> 
                     {{-- IMPLEMENTARE CON IL CONTACT FORM? --}}
-                    <a href="" class="text-decoration-none text-light">Community</a>
-                    <a href="" class="text-decoration-none text-light">Privacy Policy</a>
+                    <a href="" class="text-decoration-none text-light">{{__('ui.Community')}}</a>
+                    <a href="" class="text-decoration-none text-light">{{__('ui.Privacy')}}</a>
                 </div>
             </div>
 
