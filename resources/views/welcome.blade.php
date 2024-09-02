@@ -68,7 +68,7 @@
     
     {{-- VARIAZIONE  --}}
     
-    <div class="container mb-5">
+    <div class="container my-5">
         <div class="row"> 
             <div class="col-12 text-center">
                 <p class="display-6">{{__('ui.Our_Cat')}}</p>
