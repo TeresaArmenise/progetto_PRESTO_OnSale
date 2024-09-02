@@ -22,7 +22,7 @@
                         @enderror
                         
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label  class="form-label">Prezzo</label>
                         <input type="numeric" class="form-control @error('price') is-invalid @enderror" wire:model.blur="price">
                         

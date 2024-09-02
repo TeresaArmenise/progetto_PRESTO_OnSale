@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0">
     <div class="container-fluid bg-dark custom">
         <div class="pe-5 me-5">
-            <img src=" {{ asset('media/LogoNavBgNone.png') }}" alt="Logo" width="100" class="me-5">
+            <img src=" {{ asset('media/LogoNavBgNone.png') }}" href="{{route('home')}}" alt="Logo" width="100" class="me-5">
         </div>
         {{-- <a class="navbar-brand" href="#">Mouri</a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,9 +18,6 @@
                         </li>
                         <li class="nav-item ps-4 me-5 ">
                             <a class="nav-link" href="{{route('index')}}">Articoli</a>
-                        </li>
-                        <li class="nav-item ps-4 me-5">
-                            <a class="nav-link" href="{{route('workwithus')}}">Lavora con noi</a>
                         </li>
                         <li class="nav-item dropdown paddingDropdown">
                             <div class="text-center">
@@ -67,6 +64,10 @@
                     @endif
                     <a href="{{route('profile')}}">Profilo</a>
                     <a href="{{route('myArticles')}}">I miei articoli</a>
+                    
+                    {{-- @if (Auth::user()->is_admin) --}}
+                    {{-- DA IMPLEMENTARE  --}}
+                    
                     <form action="{{route('logout')}}" method="POST">
                         @csrf
                         <div class="text-center">
@@ -76,11 +77,16 @@
                 </div>
             </div>
         </div>
-        
-        {{-- <div> --}}
-            
-            
-            {{-- </div> --}}
-            @endguest
+            @endguest   
+            <div class="dropdown">
+                <div class="text-end mx-0">
+                    <a class="dropbtn text-decoration-none dropdown-toggle"><x-_locale lang="it" /></a>
+                    <div class="dropdown-content">
+                        <x-_locale lang="en" />
+                        <x-_locale lang="es" />
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>

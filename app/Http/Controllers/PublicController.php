@@ -33,4 +33,9 @@ class PublicController extends Controller
         $articles = Article::where('user_id', $user->id)->orderBy('created_at','desc')->get();
         return view('auth/profile', compact('user','articles'));    
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

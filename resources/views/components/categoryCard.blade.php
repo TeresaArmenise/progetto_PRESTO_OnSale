@@ -1,5 +1,5 @@
 <div class="card-container my-3">
-    <div class="card-header">
+    <div class="card-header py-3 fs-6">
         {{ $category->name }}
     </div>
     <a href="{{ route('byCategory', $category->id) }}">

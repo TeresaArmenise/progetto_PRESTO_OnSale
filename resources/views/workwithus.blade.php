@@ -18,19 +18,21 @@
                     @csrf
                     <div>
                         <label for="name">Nome</label>
-                        <input class="form-control" type="text" name="name" id="name" required>
+                        <input class="form-control" type="text" value="{{Auth::user()->name}}" disabled>
+                        <input class="form-control d-none" type="text" name="name" value="{{Auth::user()->name}}">
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input class="form-control" type="email" name="email" id="email" required>
+                        <input class="form-control" type="email" value="{{Auth::user()->email}}" disabled>
+                        <input class="form-control d-none" type="email" name="email" value="{{Auth::user()->email}}">
                     </div>
                     <div>
                         <label for="phone">Telefono</label>
-                        <input class="form-control" type="text" name="phone" id="phone" required>
+                        <input class="form-control" type="text" name="phone" required>
                     </div>
                     <div>
                         <label for="cv">Carica il CV</label>
-                        <input class="form-control" type="file" name="cv" id="cv" required>
+                        <input class="form-control" type="file" name="cv" required>
                     </div>
                     <div class="text-center">
                         <a href="{{route('home')}}" class="btn text-decoration-none bg-dark text-light Indietro"> Indietro </a>

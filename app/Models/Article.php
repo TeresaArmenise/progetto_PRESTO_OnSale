@@ -31,6 +31,10 @@ class Article extends Model
         }
     }
 
+    public function getCreationTime(){
+        return $this->created_at->format('d/m/Y');
+    }
+
     public function setAccepted($value){
         $this->is_accepted = $value;
         $this->save();

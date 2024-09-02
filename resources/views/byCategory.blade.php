@@ -3,7 +3,7 @@
     <x-nav/>
     <div class="container marginCustom">
         <div class="row text-center">
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <h1>{{$category->name}}</h1>
             </div>
             @forelse ($articles as $article)
@@ -17,7 +17,7 @@
             </div>
             @auth
             <div class="col-6 mt-5 mx-auto">
-                <a class="btn colorBtn" href="{{route('create')}}">Pubblica il tuo articolo</a>
+                <a class="btn colorBtn" href="{{route('create')}}">+ Aggiungi articolo</a>
             </div>
             @endauth
             @endforelse 

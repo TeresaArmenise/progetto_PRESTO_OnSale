@@ -56,13 +56,14 @@ class RevisorController extends Controller
         $phone = $request->phone;
         $cv = $request->file('cv')->store('public/allegati');
         $user = compact('email', 'name', 'phone', 'cv');
-        /* dd($user); */
+
         try {
             // Invia l'email all'amministratore
             Mail::to('giam2510@gmail.com')->send(new BecomeRevisor($user));
+            Mail::to('barbaronico93@gmail.com')->send(new BecomeRevisor($user));
+
+            //!! Creare mail per utente candidato
             
-            // Invia l'email all'utente che ha compilato il form
-            /* Mail::to($email)->send(new BecomeRevisor($user)); */
     
             // Esegui il comando per rendere l'utente un revisore
             Artisan::call('app:make-user-revisor', [

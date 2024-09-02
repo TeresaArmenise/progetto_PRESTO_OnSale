@@ -81,7 +81,7 @@
     <div class="container">
         <div class="row justify-content-evenly">  
             @foreach ($categories as $category)
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-2 mx-3">
                 
                 <x-categoryCard 
                 :category="$category"

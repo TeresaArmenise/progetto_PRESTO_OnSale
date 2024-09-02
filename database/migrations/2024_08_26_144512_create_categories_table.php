@@ -66,14 +66,14 @@ return new class extends Migration
                 "img4" => "abblibvincollez/collection.jpg",
             ],
             [
-                "name" => "Abbigliamento e second-hand",
+                "name" => "Abbigliamento",
                 "img1" => "abblibvincollez/jeans.jpg",
                 "img2" => "abblibvincollez/felpa.webp",
                 "img3" => "abblibvincollez/jeans.webp",
                 "img4" => "abblibvincollez/maglia.webp",
             ],
             [
-                "name" => "Elettronica e Smartphone",
+                "name" => "Elettronica",
                 "img1" => "elebicsport/phone.jpg",
                 "img2" => "elebicsport/pc.jpg",
                 "img3" => "elebicsport/pad.jpg",

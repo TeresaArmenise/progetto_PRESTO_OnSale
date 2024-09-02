@@ -7,9 +7,19 @@
                     <h1 class="text-light">Area del revisore</h1>
                 </div>
             </div>
-            <div class="col-12 text-center ps-5 pe-4">
-                <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> Annulla l'ultima azione </button>
-        </div>
+            @if ($article_revisioned)
+            <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
+                @csrf
+                @method('PATCH')
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 text-center ps-5 pe-4 mb-5">
+                            <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> Annulla l'ultima azione </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            @endif  
         </div>
     </div>
     @if (session()->has('message'))
@@ -47,7 +57,8 @@
         <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
             <div>
                 <h1>{{$article_to_check->title}}</h1>
-                <h3>Atutore: {{$article_to_check->user->name}}</h3>
+                <h3>Autore: {{$article_to_check->user->name}}</h3>
+                <h4>Articolo creato il: {{$article_to_check->getCreationTime()}}</h4>
                 <h4>{{$article_to_check->price}} €</h4>
                 <h4 class="fst-italic text-muted">#{{$article_to_check->category->name}}</h4>
                 <p class="h6">{{$article_to_check->description}}</p>
@@ -67,7 +78,7 @@
         </div>
     </div>
     @endif
-
+    
     @if (!$article_to_check)
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
@@ -77,10 +88,6 @@
         </div>
     </div>
     @endif
-    @if ($article_revisioned)
-    <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
-        @csrf
-        @method('PATCH')
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-center mt-5 ps-5">
@@ -88,8 +95,6 @@
                 </div>
             </div>
         </div>
-    </form>
-    @endif
 </div>
 
 </x-layout>

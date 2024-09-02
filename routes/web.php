@@ -24,3 +24,5 @@ Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo'
 Route::get('/I-miei-articoli', [ArticleController::class, 'myArticles'])->name('myArticles');
 
 Route::get('/Profile', [PublicController::class, 'profile'])->middleware('auth')->name('profile');
+
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
