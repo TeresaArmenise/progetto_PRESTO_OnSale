@@ -77,8 +77,6 @@ return
 'undertitle_carousel_2' => 'Esplora la sezione per scoprire le ultime novità',
 
 'title_carousel_3' => 'Libri e oggettistica',
-'undertitle_carousel_3' => 'Puoi trovare tutto quello che serve per scuola e tempo libero
-
-',
+'undertitle_carousel_3' => 'Puoi trovare tutto quello che serve per scuola e tempo libero',
 
 ];
