@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0">
     <div class="container-fluid bg-dark custom">
         <div class="pe-5 me-5">
-            <img src=" {{ asset('media/LogoNavBgNone.png') }}" href="{{route('home')}}" alt="Logo" width="100" class="me-5">
+            <a href="{{route('home')}}">
+            <img src="{{ asset('media/LogoNavBgNone.png') }}" alt="Logo" width="100" class="me-5">
+            </a>
         </div>
         {{-- <a class="navbar-brand" href="#">Mouri</a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
