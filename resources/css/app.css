@@ -196,18 +196,6 @@ button {
 
 /* NAVBAR  */
 
-.custom{
-	background-color: none !important;
-}
-
-ol{
-	list-style: none !important;
-}
-
-#carouselExampleIndicators{
-	/* margin-bottom: 2vh; */
-}
-
 .hover:hover{
 	color: red !important;
 }
