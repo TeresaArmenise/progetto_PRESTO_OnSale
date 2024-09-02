@@ -13,11 +13,11 @@
             
             @empty
             <div class="col-12 mt-5">
-                <h3>Non sono ancora stati creati articoli</h3>
+                <h3>{{__('ui.No_Art')}}</h3>
             </div>
             @auth
             <div class="col-6 mt-5 mx-auto">
-                <a class="btn colorBtn" href="{{route('create')}}">+ Aggiungi articolo</a>
+                <a class="btn colorBtn" href="{{route('create')}}">+ {{__('ui.Add_Art')}}</a>
             </div>
             @endauth
             @endforelse 

@@ -2,60 +2,83 @@
 
 return 
 [
-"accessories" => "Accessories",
-"music" => "Music, movies & television",
-"furniture" => "Furniture",
-"books" => "Books & Comics", 
-"wines" => "Wines",
-"collections" => "Collectibles",
-"clothes" => "Fashion",
-"electronics" => "Electronics & Smartphones",
-"bicycles" => "Bicycles & Electric scooters",
-"sport" => "Sport",
 
-"our_products"=> "Our products",
+//NAVBAR
+"Home" => "Home",
+"Categories" => "Categories",
+"Hello" => "Hello",
+"Access" => "Access",
+"Register" => "Register",
+"logout" => "Logout",
+"My_articles" => "My articles",
+"Profile" => "Profile",
+"Search" => "Search",
+"revision_area" => "Revision Zone",
 
-"price" => "Price",
-
-"show_more" => "Show more",
-
-"all_articles" => "All articles",
-
-"no_articles" => "There are no articles",
-
-"publish" => "Publish",
-
-"search" => "Search",
-
-"revision_area" => "Revision area",
-
-"profile" => "Profile",
-
-"my_articles" => "My articles",
-
-"articles_by" => "All articles posted by",
-
-"profile_of" => "Profile area",
-
-"name" => "Name",
-
-"registered" => "Registered" ,
+//FOOTER 
+"Products" => "Products",
+"About" => "About",
+"Workwithus" => "Work with us",
+"Community" => "Community",
+"Privacy" => "Privacy Policy",
+"Copyright" => "All rights reserved to",
 
 "revisor_area" => "Revisor area",
+"All_Products" => "See all products",
 
-"no_articles_to_revise" => "No articles to be revised",
+"Results" => "Search results",
+"Our_Prodc" => "OUR PRODUCTS",
 
-"cancel_last" => "Delete last action",
 
-"reject" => "Reject",
+//ARTICLES
+"Articles" => "Articles",
+"Title_Art" => "Article title",
+"Article_in_rev" => "Article in revision",
+"Article_rej" => "Article rejected",
+"Article_app" => "Article approved",
+"All_Art" => "All articles",
+"All_Art_of" => "All articles of",
+"Create_Art" => "Create an Article",
+"Created_Date" => "Article created",
+"No_Art_to_check" => "No articles to check",
+"Add_Art" => "Add Article",
+"No_Art" => "There are no articles yet",
 
-"accept" => "Accept",
+//INFO CARDS
+"Price" => "Price",
+"Author" => "Author",
+"Details" => "Details",
 
-"go_back" => "Go back",
 
-"login" => "Login",
+//CATEGORIES
+"Our_Cat" => "OUR CATEGORIES",
+"Select_Cat" => "Select a category",
 
-"register" => "Register",
 
+//FORMS 
+"Name" => "Name",
+"Tlf" => "Telephone",
+"Load_CV" => "Load your CV",
+"Description" => "Description",
+
+//BUTTONS 
+"Reject" => "Reject",
+"Accept" => "Accept",
+"Prev" => "Previous",
+"Next" => "Next",
+"Return_Home" => "Return Home",
+"Go_Back" => "Go back",
+"Send" => "Send",
+'cancel_last' => 'Cancel last modification',
+
+//CAROUSEL
+'title_carousel' => 'Furniture Solutions',
+'undertitle_carousel' => 'Explora our home furnishing & interior design section',
+
+'title_carousel_2' => 'Tech & Gaming', 
+'undertitle_carousel_2' => 'Discover our new arrivals and latest products',
+
+'title_carousel_3' => 'Books & Accesories',
+'undertitle_carousel_3' => 'You can find everything you need for school and leisure time',
 
 ];

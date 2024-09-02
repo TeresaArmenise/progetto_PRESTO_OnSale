@@ -4,7 +4,7 @@
         <div class="row px-5">
             <div class="col-12 text-center mb-5">
                 <div class="rounded shadow bg-dark mt-5">
-                    <h1 class="text-light">Area del revisore</h1>
+                    <h1 class="text-light">{{__('ui.revisor_area')}}</h1>
                 </div>
             </div>
             @if ($article_revisioned)
@@ -14,7 +14,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 text-center ps-5 pe-4 mb-5">
-                            <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> Annulla l'ultima azione </button>
+                            <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> {{__('ui.cancel_last')}} </button>
                         </div>
                     </div>
                 </div>
@@ -57,8 +57,8 @@
         <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
             <div>
                 <h1>{{$article_to_check->title}}</h1>
-                <h3>Autore: {{$article_to_check->user->name}}</h3>
-                <h4>Articolo creato il: {{$article_to_check->getCreationTime()}}</h4>
+                <h3>{{__('ui.Author')}}: {{$article_to_check->user->name}}</h3>
+                <h4>{{__('ui.Created_Date')}}: {{$article_to_check->getCreationTime()}}</h4>
                 <h4>{{$article_to_check->price}} €</h4>
                 <h4 class="fst-italic text-muted">#{{$article_to_check->category->name}}</h4>
                 <p class="h6">{{$article_to_check->description}}</p>
@@ -67,12 +67,12 @@
                 <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btn-danger py-3 px-3 fw-bold">Rifiuta</button>
+                    <button class="btn btn-danger py-3 px-3 fw-bold">{{__('ui.Reject')}}</button>
                 </form>
                 <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btn-success py-3 px-3 fw-bold">Accetta</button>
+                    <button class="btn btn-success py-3 px-3 fw-bold">{{__('ui.Accept')}}</button>
                 </form>
             </div>
         </div>
@@ -83,7 +83,7 @@
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
             <h1 class="fst-italic display-4 marginCustom">
-                Nessun articolo da revisionare
+                {{__('ui.No_Art_to_check')}}
             </h1>
         </div>
     </div>
@@ -91,7 +91,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-center mt-5 ps-5">
-                    <a href="{{route('home')}}" class="my-5 btn colorBtn p-3 px-4">Torna all'homepage</a>
+                    <a href="{{route('home')}}" class="my-5 btn colorBtn p-3 px-4">{{__('ui.Return_Home')}}</a>
                 </div>
             </div>
         </div>

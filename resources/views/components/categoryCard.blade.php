@@ -10,6 +10,6 @@
         <img src="{{ asset($category->img4) }}" alt="Img categoria {{ $category->name }}">
     </div>
     <div class="card-footer">
-        Vedi tutti i prodotti</a>
+        {{__('ui.All_Products')}}</a>
     </div>
 </div>
