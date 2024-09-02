@@ -36,7 +36,7 @@
                             <option class="fst-italic text-secondary" label value="">{{__('ui.Select_Cat')}}</option>
                             
                             @foreach ($categories as $cat)
-                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                            <option value="{{$cat->id}}"> {{__("ui.$cat->name")}}</option>
                             @endforeach
 
                         </select>

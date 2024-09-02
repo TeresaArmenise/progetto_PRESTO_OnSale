@@ -1,6 +1,6 @@
 <div class="card-container my-3">
     <div class="card-header py-3 fs-6">
-        {{ $category->name }}
+        {{__("ui.$category->name")}}
     </div>
     <a href="{{ route('byCategory', $category->id) }}">
     <div class="card-grid">

@@ -25,7 +25,7 @@
                                 <a class="dropbtn text-decoration-none dropdown-toggle">{{__('ui.Categories')}}</a>
                                 <div class="dropdown-content marginDropdown">
                                     @foreach ($categories as $category)
-                                    <a class="px-4 py-2" href="{{route('byCategory', ['category'=> $category])}}">{{$category->name}}</a>
+                                    <a class="px-4 py-2" href="{{route('byCategory', ['category'=> $category])}}"> {{__("ui.$category->name")}} </a>
                                     @if (!$loop->last)
                                     <hr class="dropdown-divider">
                                     @endif

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Migrations\Migration;
+
 return 
 [
 //NAVBAR
@@ -52,6 +54,16 @@ return
 //CATEGORIES
 "Our_Cat" => "LE NOSTRE CATEGORIE",
 "Select_Cat" => "Seleziona una categoria",
+"Oggettistica" => "Oggettistica",
+"Musica, Film e TV" => "Musica, Film e TV",
+"Arredamento" => "Arredamento",
+"Libri e Fumetti" => "Libri e Fumetti",
+"Vini" => "Vini",
+"Collezionismo" => "Collezionismo",
+"Abbigliamento" => "Abbigliamento",
+"Elettronica" => "Elettronica",
+"Biciclette e Monopattini" => "Biciclette e Monopattini",
+"Sport e Tempo Libero" => "Sport e Tempo Libero",
 
 //FORMS 
 "Name" => "Nome",

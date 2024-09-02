@@ -53,7 +53,16 @@ return
 //CATEGORIES
 "Our_Cat" => "OUR CATEGORIES",
 "Select_Cat" => "Select a category",
-
+"Oggettistica" => "Accesories",
+"Musica, Film e TV" => "Music, Film & TV",
+"Arredamento" => "Furniture",
+"Libri e Fumetti" => "Books and Comics",
+"Vini" => "Wines",
+"Collezionismo" => "Collections",
+"Abbigliamento" => "Clothes",
+"Elettronica" => "Electronics",
+"Biciclette e Monopattini" => "Bicycles and Scooters",
+"Sport e Tempo Libero" => "Sport & Leisure",
 
 //FORMS 
 "Name" => "Name",

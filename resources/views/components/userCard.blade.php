@@ -3,7 +3,8 @@
     <div class="card-body text-center">
       <h5 class="card-title bold">{{$article->title}}</h5>
       <h6 class="card-text">{{__('ui.Price')}}: {{$article->price}} €</h6>
-      <a href="{{route('byCategory', ['category'=> $article->category])}}" class="text-decoration-none small">{{$article->category['name']}}</a>
+      <a href="{{route('byCategory', ['category'=> $article->category])}}" class="text-decoration-none small"> 
+        {{$article->category['name']}} {{-- {{__("ui.$article->category['name']")}} --}} </a>
       <p class="card-text small">{{$article->getSubstring()}}</p>
       
         @if($article['is_accepted']===null) 
