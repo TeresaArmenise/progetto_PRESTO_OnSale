@@ -1,7 +1,7 @@
 <x-layout>
     
     <x-nav />
-    @dump($revisors)
+
     <div class="container marginCustom">
         <div class="row">
             <div class="col-12 text-center my-5">
