@@ -9,7 +9,7 @@
     </div>
     
     <div class="container marginCustom">
-        <div class="row">
+        <div class="row no-wrap">
             <div class="col-sm-6">
                 {{-- <div id="carousel" class="carouselCustom slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -64,29 +64,29 @@
                     </div> 
                 </div> --}}
                 
+                @if($article->images->count() > 0)
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/900" class="d-block w-100" alt="...">
+                        @foreach($article->images as $key => $image)
+                        <div class="carousel-item active @if($loop->first) active @endif">
+                            <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/901" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/902" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/903" class="d-block w-100" alt="...">
-                        </div>
+                        @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    @if($article->images->count() > 1)
+                       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">{{__("ui.Prev")}}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">{{__("ui.Next")}}</span>
-                    </button>
+                    </button> 
+                    @endif
+                </div>
+                    @else
+                    <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
+                    @endif
                 </div>
                 
                 

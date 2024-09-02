@@ -31,12 +31,13 @@
                         @enderror
                         
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
+                        <label  class="form-label">Categoria</label>
                         <select id="category"  class="form-control @error('category') is-invalid @enderror" wire:model.blur="category">
                             <option class="fst-italic text-secondary" label value="">{{__('ui.Select_Cat')}}</option>
                             
                             @foreach ($categories as $cat)
-                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                            <option value="{{$cat->id}}"> {{__("ui.$cat->name")}}</option>
                             @endforeach
 
                         </select>
@@ -45,9 +46,36 @@
                         @enderror
                         
                     </div>
+                    <div class="mb-4">
+                        <label  class="form-label">Immagini</label>
+                        <input type="file" wire:model.live="temporary_images" multiple class="form-control @error('temporary_images . *') is-invalid @enderror" placeholder="Img/" >
+                        @error('temporary_images . *')
+                        <p class="fst-italic text-danger">{{$message}}</p>
+                        @enderror
+                        @error ('temporary_images')
+                        <p class="fst-italic text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                @if (!empty($images))
+                <div class="row">
+                    <div class="col-12">
+                        <p>Photo preview:</p>
+                        <div class="row border border-4 border-success rounded shadow py-4">
+                            @foreach ($images as $key=> $image)
+                            <div class="col d-flex flex-column align-items-center my-3">
+                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
+                                </div> 
+                                <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})"> X </button>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                @endif
                     <div class="my-5 text-center">
                         <button type="submit" class="btn btn-outline-primary">{{__('ui.Add_Art')}}</button>
                     </div>
+                   
                 </form>
             </div>
         </div>

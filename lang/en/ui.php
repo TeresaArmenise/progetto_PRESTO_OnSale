@@ -7,13 +7,13 @@ return
 "Home" => "Home",
 "Categories" => "Categories",
 "Hello" => "Hello",
-"Access" => "Access",
+"Access" => "Login",
 "Register" => "Register",
 "logout" => "Logout",
 "My_articles" => "My articles",
 "Profile" => "Profile",
 "Search" => "Search",
-"revision_area" => "Revision Zone",
+"revision_area" => "Revision area",
 
 //FOOTER 
 "Products" => "Products",
@@ -53,7 +53,16 @@ return
 //CATEGORIES
 "Our_Cat" => "OUR CATEGORIES",
 "Select_Cat" => "Select a category",
-
+"Oggettistica" => "Accessories",
+"Musica, Film e TV" => "Music, Movies & TV",
+"Arredamento" => "Furniture",
+"Libri e Fumetti" => "Books and Comics",
+"Vini" => "Wines",
+"Collezionismo" => "Collectibles",
+"Abbigliamento" => "Fashion",
+"Elettronica" => "Electronics",
+"Biciclette e Monopattini" => "Bicycles and scooters",
+"Sport e Tempo Libero" => "Sport & Leisure",
 
 //FORMS 
 "Name" => "Name",
@@ -73,7 +82,7 @@ return
 
 //CAROUSEL
 'title_carousel' => 'Furniture Solutions',
-'undertitle_carousel' => 'Explora our home furnishing & interior design section',
+'undertitle_carousel' => 'Explore our home furnishing & interior design section',
 
 'title_carousel_2' => 'Tech & Gaming', 
 'undertitle_carousel_2' => 'Discover our new arrivals and latest products',

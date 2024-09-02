@@ -425,3 +425,14 @@ button {
 .card-footer a:hover {
 	text-decoration: underline;
 }
+
+/* preview delle immagini */
+
+.img-preview {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 120px;
+	height: 120px;
+	
+}
