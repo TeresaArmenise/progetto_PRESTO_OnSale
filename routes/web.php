@@ -26,3 +26,5 @@ Route::get('/I-miei-articoli', [ArticleController::class, 'myArticles'])->name('
 Route::get('/Profile', [PublicController::class, 'profile'])->middleware('auth')->name('profile');
 
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+Route::get('/admin-Area', [PublicController::class, 'adminArea'])->middleware('auth')->name('adminArea');

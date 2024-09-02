@@ -16,6 +16,7 @@ return
 "title_carousel_3" => "Soluzioni per l'arredo",
 "undertitle_carousel_3" => "Esplora la nostra sezione di arredamento e oggetti di design",
 
+
 "accessories" => "Oggettistica",
 "music" => "Musica, Film e TV",
 "furniture" => "Arredamento",
