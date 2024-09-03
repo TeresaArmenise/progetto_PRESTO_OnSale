@@ -18,7 +18,7 @@ return
 "email" => "E-mail",
 "password" => "Password",
 "conf_pass" => "Confirm password",
-"prof_of" => "PROFILO DI",
+"prof_of" => "PROFILE OF",
 "Registered" => "Registered by",
 "All_Products" => "See all products",
 "Results" => "Search results",

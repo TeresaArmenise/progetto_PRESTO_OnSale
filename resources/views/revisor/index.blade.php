@@ -7,6 +7,9 @@
                     <h1 class="text-light">{{__('ui.revisor_area')}}</h1>
                 </div>
             </div>
+
+            {{-- IF PER ANNULLA ULTIMA OPERAZIONE  --}}
+
             @if ($article_revisioned)
             <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
                 @csrf
@@ -22,6 +25,8 @@
             @endif  
         </div>
     </div>
+
+    {{-- IF MESSAGGI IN INDEX  --}}
 
     @if (session()->has('message'))
     <div class="row justify-content-center">
@@ -45,20 +50,22 @@
     </div>
     @endif
     
+    {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
+
     @if ($article_to_check)
-    @if ($article_to_check->images->count())
-        @foreach ($article_to_check->images as $key=>$image)
-        <div class="col-6 col-md-4 mb-4">
-            <img src="{{ $image->getUrl(300, 300)}}" class="img-fluid rounded shadow" alt="Immagine{{$key +1 }} dell'articolo {{$article_to_check->title}}">
-        </div>
-        @endforeach
+        @if ($article_to_check->images->count())
+            @foreach ($article_to_check->images as $key=>$image)
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{{ $image->getUrl(300, 300)}}" class="img-fluid rounded shadow" alt="Immagine{{$key +1 }} dell'articolo {{$article_to_check->title}}">
+            </div>
+            @endforeach
         @else
-        @for ($i = 0; $i < 1; $i++)
-        <div class="col-6 ocl-md-4 mb-4 text-center">
-            <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
-        </div>
-        @endfor
-    @endif
+            @for ($i = 0; $i < 1; $i++)
+            <div class="col-6 coll-md-4 mb-4 text-center">
+                <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
+            </div>
+            @endfor
+        @endif
         <div class="row justify-content-end marginCustom">
             <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
                 <div>
@@ -83,8 +90,10 @@
                 </div>
             </div>
         </div>
-    @else
+
+    {{-- SE NON CI SONO ARTICOLI DA VERIFICARE  --}}
     
+    @else
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
             <h1 class="fst-italic display-4 marginCustom">
