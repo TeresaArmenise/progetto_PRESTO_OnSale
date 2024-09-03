@@ -3,7 +3,7 @@
   <div class="card-body text-center">
     <h5 class="card-title bold">{{$article->title}}</h5>
     <h6 class="card-text">{{__('ui.Price')}}: {{$article->price}} €</h6>
-    <a href="{{route('byCategory', ['category'=> $article->category])}}" class="text-decoration-none small">{{$article->category['name']}}</a>
+    <a href="{{route('byCategory', ['category'=> $article->category])}}" class="text-decoration-none small">{{__("ui.".$article->category->name)}}</a>
     <p class="card-text small">{{$article->getSubstring()}}</p>
     <div class="text-center">
       <a href="{{route('show', compact('article'))}}" class="btn rounded-pill colorBtn">{{__('ui.Details')}}</a>

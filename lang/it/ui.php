@@ -4,17 +4,27 @@ use Illuminate\Database\Migrations\Migration;
 
 return 
 [
-//NAVBAR
+//NAVBAR & HOME
 "Home" => "Home",
 "Categories" => "Categorie",
 "Hello" => "Ciao",
 "Access" => "Accedi",
+"username" => "Nome utente",
 "Register" => "Registrati",
 "logout" => "Logout",
-"My_articles" => "Miei Articoli",
+"My_articles" => "I Miei Articoli",
 "Profile" => "Profilo",
 "Search" => "Cerca",
 "revision_area" => "Area Revisione",
+"email" => "Indirizzo email",
+"password" => "Password",
+"prof_of" => "PROFILE OF",
+"Registered" => "Registrato il",
+"revisor_area" => "Area del revisore",
+"All_Products" => "Tutti i prodotti",
+"Results" => "Risultati della ricerca",
+"Our_Prodc" => "I NOSTRI PRODOTTI",
+
 
 //FOOTER 
 "Products" => "Prodotti",
@@ -24,11 +34,19 @@ return
 "Privacy" => "Privacy e Politica",
 "Copyright" => "Tutti i diritti riservati a",
 
-"revisor_area" => "Area del revisore",
-"All_Products" => "Tutti i prodotti",
 
-"Results" => "Risultati della ricerca",
-"Our_Prodc" => "NOSTRI PRODOTTI",
+//ADMIN
+"Rev_app" => "Applicazioni del revisor",
+"App_Rej" => "Articoli approvati e rifiutati",
+"State" => "Stato",
+"Acc" => "Accettato",
+"Rej" => "Rifiutato",
+"Rev" => "In revisione",
+"Act" => "Azione",
+"Acts" => "Azioni",
+"Handle" => "Gestiona",
+"Title" => "Titolo",
+
 
 
 //ARTICLES
@@ -44,6 +62,7 @@ return
 "No_Art_to_check" => "Non ci sono articoli da revisionare",
 "Add_Art" => "Aggiungi Articolo",
 "No_Art" => "Non ci sono articoli ancora",
+
 
 //INFO CARDS
 "Price" => "Prezzo",

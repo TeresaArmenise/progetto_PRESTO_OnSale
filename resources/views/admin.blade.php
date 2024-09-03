@@ -22,17 +22,17 @@
 
             {{-- TABELLA PER GLI APPLICANTS REVISORI --}}
             <div class="col-12 text-center my-5">
-                <h1 class="display-6 my-5">Richieste per diventare revisore</h1>
+                <h1 class="display-6 my-5">{{__("ui.Rev_app")}}</h1>
             </div>
             <div class="col-12"> 
                 <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Data creazione</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">{{__("ui.Name")}}</th>
+                            <th scope="col">{{__("ui.email")}}</th>
+                            <th scope="col">{{__("ui.Handle")}}</th>
+                            <th scope="col">{{__("ui.Acts")}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,7 +94,7 @@
         <div class="row">
             {{-- TABELLA ARTICOLI APPROVATI E RIFIUTATI  --}}
             <div class="col-12 text-center my-5">
-                <h1 class="display-6 my-5">Articoli approvati e rifiutati</h1>
+                <h1 class="display-6 my-5">{{__("ui.App_Rej")}}</h1>
             </div>
             <div class="col-12">
                 <table class="table">
@@ -102,11 +102,11 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">A</th>
-                            <th scope="col">Titolo</th>
-                            <th scope="col">Descrizione</th>
-                            <th scope="col">Prezzo</th>
-                            <th scope="col">Stato</th>
-                            <th scope="col">Azione</th>
+                            <th scope="col">{{__("ui.Title")}}</th>
+                            <th scope="col">{{__("ui.Description")}}</th>
+                            <th scope="col">{{__("ui.Price")}}</th>
+                            <th scope="col">{{__("ui.State")}}</th>
+                            <th scope="col">{{__("ui.Act")}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -119,23 +119,23 @@
                             <td>{{$article->description}}</td>
                             <td>€ {{$article->price}}</td>
                             @if($article['is_accepted']===null) 
-                            <td>In revisione</td>
+                            <td>{{__("ui.Rev")}}</td>
                             @elseif($article['is_accepted']==false)
-                            <td>Rifiutato</td>
+                            <td>{{__("ui.Rej")}}</td>
                             @else 
-                            <td>Accettato</td>
+                            <td>{{__("ui.Acc")}}</td>
                             @endif
                             <td>   
                                 <form action="{{route('undo', ['article' => $article])}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-12 text-center ps-5 pe-4 mb-5">
-                                            <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> {{__('ui.cancel_last')}} </button>
+                                    @csrf
+                                    @method('PATCH')
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 text-center ps-5 pe-4 mb-5">
+                                                <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> {{__('ui.cancel_last')}} </button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 </form>
                             </td>
                         </tr>    
@@ -145,6 +145,5 @@
             </div>
         </div>
     </div>
-    
     
 </x-layout>
