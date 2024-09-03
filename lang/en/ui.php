@@ -17,6 +17,7 @@ return
 "revision_area" => "Revision area",
 "email" => "E-mail",
 "password" => "Password",
+"conf_pass" => "Confirm password",
 "prof_of" => "PROFILO DI",
 "Registered" => "Registered by",
 "All_Products" => "See all products",

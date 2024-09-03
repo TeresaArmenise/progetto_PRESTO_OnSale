@@ -18,6 +18,7 @@ return
 "revision_area" => "Area Revisione",
 "email" => "Indirizzo email",
 "password" => "Password",
+"conf_pass" => "Confirma la password",
 "prof_of" => "PROFILE OF",
 "Registered" => "Registrato il",
 "revisor_area" => "Area del revisore",
