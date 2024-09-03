@@ -74,7 +74,7 @@
                         @endforeach
                     </div>
                     @if($article->images->count() > 1)
-                       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">{{__("ui.Prev")}}</span>
                     </button>
@@ -84,35 +84,35 @@
                     </button> 
                     @endif
                 </div>
-                    @else
-                    <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
-                    @endif
-                </div>
-                
-                
-            </div> 
+                @else
+                <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
+                @endif
+            </div>
             
             
+        </div> 
+        
+        
+        
+        <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
+            <h2>{{$article->title}}</h2>
+            <h4>{{$article->category['name']}}</h4>
+            <p>{{$article->description}}</p>
+            <p>€ {{$article->price}}</p>
             
-            <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
-                <h2>{{$article->title}}</h2>
-                <h4>{{$article->category['name']}}</h4>
-                <p>{{$article->description}}</p>
-                <p>€ {{$article->price}}</p>
-                
-            </div> <!-- /col-sm-6 -->
-        </div> <!-- /row -->
-    </div> <!-- /container -->
+        </div> <!-- /col-sm-6 -->
+    </div> <!-- /row -->
+</div> <!-- /container -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <div class="col-6 mt-5 text-start">
-                    <a class="btn colorBtn " href="{{route('home')}}">{{__("ui.Return_Home")}}</a>
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="col-6 mt-5 text-start">
+                <a class="btn colorBtn " href="{{route('home')}}">{{__("ui.Return_Home")}}</a>
             </div>
         </div>
     </div>
-    
+</div>
+
 
 </x-layout>
