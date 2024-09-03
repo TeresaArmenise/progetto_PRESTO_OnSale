@@ -16,7 +16,7 @@ Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('i
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::get('/workwithus/revisor', [RevisorController::class, 'WorkWithUs'])->middleware('auth')->name('workwithus');
-Route::post('/workwithus/submit', [RevisorController::class, 'becomeRevisor'])->name('submit');
+
 
 Route::get('/Search/Article', [PublicController::class, 'search'])->name('search');
 Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo');
@@ -28,3 +28,9 @@ Route::get('/Profile', [PublicController::class, 'profile'])->middleware('auth')
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
 Route::get('/admin-Area', [PublicController::class, 'adminArea'])->middleware('auth')->name('adminArea');
+
+
+Route::post('/workwithus/submit', [RevisorController::class, 'AskTobecomeRevisor'])->name('submit');
+Route::post('/Admin_Area/approve/{email}', [PublicController::class, 'approveRevisor'])->name('approveRevisor');
+
+Route::patch('/Admin_Area/declassa/{revisor}', [PublicController::class, 'downgrade'])->name('downgrade');

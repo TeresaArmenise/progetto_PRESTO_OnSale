@@ -51,4 +51,10 @@ class User extends Authenticatable
     public function articles(): HasMany{
         return $this->hasMany(Article::class);
     }
+
+    public function downgradeRevisor($value){
+        $this->is_revisor = $value;
+        $this->save();
+        return true;
+    }
 }
