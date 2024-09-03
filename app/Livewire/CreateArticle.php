@@ -42,7 +42,7 @@ class CreateArticle extends Component
             'price' => $this->price,
             'category_id' => $this->category,
             'user_id'=> Auth::id()
-           
+        
 
         ]);
         /*  $this->cleanForm(); */
