@@ -7,6 +7,9 @@
                     <h1 class="text-light">{{__('ui.revisor_area')}}</h1>
                 </div>
             </div>
+
+            {{-- IF PER ANNULLA ULTIMA OPERAZIONE  --}}
+
             @if ($article_revisioned)
             <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
                 @csrf
@@ -22,6 +25,8 @@
             @endif  
         </div>
     </div>
+
+    {{-- IF MESSAGGI IN INDEX  --}}
 
     @if (session()->has('message'))
     <div class="row justify-content-center">
@@ -45,6 +50,8 @@
     </div>
     @endif
     
+    {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
+
     @if ($article_to_check)
         @if ($article_to_check->images->count())
             @foreach ($article_to_check->images as $key=>$image)
@@ -83,6 +90,9 @@
                 </div>
             </div>
         </div>
+
+    {{-- SE NON CI SONO ARTICOLI DA VERIFICARE  --}}
+    
     @else
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
