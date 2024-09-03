@@ -45,7 +45,7 @@
     </div>
     @endif
     
-    
+    @if ($article_to_check)
     @if ($article_to_check->images->count())
         @foreach ($article_to_check->images as $key=>$image)
         <div class="col-6 col-md-4 mb-4">
@@ -59,7 +59,6 @@
         </div>
         @endfor
     @endif
-    @if ($article_to_check)
         <div class="row justify-content-end marginCustom">
             <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
                 <div>
@@ -84,9 +83,8 @@
                 </div>
             </div>
         </div>
-    @endif
+    @else
     
-    @if (!$article_to_check)
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
             <h1 class="fst-italic display-4 marginCustom">
