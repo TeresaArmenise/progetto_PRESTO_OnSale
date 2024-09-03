@@ -2,7 +2,7 @@
     <div class="card mb-3" style="max-width: 100vw;">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : https:picsum.photos/900}}" class="card-img" alt="Product Image">
+                <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : 'https:picsum.photos/900'}}" class="card-img" alt="Product Image">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
