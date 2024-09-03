@@ -36,7 +36,7 @@ return
 
 
 //ADMIN
-"Rev_app" => "Applicazioni del revisor",
+"Rev_app" => "Richieste per diventare revisore",
 "App_Rej" => "Articoli approvati e rifiutati",
 "State" => "Stato",
 "Acc" => "Accettato",
