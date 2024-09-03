@@ -3,17 +3,26 @@
 return 
 [
 
-//NAVBAR
+//NAVBAR & HOME
 "Home" => "Home",
 "Categories" => "Categories",
 "Hello" => "Hello",
 "Access" => "Login",
+"username" => "Username",
 "Register" => "Register",
 "logout" => "Logout",
 "My_articles" => "My articles",
 "Profile" => "Profile",
 "Search" => "Search",
 "revision_area" => "Revision area",
+"email" => "E-mail",
+"password" => "Password",
+"prof_of" => "PROFILO DI",
+"Registered" => "Registered by",
+"All_Products" => "See all products",
+"Results" => "Search results",
+"Our_Prodc" => "OUR PRODUCTS",
+"revisor_area" => "Revisor area",
 
 //FOOTER 
 "Products" => "Products",
@@ -23,12 +32,18 @@ return
 "Privacy" => "Privacy Policy",
 "Copyright" => "All rights reserved to",
 
-"revisor_area" => "Revisor area",
-"All_Products" => "See all products",
 
-"Results" => "Search results",
-"Our_Prodc" => "OUR PRODUCTS",
-
+//ADMIN
+"Rev_app" => "Revisor applications",
+"App_Rej" => "Approved and rejected articles",
+"State" => "State",
+"Acc" => "Accepted",
+"Rej" => "Rejected",
+"Rev" => "In revision",
+"Act" => "Action",
+"Acts" => "Actions",
+"Handle" => "Handle",
+"Title" => "Title",
 
 //ARTICLES
 "Articles" => "Articles",

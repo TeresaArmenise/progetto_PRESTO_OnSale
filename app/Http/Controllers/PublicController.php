@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\IsRevisor;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class PublicController extends Controller
 {
@@ -40,7 +43,8 @@ class PublicController extends Controller
     }
 
     public function adminArea() {
-
-        return view('admin');
+        $revisors=User::where('is_revisor', true)->get();
+        $article_revisioned=Article::whereNotNull('is_accepted')->get();
+        return view('admin', compact( 'article_revisioned', 'revisors'));
     }
 }

@@ -8,7 +8,7 @@
     <div class="container d-flex flex-column-reverse justify-content-between px-5 py-5 mx-auto gap-5">
         <div class="d-flex flex-column-reverse align-items-center justify-content-between gap-3">
             <div class="mx-auto text-center text-white">
-                Copyright &copy; 2022, {{__("ui.Copyright")}} FastTrack-Coders
+                Copyright &copy; 2024, {{__("ui.Copyright")}} FastTrack-Coders
             </div>
         </div>
         <!-- List Container  -->

@@ -2,17 +2,28 @@
 
 return 
 [
-//NAVBAR
+//NAVBAR & HOME
 "Home" => "Inicio",
 "Categories" => "Categorías",
 "Hello" => "Hola",
 "Access" => "Accede",
+"username" => "Nombre del usuario",
 "Register" => "Registrate",
 "logout" => "Cerrar sesión",
 "My_articles" => "Mis artículos",
 "Profile" => "Pérfil",
 "Search" => "Buscar",
 "revision_area" => "Área de revisión",
+"email" => "Correo electrónico",
+"password" => "Contraseña",
+"conf_pass" => "Confirma la contraseña",
+"prof_of" => "PÉRFIL DE",
+"Registered" => "Registrado el",
+"revisor_area" => "Área del revisor",
+"All_Products" => "Mira todos los productos",
+"Results" => "Resultados de la busquedad",
+"Our_Prodc" => "NUESTROS PRODUCTOS",
+
 
 //FOOTER 
 "Products" => "Productos",
@@ -22,11 +33,19 @@ return
 "Privacy" => "Privacidad y Política",
 "Copyright" => "Todos los derechos reservados a",
 
-"revisor_area" => "Área del revisor",
-"All_Products" => "Mira todos los productos",
 
-"Results" => "Resultados de la busquedad",
-"Our_Prodc" => "NUESTROS PRODUCTOS",
+//ADMIN 
+"Rev_app" => "Aplicaciones del revisor",
+"App_Rej" => "Artículos aprovados y rechazados",
+"State" => "Estado",
+"Acc" => "Aceptado",
+"Rej" => "Rechazado",
+"Rev" => "En revision",
+"Act" => "Acción",
+"Acts" => "Acciones",
+"Handle" => "Gestionar",
+"Title" => "Título",
+
 
 
 //ARTICLES
@@ -42,6 +61,7 @@ return
 "No_Art_to_check" => "No hay artículos para revisar",
 "Add_Art" => "Añade Artículo",
 "No_Art" => "No hay artículos todavía",
+
 
 //INFO CARDS
 "Price" => "Precio",
