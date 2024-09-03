@@ -29,7 +29,9 @@
             </div>
 
             <div class="mb-5">
-                <img src="{{ asset('media/LogoNavBgNone.png') }}" alt="Logo" class="" width="200">
+                <a href="{{route('home')}}">
+                    <img src="{{ asset('media/LogoNavBgNone.png') }}" alt="Logo" class="" width="200">
+                </a>
             </div>
 
             <div class="flex justify-center my-4 d-flex align-items-center">

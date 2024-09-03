@@ -39,7 +39,9 @@ return
 //ADMIN
 "Rev_app" => "Richieste per diventare revisore",
 "App_Rej" => "Articoli approvati e rifiutati",
+"Act_Rev" => "Revisori Attuali",
 "State" => "Stato",
+"Promote"=> "Promuovi",
 "Acc" => "Accettato",
 "Rej" => "Rifiutato",
 "Rev" => "In revisione",
@@ -47,6 +49,9 @@ return
 "Acts" => "Azioni",
 "Handle" => "Gestiona",
 "Title" => "Titolo",
+"Undo" => "Ripristina",
+"Created_Date" => "Data creazione",
+"Downgrade" => "Declassa",
 
 
 

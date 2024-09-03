@@ -37,7 +37,9 @@ return
 //ADMIN
 "Rev_app" => "Revisor applications",
 "App_Rej" => "Approved and rejected articles",
+"Act_Rev" => "Actuals Revisors",
 "State" => "State",
+"Promote"=> "Promote",
 "Acc" => "Accepted",
 "Rej" => "Rejected",
 "Rev" => "In revision",
@@ -45,6 +47,12 @@ return
 "Acts" => "Actions",
 "Handle" => "Handle",
 "Title" => "Title",
+"Undo" => "Undo",
+"Created_Date" => "Creation date",
+"Downgrade" => "Downgrade",
+
+
+
 
 //ARTICLES
 "Articles" => "Articles",
