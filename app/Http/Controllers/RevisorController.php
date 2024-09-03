@@ -15,6 +15,7 @@ class RevisorController extends Controller
     public function index()
     {
         $article_revisioned=Article::whereNotNull('is_accepted')->get()->last();
+        $article_to_check = false;
         $article_to_check=Article::where('is_accepted',null)
         ->where('user_id', '!=', Auth::id())
         ->orderBy('created_at', 'asc')
