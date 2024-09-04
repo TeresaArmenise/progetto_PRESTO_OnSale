@@ -45,6 +45,5 @@ document.addEventListener("DOMContentLoaded", function() {
         langElements.forEach(item => {
             item.style.display = 'block';
         });
-  
     }
 });
