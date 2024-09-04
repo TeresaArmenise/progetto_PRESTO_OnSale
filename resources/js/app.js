@@ -13,29 +13,38 @@ document.addEventListener("DOMContentLoaded", function() {
         // Memorizza la selezione nel localStorage
         localStorage.setItem('selectedLang', lang);
         
-        const currentLangElement = document.getElementById('currentLang');
-        const langElements = document.querySelectorAll('.dropdown-content-lang .dropdown-item');
+        // Aggiorna l'elemento corrente della lingua
+        updateCurrentLang(lang);
+    }
+    
+    // Funzione per aggiornare l'elemento corrente della lingua e nascondere l'opzione selezionata
+    function updateCurrentLang(lang) {
+        let currentLangElement = document.getElementById('currentLang');
+        let langElements = document.querySelectorAll('.dropdown-content-lang .dropdown-item');
         
         langElements.forEach(item => {
-            const selectedLang = item.getAttribute('data-lang');
+            let selectedLang = item.getAttribute('data-lang');
             if (selectedLang === lang) {
                 currentLangElement.innerHTML = item.innerHTML;
+                // Nascondi l'opzione selezionata
+                item.style.display = 'none';
+            } else {
+                // Mostra tutte le altre opzioni
+                item.style.display = 'block';
             }
         });
     }
     
     // Recupera la selezione salvata dal localStorage
-    const savedLang = localStorage.getItem('selectedLang');
+    let savedLang = localStorage.getItem('selectedLang');
     if (savedLang) {
-        const currentLangElement = document.getElementById('currentLang');
-        const langElements = document.querySelectorAll('.dropdown-content-lang .dropdown-item');
-        
+        updateCurrentLang(savedLang);
+    } else {
+        // Se non c'è una lingua salvata, mostra tutte le opzioni
+        let langElements = document.querySelectorAll('.dropdown-content-lang .dropdown-item');
         langElements.forEach(item => {
-            const selectedLang = item.getAttribute('data-lang');
-            if (selectedLang === savedLang) {
-                currentLangElement.innerHTML = item.innerHTML;
-            }
+            item.style.display = 'block';
         });
+  
     }
 });
-

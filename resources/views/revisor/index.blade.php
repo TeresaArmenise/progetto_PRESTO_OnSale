@@ -7,9 +7,9 @@
                     <h1 class="text-light">{{__('ui.revisor_area')}}</h1>
                 </div>
             </div>
-
+            
             {{-- IF PER ANNULLA ULTIMA OPERAZIONE  --}}
-
+            
             @if ($article_revisioned)
             <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
                 @csrf
@@ -25,9 +25,9 @@
             @endif  
         </div>
     </div>
-
+    
     {{-- IF MESSAGGI IN INDEX  --}}
-
+    
     @if (session()->has('message'))
     <div class="row justify-content-center">
         <div class="col-5 alert alert-success text-center shadow rounded">
@@ -51,32 +51,49 @@
     @endif
     
     {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
-
-    @if ($article_to_check)
-        @if ($article_to_check->images->count())
-            @foreach ($article_to_check->images as $key=>$image)
-            <div class="col-6 col-md-2 mb-4">
-                <img src="{{ $image->getUrl(300, 300)}}" class="img-fluid rounded shadow" alt="Immagine{{$key +1 }} dell'articolo {{$article_to_check->title}}">
-            </div>
-            @endforeach
-        @else
-            @for ($i = 0; $i < 1; $i++)
-            <div class="col-6 coll-md-4 mb-4 text-center">
-                <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
-            </div>
-            @endfor
-        @endif
-        <div class="row justify-content-end marginCustom">
-            <div class="col-md-6 ps-4 d-flex flex-column justify-content-between">
-                <div>
-                    <h1>{{$article_to_check->title}}</h1>
-                    <h3>{{__('ui.Author')}}: {{$article_to_check->user->name}}</h3>
-                    <h4>{{__('ui.Created_Date')}}: {{$article_to_check->getCreationTime()}}</h4>
-                    <h4>{{$article_to_check->price}} €</h4>
-                    <h4 class="fst-italic text-muted">#{{$article_to_check->category->name}}</h4>
-                    <p class="h6">{{$article_to_check->description}}</p>
+    
+    <div class="container marginCustom">
+        <div class="row no-wrap">
+            <div class="col-sm-6 p-0">
+                @if ($article_to_check)
+                @if($article_to_check->images->count() > 0)
+                <div id="carouselExampleIndicatorsFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        @foreach($article_to_check->images as $key => $image)
+                        <button type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide-to="{{ $key }}" class="@if($loop->first) active @endif" aria-current="@if($loop->first) true @endif" aria-label="Slide {{ $key + 1 }}"></button>
+                        @endforeach
+                    </div>
+                    
+                    <div class="carousel-inner">
+                        @foreach($article_to_check->images as $key => $image)
+                        <div class="carousel-item @if($loop->first) active @endif">
+                            <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
+                        </div>
+                        @endforeach
+                    </div>
+                    
+                    @if($article_to_check->images->count() > 1)
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">{{ __("ui.Prev") }}</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">{{ __("ui.Next") }}</span>
+                    </button>
+                    @endif
                 </div>
-                <div class="d-flex pb-4 justify-content-start">
+                @else
+                <img src="https://picsum.photos/303" alt="Nessuna foto inserita dall'utente">
+                @endif
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center mt-3">
+                    <h2>{{$article_to_check->title}}</h2>
+                    <h4>{{$article_to_check->category['name']}}</h4>
+                    <p>{{$article_to_check->description}}</p>
+                    <p>€ {{$article_to_check->price}}</p>
+                </div>
+                <div class="d-flex pb-4 justify-content-center">
                     <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                         @csrf
                         @method('PATCH')
@@ -90,18 +107,20 @@
                 </div>
             </div>
         </div>
-
-    {{-- SE NON CI SONO ARTICOLI DA VERIFICARE  --}}
     
-    @else
-    <div class="row justify-content-center align-items-center text-center">
-        <div class="col-12">
-            <h1 class="fst-italic display-4 marginCustom">
-                {{__('ui.No_Art_to_check')}}
-            </h1>
+    
+        
+        {{-- SE NON CI SONO ARTICOLI DA VERIFICARE  --}}
+        
+        @else
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-12">
+                <h1 class="fst-italic display-4 marginCustom">
+                    {{__('ui.No_Art_to_check')}}
+                </h1>
+            </div>
         </div>
-    </div>
-    @endif
+        @endif
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-center mt-5 ps-5">
@@ -109,5 +128,5 @@
                 </div>
             </div>
         </div>
-
-</x-layout>
+        
+    </x-layout>
