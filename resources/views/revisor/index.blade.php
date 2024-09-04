@@ -83,6 +83,50 @@
                     </button>
                     @endif
                 </div>
+                <div class="col-md-8 ps-3">
+                    <div class="card-body">
+                        <h5>{{__('ui.Ratings')}}</h5>
+                        @if($image->labels)
+                        @foreach ($image->labels as $label)
+                            #{{$label}},
+                        @endforeach
+                        @else
+                        <div class="fst-italic">{{__('ui.No_Labs')}}</div>
+                        @endif
+                        @foreach ($article_to_check->images as $key => $image)
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->adult}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Adult')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->violence}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Violence')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->spoof}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Spoof')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->racy}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Racy')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->medical}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Medical')}}</div>
+                        </div>
+                    </div>
+                </div>
+                        @endforeach
                 @else
                 <img src="https://picsum.photos/303" alt="Nessuna foto inserita dall'utente">
                 @endif

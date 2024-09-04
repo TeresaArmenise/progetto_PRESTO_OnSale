@@ -35,6 +35,7 @@ return
 
 
 //ADMIN 
+"Ad_Ar" => "Área Administrador",
 "Rev_app" => "Aplicaciones de revisor",
 "App_Rej" => "Artículos aprovados y rechazados",
 "Act_Rev" => "Revisores Actuales",
@@ -74,9 +75,20 @@ return
 "Price" => "Precio",
 "Author" => "Autor",
 "Details" => "Detalles",
+"Images" => "Imágenes",
+"Img_prew" => "Vista previa",
+"Ratings" => "Calificaciones",
+"No_Labs" => "Ninguna etiqueta",
+"Adult" => "Adulto",
+"Violence" => "Violencia",
+"Spoof" => "Burla",
+"Racy" => "Racista",
+"Medical" => "Contenido sensible",
+
 
 
 //CATEGORIES
+"Cat" => "Categoria",
 "Our_Cat" => "NUESTRAS CATEGORÍAS",
 "Select_Cat" => "Selecciona una categoría",
 "Oggettistica" => "Accesorios",
@@ -116,4 +128,12 @@ return
 'title_carousel_3' => 'Libros y Decoraciones',
 'undertitle_carousel_3' => 'Encuentra todo lo que te sirve para la escuela y el tiempo libre',
 
+'title_carousel_4' => "Moda", 
+'undertitle_carousel_4' => "Divierte encontrando tu estilo explorando nuestra sección",
+
+'title_carousel_5' => "Música, películas y TV ", 
+'undertitle_carousel_5' => "Una amplia selección de títulos para una noche perfecta",
+
+'title_carousel_6' => "Vinos",  
+'undertitle_carousel_6' => "Descubre nuestra sección de vinos finos",
 ];
