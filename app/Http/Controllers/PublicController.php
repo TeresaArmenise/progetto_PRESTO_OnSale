@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Middleware\IsRevisor;
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Middleware\IsRevisor;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Artisan;
 
 
 class PublicController extends Controller
@@ -43,8 +44,33 @@ class PublicController extends Controller
     }
 
     public function adminArea() {
-        $revisors=User::where('is_revisor', true)->get();
+        $revisors_requested=User::where('mail_sent', true)
+        ->where('is_revisor', false)
+        ->get();
+        $revisors_in_charge=User::where('is_revisor', true)->where('mail_sent', true)->get();
         $article_revisioned=Article::whereNotNull('is_accepted')->get();
-        return view('admin', compact( 'article_revisioned', 'revisors'));
+        return view('admin', compact( 'article_revisioned', 'revisors_requested', 'revisors_in_charge'));
+    }
+
+    public function approveRevisor($revisor) {       
+        Artisan::call('app:make-user-revisor', [
+            'email' => $revisor
+        ]);
+
+        return redirect()
+        ->back()
+        ->with('approve', "Hai promosso revisore l'utente con mail : $revisor");
+    }
+
+    public function downgrade(User $revisor){
+
+        // $revisor = User::find($revisorId);
+
+        $revisor->downgradeRevisor(false);
+
+        return redirect()
+        ->back()
+        ->with('downgrade', "Hai rimosso il revisore con mail : ");
+        // $user->name"
     }
 }

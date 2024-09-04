@@ -50,7 +50,7 @@ class RevisorController extends Controller
     }
 }
     
-    public function becomeRevisor(Request $request) {
+    public function AskTobecomeRevisor(Request $request) {
         $email = $request->email;
         $name = $request->name;
         $phone = $request->phone;
@@ -66,7 +66,7 @@ class RevisorController extends Controller
             
     
             // Esegui il comando per rendere l'utente un revisore
-            Artisan::call('app:make-user-revisor', [
+            Artisan::call('app:make-user-mail-sent', [
                 'email' => $email
             ]);
     
@@ -87,5 +87,4 @@ class RevisorController extends Controller
         ->back()
         ->with('warning', "Hai annullato l'ultima modifica");
     }
-
 }

@@ -18,6 +18,7 @@ return
 "revision_area" => "Area Revisione",
 "email" => "Indirizzo email",
 "password" => "Password",
+"conf_pass" => "Confirma la password",
 "prof_of" => "PROFILE OF",
 "Registered" => "Registrato il",
 "revisor_area" => "Area del revisore",
@@ -36,7 +37,7 @@ return
 
 
 //ADMIN
-"Rev_app" => "Applicazioni del revisor",
+"Rev_app" => "Richieste per diventare revisore",
 "App_Rej" => "Articoli approvati e rifiutati",
 "State" => "Stato",
 "Acc" => "Accettato",
