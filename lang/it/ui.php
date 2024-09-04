@@ -75,9 +75,18 @@ return
 "Price" => "Prezzo",
 "Author" => "Autore",
 "Details" => "Dettaglio",
-
+"Images" => "Immagini",
+"Img_prew" => "Anteprima immagine",
+"Ratings" => "Valutazione",
+"No_Labs" => "No etichette",
+"Adult" => "Per adulti",
+"Violence" => "Violenza",
+"Spoof" => "Immagine derisoria",
+"Racy" => "Razzista",
+"Medical" => "Sensibile",
 
 //CATEGORIES
+"Cat" => "Categoria",
 "Our_Cat" => "LE NOSTRE CATEGORIE",
 "Select_Cat" => "Seleziona una categoria",
 "Oggettistica" => "Oggettistica",

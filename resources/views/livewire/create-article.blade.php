@@ -32,7 +32,7 @@
                         
                     </div>
                     <div class="mb-4">
-                        <label  class="form-label">Categoria</label>
+                        <label  class="form-label">{{__('ui.Category')}}</label>
                         <select id="category"  class="form-control @error('category') is-invalid @enderror" wire:model.blur="category">
                             <option class="fst-italic text-secondary" label value="">{{__('ui.Select_Cat')}}</option>
                             
@@ -47,7 +47,7 @@
                         
                     </div>
                     <div class="mb-4">
-                        <label  class="form-label">Immagini</label>
+                        <label  class="form-label">{{__('ui.Images')}}</label>
                         <input type="file" wire:model.live="temporary_images" multiple class="form-control @error('temporary_images . *') is-invalid @enderror" placeholder="Img/" >
                         @error('temporary_images . *')
                         <p class="fst-italic text-danger">{{$message}}</p>
@@ -59,7 +59,7 @@
                     @if (!empty($images))
                     <div class="row">
                         <div class="col-12">
-                            <p>Photo preview:</p>
+                            <p>{{__('ui.Img_prew')}}:</p>
                             <div class="row border border-4 border-success rounded shadow py-4">
                                 @foreach ($images as $key=> $image)
                                 <div class="col d-flex flex-column align-items-center my-3">
