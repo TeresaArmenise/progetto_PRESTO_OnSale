@@ -73,7 +73,7 @@
                     </div>
                     @endif
                     <div class="my-5 text-center">
-                        <button type="submit" class="btn btn-outline-primary">{{__('ui.Add_Art')}}</button>
+                        <button type="submit" class="btn btn-outline-primary colorBtn">{{__('ui.Add_Art')}}</button>
                     </div>
                     
                 </form>

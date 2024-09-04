@@ -37,6 +37,7 @@ return
 
 
 //ADMIN
+"Ad_Ar" => "Admin Area",
 "Rev_app" => "Richieste per diventare revisore",
 "App_Rej" => "Articoli approvati e rifiutati",
 "Act_Rev" => "Revisori Attuali",
@@ -116,4 +117,12 @@ return
 'title_carousel_3' => 'Libri e oggettistica',
 'undertitle_carousel_3' => 'Puoi trovare tutto quello che serve per scuola e tempo libero',
 
+'title_carousel_4' => "ABBIGLIAMENTO", 
+'undertitle_carousel_4' => "Divertiti a trovare il tuo stile esplorando la nostra sezione",
+
+'title_carousel_5' => "MUSICA FILM E TV ", 
+'undertitle_carousel_5' => "Una vasta selezione di titoli per una serata perfetta",
+
+'title_carousel_6' => "VINI",  
+'undertitle_carousel_6' => "Scopri la nostra selezione di vini pregiati",
 ];

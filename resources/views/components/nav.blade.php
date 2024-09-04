@@ -82,7 +82,7 @@
                     <a href="{{route('myArticles')}}">{{__('ui.My_articles')}}</a>
 
                     @if (Auth::user()->is_admin)
-                    <a href="{{route('adminArea')}}">Admin Area</a>
+                    <a href="{{route('adminArea')}}">{{__('ui.Ad_Ar')}}</a>
                     @endif
 
                     

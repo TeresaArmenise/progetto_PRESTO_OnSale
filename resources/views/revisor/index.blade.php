@@ -53,7 +53,7 @@
     {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
     
     <div class="container marginCustom">
-        <div class="row no-wrap">
+        <div class="row no-wrap justify-content-center">
             <div class="col-sm-6 p-0">
                 @if ($article_to_check)
                 @if($article_to_check->images->count() > 0)
@@ -170,5 +170,7 @@
                 </div>
             </div>
         </div>
-        
-    </x-layout>
+    </div>
+</div>
+
+</x-layout>

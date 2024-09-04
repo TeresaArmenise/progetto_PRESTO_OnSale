@@ -35,6 +35,7 @@ return
 
 
 //ADMIN
+"Ad_Ar" => "Admin Area",
 "Rev_app" => "Revisor applications",
 "App_Rej" => "Approved and rejected articles",
 "Act_Rev" => "Actuals Revisors",
@@ -113,5 +114,15 @@ return
 
 'title_carousel_3' => 'Books & Accesories',
 'undertitle_carousel_3' => 'You can find everything you need for school and leisure time',
+
+'title_carousel_4' => "Fashion", 
+'undertitle_carousel_4' => "Have fun looking for your style and exploring our section", 
+
+'title_carousel_5' => "Music, movies & TV ", 
+'undertitle_carousel_5' => "A wide selection of titles for a perfect night", //
+
+'title_carousel_6' => "Wines",  
+'undertitle_carousel_6' => "Discover our section of fine wines", // 
+
 
 ];
