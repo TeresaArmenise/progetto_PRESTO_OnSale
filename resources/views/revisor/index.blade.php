@@ -53,7 +53,7 @@
     {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
     
     <div class="container marginCustom">
-        <div class="row no-wrap justify-content-center">
+        <div class="row no-wrap">
             <div class="col-sm-6 p-0">
                 @if ($article_to_check)
                 @if($article_to_check->images->count() > 0)
@@ -69,48 +69,6 @@
                         <div class="carousel-item @if($loop->first) active @endif">
                             <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
                         </div>
-                        <div class="col-md-8 ps-3">
-                            <div class="card-body">
-                                <h5>Ratings</h5>
-                                @if($image->labels)
-                                @foreach ($image->labels as $label)
-                                    #{{$label}},
-                                @endforeach
-                                @else
-                                <div class="fst-italic">No labels</div>
-                                @endif
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->adult}}"></div>
-                                    </div>
-                                    <div class="col-10">Adult</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->violence}}"></div>
-                                    </div>
-                                    <div class="col-10">Violence</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->spoof}}"></div>
-                                    </div>
-                                    <div class="col-10">Spoof</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->racy}}"></div>
-                                    </div>
-                                    <div class="col-10">Racy</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->medical}}"></div>
-                                    </div>
-                                    <div class="col-10">Medical</div>
-                                </div>
-                            </div>
-                        </div>
                         @endforeach
                     </div>
                     
@@ -125,6 +83,50 @@
                     </button>
                     @endif
                 </div>
+                <div class="col-md-8 ps-3">
+                    <div class="card-body">
+                        <h5>Ratings</h5>
+                        @if($image->labels)
+                        @foreach ($image->labels as $label)
+                            #{{$label}},
+                        @endforeach
+                        @else
+                        <div class="fst-italic">No labels</div>
+                        @endif
+                        @foreach ($article_to_check->images as $key => $image)
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->adult}}"></div>
+                            </div>
+                            <div class="col-10">Adult</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->violence}}"></div>
+                            </div>
+                            <div class="col-10">Violence</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->spoof}}"></div>
+                            </div>
+                            <div class="col-10">Spoof</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->racy}}"></div>
+                            </div>
+                            <div class="col-10">Racy</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->medical}}"></div>
+                            </div>
+                            <div class="col-10">Medical</div>
+                        </div>
+                    </div>
+                </div>
+                        @endforeach
                 @else
                 <img src="https://picsum.photos/303" alt="Nessuna foto inserita dall'utente">
                 @endif
@@ -170,7 +172,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-</x-layout>
+        
+    </x-layout>
