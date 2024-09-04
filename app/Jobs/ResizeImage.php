@@ -42,7 +42,7 @@ class ResizeImage implements ShouldQueue
         Image::load($srcPath)
         ->crop($w, $h, CropPosition::Center)
         ->watermark(
-            base_path('resources/images/watermark.png'),
+            public_path('/media/LogoNavBgNone.png'),
             width: 50,
             height: 50,
             paddingX: 5,

@@ -39,7 +39,7 @@
                             @foreach ($categories as $cat)
                             <option value="{{$cat->id}}"> {{__("ui.$cat->name")}}</option>
                             @endforeach
-
+                            
                         </select>
                         @error('category')
                         <p class="fst-italic text-danger">{{$message}}</p>
@@ -56,26 +56,26 @@
                         <p class="fst-italic text-danger">{{$message}}</p>
                         @enderror
                     </div>
-                @if (!empty($images))
-                <div class="row">
-                    <div class="col-12">
-                        <p>Photo preview:</p>
-                        <div class="row border border-4 border-success rounded shadow py-4">
-                            @foreach ($images as $key=> $image)
-                            <div class="col d-flex flex-column align-items-center my-3">
-                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
-                                </div> 
-                                <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})"> X </button>
+                    @if (!empty($images))
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Photo preview:</p>
+                            <div class="row border border-4 border-success rounded shadow py-4">
+                                @foreach ($images as $key=> $image)
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
+                                    </div> 
+                                    <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})"> X </button>
+                                </div>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
                     </div>
-                </div>
-                @endif
+                    @endif
                     <div class="my-5 text-center">
                         <button type="submit" class="btn btn-outline-primary">{{__('ui.Add_Art')}}</button>
                     </div>
-                   
+                    
                 </form>
             </div>
         </div>
