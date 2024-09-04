@@ -75,9 +75,20 @@ return
 "Price" => "Precio",
 "Author" => "Autor",
 "Details" => "Detalles",
+"Images" => "Imágenes",
+"Img_prew" => "Vista previa",
+"Ratings" => "Calificaciones",
+"No_Labs" => "Ninguna etiqueta",
+"Adult" => "Adulto",
+"Violence" => "Violencia",
+"Spoof" => "Burla",
+"Racy" => "Racista",
+"Medical" => "Contenido sensible",
+
 
 
 //CATEGORIES
+"Cat" => "Categoria",
 "Our_Cat" => "NUESTRAS CATEGORÍAS",
 "Select_Cat" => "Selecciona una categoría",
 "Oggettistica" => "Accesorios",

@@ -73,9 +73,21 @@ return
 "Price" => "Price",
 "Author" => "Author",
 "Details" => "Details",
+"Images" => "Images",
+"Img_prew" => "Image preview",
+"Ratings" => "Ratings",
+"No_Labs" => "No labels",
+"Adult" => "Adult",
+"Violence" => "Violence",
+"Spoof" => "Spoof",
+"Racy" => "Racy",
+"Medical" => "Medical",
+
+
 
 
 //CATEGORIES
+"Cat" => "Category",
 "Our_Cat" => "OUR CATEGORIES",
 "Select_Cat" => "Select a category",
 "Oggettistica" => "Accessories",
