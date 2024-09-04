@@ -1,7 +1,7 @@
 <x-layout>
     
     <x-nav />
-
+    
     @if (session()->has('approve'))
     <div class="row justify-content-center">
         <div class="col-5 alert alert-success text-center shadow rounded">
@@ -16,17 +16,17 @@
         </div>
     </div>
     @endif
-
+    
     <div class="container marginCustom">
         <div class="row">
-
+            
             {{-- TABELLA PER GLI APPLICANTS REVISORI --}}
-            <div class="col-12 text-center my-5">
+            <div class="col-12 my-5">
                 <h1 class="display-6 my-5">{{__("ui.Rev_app")}}</h1>
             </div>
             <div class="col-12"> 
-                <table class="table">
-                    <thead>
+                <table class="table table-dark table-borderless table-responsive">
+                    <thead class="table-secondary">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">{{__("ui.Name")}}</th>
@@ -44,8 +44,8 @@
                             <td>{{$revisor->created_at}}</td>
                             <td>
                                 <form class="d-flex flex-column gap-3" action="{{route('approveRevisor', ['email' => $revisor->email])}}" method="POST">
-                                @csrf
-                                <button type="submit" class="btn colorBtn2 text-center">Promuovi</button>
+                                    @csrf
+                                    <button type="submit" class="btn colorBtn2 p-1 m-0">{{__("ui.Promote")}}</button>
                                 </form>
                             </td>
                         </tr>
@@ -54,18 +54,18 @@
                 </table>     
             </div>
             {{-- TABELLA PER ATTUALI REVISORI  --}}
-            <div class="col-12 text-center my-5">
-                <h1 class="display-6 my-5">Revisori Attuali</h1>
+            <div class="col-12 my-5">
+                <h1 class="display-6 my-5">{{__("ui.Act_Rev")}}</h1>
             </div>
             <div class="col-12">
-                <table class="table">
-                    <thead>
+                <table class="table table-dark table-borderless table-responsive">
+                    <thead class="table-secondary">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Data creazione</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">{{__("ui.Name")}}</th>
+                            <th scope="col">{{__("ui.email")}}</th>
+                            <th scope="col">{{__("ui.Created_Date")}}</th>
+                            <th scope="col">{{__("ui.Acts")}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -80,9 +80,9 @@
                             <td>
                                 {{-- @dump($revisor) --}}
                                 <form class="d-flex flex-column gap-3" action="{{route('downgrade', ['revisor' => $revisor])}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn colorBtn2 text-center">Declassa</button>
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn colorBtn p-1 m-0 justify-content-start "> {{__("ui.Downgrade")}} </button>
                                 </form>
                             </td>
                         </tr>
@@ -93,20 +93,20 @@
         </div>
         <div class="row">
             {{-- TABELLA ARTICOLI APPROVATI E RIFIUTATI  --}}
-            <div class="col-12 text-center my-5">
+            <div class="col-12 my-5">
                 <h1 class="display-6 my-5">{{__("ui.App_Rej")}}</h1>
             </div>
             <div class="col-12">
-                <table class="table">
-                    <thead>
-                        <tr>
+                <table class="table table-dark table-responsive table-striped">
+                    <thead class="table-secondary">
+                        <tr class="border">
                             <th scope="col">#</th>
-                            <th scope="col">A</th>
+                            <th scope="col">{{__("ui.Author")}}</th>
+                            {{-- <th scope="col">{{__("ui.email")}}</th> --}}
                             <th scope="col">{{__("ui.Title")}}</th>
-                            <th scope="col">{{__("ui.Description")}}</th>
                             <th scope="col">{{__("ui.Price")}}</th>
                             <th scope="col">{{__("ui.State")}}</th>
-                            <th scope="col">{{__("ui.Act")}}</th>
+                            <th scope="col">{{__("ui.Acts")}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -114,9 +114,8 @@
                         <tr>
                             <th scope="row">{{$article->id}}</th>
                             <td>{{$article->user->name}}</td>
-                            <td>{{$article->user->email}}</td>
+                            {{-- <td>{{$article->user->email}}</td> --}}
                             <td>{{$article->title}}</td>
-                            <td>{{$article->description}}</td>
                             <td>€ {{$article->price}}</td>
                             @if($article['is_accepted']===null) 
                             <td>{{__("ui.Rev")}}</td>
@@ -126,16 +125,10 @@
                             <td>{{__("ui.Acc")}}</td>
                             @endif
                             <td>   
-                                <form action="{{route('undo', ['article' => $article])}}" method="POST">
+                                <form class="d-flex flex-column gap-3" action="{{route('undo', ['article' => $article])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-12 text-center ps-5 pe-4 mb-5">
-                                                <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> {{__('ui.cancel_last')}} </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <button type="submit" class="btn colorBtn p-1 m-0 justify-content-start" > {{__('ui.Undo')}} </button>
                                 </form>
                             </td>
                         </tr>    

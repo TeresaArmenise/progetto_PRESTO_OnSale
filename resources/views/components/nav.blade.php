@@ -55,10 +55,13 @@
             </div>
             <div>
                 <div class="text-end dropdown dropdownLang">
-                    <a class="dropbtn text-decoration-none dropdown-toggle"><x-_locale lang="it" /></a>
+                    <a id="currentLang" class="dropbtn text-decoration-none dropdown-toggle">
+                        <x-_locale lang="it" />
+                    </a>
                     <div class="dropdown-content-lang">
-                        <x-_locale lang="en" />
-                        <x-_locale lang="es" />
+                        <a href="#" class="dropdown-item" data-lang="it" onclick="changeLang('it')"><x-_locale lang="it" /></a>
+                        <a href="#" class="dropdown-item" data-lang="en" onclick="changeLang('en')"><x-_locale lang="en" /></a>
+                        <a href="#" class="dropdown-item" data-lang="es" onclick="changeLang('es')"><x-_locale lang="es" /></a>
                     </div>
                 </div>
             </div>
@@ -94,14 +97,16 @@
         </div>
         <div>
             <div class="text-end dropdown dropdownLang mx-0">
-                <a class="dropbtn text-decoration-none dropdown-toggle"><x-_locale lang="it" /></a>
+                <a id="currentLang" class="dropbtn text-decoration-none dropdown-toggle">
+                    <x-_locale lang="it" />
+                </a>
                 <div class="dropdown-content-lang">
-                    <x-_locale lang="en" />
-                    <x-_locale lang="es" />
+                    <a href="#" class="dropdown-item" data-lang="it" onclick="changeLang('it')"><x-_locale lang="it" /></a>
+                    <a href="#" class="dropdown-item" data-lang="en" onclick="changeLang('en')"><x-_locale lang="en" /></a>
+                    <a href="#" class="dropdown-item" data-lang="es" onclick="changeLang('es')"><x-_locale lang="es" /></a>
                 </div>
             </div>
         </div>
         @endguest 
-
     </div>
 </nav>

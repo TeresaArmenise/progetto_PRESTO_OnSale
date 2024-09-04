@@ -4,7 +4,7 @@
     <div class="container marginCustom">
         <div class="row text-center">
             <div class="col-12 d-flex justify-content-center">
-                <h1>{{$category->name}}</h1>
+                <h1>{{__("ui.$category->name")}}</h1>
             </div>
             @forelse ($articles as $article)
             <div class= "col-12 col-md-3 mt-5 d-flex justify-content-evenly">

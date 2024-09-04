@@ -35,9 +35,11 @@ return
 
 
 //ADMIN 
-"Rev_app" => "Aplicaciones del revisor",
+"Rev_app" => "Aplicaciones de revisor",
 "App_Rej" => "Artículos aprovados y rechazados",
+"Act_Rev" => "Revisores Actuales",
 "State" => "Estado",
+"Promote"=> "Promueve",
 "Acc" => "Aceptado",
 "Rej" => "Rechazado",
 "Rev" => "En revision",
@@ -45,6 +47,11 @@ return
 "Acts" => "Acciones",
 "Handle" => "Gestionar",
 "Title" => "Título",
+"Undo" => "Deshacer",
+"Created_Date" => "Data de creación",
+"Downgrade" => "Destituir",
+
+
 
 
 
