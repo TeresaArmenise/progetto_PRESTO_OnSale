@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use App\Models\Article;
 use Livewire\Component;
 use App\Jobs\RemoveFaces;
