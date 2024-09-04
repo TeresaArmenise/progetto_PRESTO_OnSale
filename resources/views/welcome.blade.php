@@ -30,6 +30,27 @@
                     <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_3')}}</p>
                 </div>
             </div>
+            <div class="carousel-item ">
+                <img class="d-block w-100" src="media\abbigliamento.webp" alt="Third slide">
+                <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
+                    <h5 class="text-dark">{{__('ui.title_carousel_4')}}</h5>
+                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_4')}}</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img class="d-block w-100" src="media\movies.webp" alt="Third slide">
+                <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
+                    <h5 class="text-dark">{{__('ui.title_carousel_5')}}</h5>
+                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_5')}}</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img class="d-block w-100" src="media\vino.webp" alt="Third slide">
+                <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
+                    <h5 class="text-dark">{{__('ui.title_carousel_6')}}</h5>
+                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_6')}}</p>
+                </div>
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
