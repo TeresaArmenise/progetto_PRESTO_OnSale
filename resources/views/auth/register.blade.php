@@ -33,4 +33,5 @@
                 <button type="submit" class="btn btn-primary">{{__('ui.Register')}}</button>
             </form>
         </div>
+    </div>
     </x-layout>

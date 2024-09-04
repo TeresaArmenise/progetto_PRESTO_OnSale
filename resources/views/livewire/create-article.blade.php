@@ -32,7 +32,7 @@
                         
                     </div>
                     <div class="mb-4">
-                        <label  class="form-label">{{__('ui.Category')}}</label>
+                        <label  class="form-label">{{__('ui.Cat')}}</label>
                         <select id="category"  class="form-control @error('category') is-invalid @enderror" wire:model.blur="category">
                             <option class="fst-italic text-secondary" label value="">{{__('ui.Select_Cat')}}</option>
                             
