@@ -29,6 +29,23 @@
 	border: none;
 }
 
+.carousel-control-prev-show{
+	position: absolute;
+	top: 310px;
+	background-color: transparent;
+	z-index: 1;
+	border: none;
+	left: -10px;
+}
+
+.carousel-control-next-show{
+	position: absolute;
+	top: 310px;
+	background-color: transparent;
+	z-index: 1;
+	border: none;
+	right: -10px;
+}
 
 															/* CSS FOR NAVBAR  */
 
@@ -528,6 +545,32 @@ button {
 	.centered{
 		display: flex;
 		justify-content: center;
+	}
+
+												/* BYCategory  */
+	
+	.marginTop{
+		margin-top: 10vh;
+	}
+	
+													/* SHOW  */
+
+	.carousel-control-prev-show{
+		position: absolute;
+		top: 310px;
+		background-color: transparent;
+		z-index: 1;
+		border: none;
+		left: -10px;
+	}
+
+	.carousel-control-next-show{
+		position: absolute;
+		top: 310px;
+		background-color: transparent;
+		z-index: 1;
+		border: none;
+		right: -10px;
 	}
 
 }

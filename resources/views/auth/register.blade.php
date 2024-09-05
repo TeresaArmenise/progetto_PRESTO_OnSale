@@ -4,12 +4,12 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="display-4 pt-t">
-                    <h1>{{__('ui.Register')}}</h1>
+                    <h1 class="marginTop">{{__('ui.Register')}}</h1>
                 </div>
             </div>
         </div>
     </div> 
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center mt-5">
         <div class="col-12 col-md-6">
             <form method="POST" action="{{ route('register') }}" class="shadow rounded p-5">
                 @csrf
