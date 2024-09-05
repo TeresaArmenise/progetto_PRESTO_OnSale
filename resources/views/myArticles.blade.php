@@ -8,7 +8,28 @@
                 </div>
             </div>
         </div>
+        @if (session()->has('deleteMessage'))
+        <div class="row justify-content-center">
+            <div class="col-5 alert alert-danger text-center shadow rounded">
+                {{ session('deleteMessage') }} 
+            </div>
+        </div>
+        @endif
 
+        @if ($articles->isEmpty())
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-12">
+                    <h1 class="fst-italic display-4 marginCustom">Non sono stati ancora creati articoli.</h1>
+                </div>
+                <div class="col-4 mt-5">
+                    <a href="{{route('create')}}">
+                        <button  class="custom-btn btn-11">+ {{__('ui.Add_Art')}}<div class="dot"></div></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        @else
         <div class="container my-5">
             <div class="row justify-content-center">
             
@@ -24,6 +45,6 @@
                 @endforeach
             </div>
         </div>
-
+        @endif
 
 </x-layout>

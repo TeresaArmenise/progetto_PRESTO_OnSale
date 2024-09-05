@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AdminMiddleware;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -27,10 +28,15 @@ Route::get('/Profile', [PublicController::class, 'profile'])->middleware('auth')
 
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
-Route::get('/admin-Area', [PublicController::class, 'adminArea'])->middleware('auth')->name('adminArea');
+Route::get('/admin-Area', [PublicController::class, 'adminArea'])->middleware(['auth', AdminMiddleware::class])->name('adminArea');
 
 
 Route::post('/workwithus/submit', [RevisorController::class, 'AskTobecomeRevisor'])->name('submit');
 Route::post('/Admin_Area/approve/{email}', [PublicController::class, 'approveRevisor'])->name('approveRevisor');
 
 Route::patch('/Admin_Area/declassa/{revisor}', [PublicController::class, 'downgrade'])->name('downgrade');
+
+Route::delete('/I-miei-articoli/delete/{article}', [ArticleController::class, 'destroy'])->name('delete');
+Route::delete('/Profile/delete', [PublicController::class, 'destroyProfile'])->name('usersDestroy');
+
+

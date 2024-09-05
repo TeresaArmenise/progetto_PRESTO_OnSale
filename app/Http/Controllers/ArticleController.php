@@ -45,4 +45,8 @@ class ArticleController extends Controller
         return view('myArticles', compact('articles'));
     }
 
+    public function destroy(Article $article){
+        $article->delete();
+        return redirect()->route('myArticles')->with('deleteMessage', 'Articolo eliminato con successo.');
+    }
 }
