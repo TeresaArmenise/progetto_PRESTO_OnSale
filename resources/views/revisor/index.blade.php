@@ -67,10 +67,10 @@
                     <!-- Carousel Items -->
                     <div class="carousel-inner">
                         @foreach($article_to_check->images as $key => $image)
-                        <div class="carousel-item @if($loop->first) active @endif" data-key="{{ $key }}">
+                        <div class="carousel-item @if($loop->first) active @endif h-100" data-key="{{ $key }}">
                             <div class="row">
                                 <!-- Colonna Immagine -->
-                                <div class="col-8">
+                                <div class="col-10">
                                     <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
                                 </div>
                     
