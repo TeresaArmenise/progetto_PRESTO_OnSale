@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-4">
                         <label  class="form-label">{{__('ui.Price')}}</label>
-                        <input type="numeric" class="form-control @error('price') is-invalid @enderror" wire:model.blur="price">
+                        <input type="number" class="form-control @error('price') is-invalid @enderror" wire:model.blur="price">
                         
                         @error('price')
                         <p class="fst-italic text-danger">{{$message}}</p>
