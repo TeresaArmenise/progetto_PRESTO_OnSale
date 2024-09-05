@@ -2,27 +2,12 @@
     <x-nav/>
     <div class="container-fluid marginCustom px-5">
         <div class="row px-5">
-            <div class="col-12 text-center mb-5">
-                <div class="rounded shadow bg-dark mt-5">
-                    <h1 class="text-light">{{__('ui.revisor_area')}}</h1>
+            <div class="text-center mb-5">
+                <div class="rounded mt-5">
+                    <h1 class="">{{__('ui.revisor_area')}}</h1>
                 </div>
             </div>
         </div>
-        
-        {{-- IF PER ANNULLA ULTIMA OPERAZIONE --}}
-        @if ($article_revisioned)
-        <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
-            @csrf
-            @method('PATCH')
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center ps-5 pe-4 mb-5">
-                        <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3"> {{__('ui.cancel_last')}} </button>
-                    </div>
-                </div>
-            </div>
-        </form>
-        @endif  
     </div>
 
     {{-- IF MESSAGGI IN INDEX --}}
@@ -52,7 +37,7 @@
 
     {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
     @if ($article_to_check)
-    <div class="container">
+    <div class="container shadow rounded">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 @if($article_to_check->images->count() > 0)
@@ -77,7 +62,7 @@
                                 <!-- Colonna Valutazioni AI -->
                                 <div class="col-10 d-none mt-4" id="ratings-{{$key}}">
                                     <div class="card-body">
-                                        <h5>{{__('ui.Ratings')}}</h5>
+                                        <h5 class="fw-bold">{{__('ui.Ratings')}}</h5>
                                         <!-- Mostra le etichette dell'immagine (labels) -->
                                         @if($image->labels)                                        
                                             @foreach ($image->labels as $label)
@@ -130,10 +115,12 @@
 
             
             <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center mt-3">
-                <h2>{{$article_to_check->title}}</h2>
-                <h4>{{$article_to_check->category['name']}}</h4>
-                <p>{{$article_to_check->description}}</p>
-                <p class="fw-bold">€ {{$article_to_check->price}}</p>
+                <div class="text-start">
+                    <h3>{{$article_to_check->title}}</h3>
+                    <h4>{{$article_to_check->category['name']}}</h4>
+                    <p class="fst-italic">{{$article_to_check->description}}</p>
+                    <h4 class="fw-bold text-success">€ {{$article_to_check->price}}</h4>
+                </div>
             </div>
             
         </div>
@@ -151,6 +138,20 @@
             </form>
         </div>
     </div>
+    {{-- IF PER ANNULLA ULTIMA OPERAZIONE --}}
+    @if ($article_revisioned)
+    <form action="{{route('undo', ['article' => $article_revisioned])}}" method="POST">
+        @csrf
+        @method('PATCH')
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center ps-5 pe-4 mb-5 mt-5">
+                    <button type="submit" class="btn btnAnnulla fw-bold m-0 p-3 me-3"> {{__('ui.cancel_last')}}  <i class="bi bi-arrow-counterclockwise"></i> </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    @endif 
     @else
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center text-center">
