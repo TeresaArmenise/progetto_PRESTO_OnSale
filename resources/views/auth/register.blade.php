@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="display-4 pt-t">
-                    <h1>Registrati</h1>
+                    <h1>{{__('ui.Register')}}</h1>
                 </div>
             </div>
         </div>
@@ -33,4 +33,5 @@
                 <button type="submit" class="btn btn-primary">{{__('ui.Register')}}</button>
             </form>
         </div>
+    </div>
     </x-layout>

@@ -53,7 +53,7 @@
     {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
     
     <div class="container marginCustom">
-        <div class="row no-wrap">
+        <div class="row no-wrap justify-content-center">
             <div class="col-sm-6 p-0">
                 @if ($article_to_check)
                 @if($article_to_check->images->count() > 0)
@@ -69,48 +69,6 @@
                         <div class="carousel-item @if($loop->first) active @endif">
                             <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
                         </div>
-                        <div class="col-md-8 ps-3">
-                            <div class="card-body">
-                                <h5>Ratings</h5>
-                                @if($image->labels)
-                                @foreach ($image->labels as $label)
-                                    #{{$label}},
-                                @endforeach
-                                @else
-                                <div class="fst-italic">No labels</div>
-                                @endif
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->adult}}"></div>
-                                    </div>
-                                    <div class="col-10">Adult</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->violence}}"></div>
-                                    </div>
-                                    <div class="col-10">Violence</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->spoof}}"></div>
-                                    </div>
-                                    <div class="col-10">Spoof</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->racy}}"></div>
-                                    </div>
-                                    <div class="col-10">Racy</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{$image->medical}}"></div>
-                                    </div>
-                                    <div class="col-10">Medical</div>
-                                </div>
-                            </div>
-                        </div>
                         @endforeach
                     </div>
                     
@@ -125,50 +83,96 @@
                     </button>
                     @endif
                 </div>
+                <div class="col-md-8 ps-3">
+                    <div class="card-body">
+                        <h5>{{__('ui.Ratings')}}</h5>
+                        @if($image->labels)
+                        @foreach ($image->labels as $label)
+                        #{{$label}},
+                        @endforeach
+                        @else
+                        <div class="fst-italic">{{__('ui.No_Labs')}}</div>
+                        @endif
+                        @foreach ($article_to_check->images as $key => $image)
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->adult}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Adult')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->violence}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Violence')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->spoof}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Spoof')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->racy}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Racy')}}</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{$image->medical}}"></div>
+                            </div>
+                            <div class="col-10">{{__('ui.Medical')}}</div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
                 @else
                 <img src="https://picsum.photos/303" alt="Nessuna foto inserita dall'utente">
                 @endif
-                </div>
-                <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center mt-3">
-                    <h2>{{$article_to_check->title}}</h2>
-                    <h4>{{$article_to_check->category['name']}}</h4>
-                    <p>{{$article_to_check->description}}</p>
-                    <p>€ {{$article_to_check->price}}</p>
-                </div>
-                <div class="d-flex pb-4 justify-content-center">
-                    <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button class="btn btn-danger py-3 px-3 fw-bold">{{__('ui.Reject')}}</button>
-                    </form>
-                    <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button class="btn btn-success py-3 px-3 fw-bold">{{__('ui.Accept')}}</button>
-                    </form>
-                </div>
+            </div>
+            <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center mt-3">
+                <h2>{{$article_to_check->title}}</h2>
+                <h4>{{$article_to_check->category['name']}}</h4>
+                <p>{{$article_to_check->description}}</p>
+                <p>€ {{$article_to_check->price}}</p>
+            </div>
+            <div class="d-flex pb-4 justify-content-center">
+                <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button class="btn btn-danger py-3 px-3 fw-bold">{{__('ui.Reject')}}</button>
+                </form>
+                <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button class="btn btn-success py-3 px-3 fw-bold">{{__('ui.Accept')}}</button>
+                </form>
             </div>
         </div>
+    </div>
     
     
-        
-        {{-- SE NON CI SONO ARTICOLI DA VERIFICARE  --}}
-        
-        @else
-        <div class="row justify-content-center align-items-center text-center">
-            <div class="col-12">
-                <h1 class="fst-italic display-4 marginCustom">
-                    {{__('ui.No_Art_to_check')}}
-                </h1>
+    
+    {{-- SE NON CI SONO ARTICOLI DA VERIFICARE  --}}
+    
+    @else
+    <div class="row justify-content-center align-items-center text-center">
+        <div class="col-12">
+            <h1 class="fst-italic display-4 marginCustom">
+                {{__('ui.No_Art_to_check')}}
+            </h1>
+        </div>
+    </div>
+    @endif
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center mt-5 ps-5">
+                <a href="{{route('home')}}" class="my-5 btn colorBtn p-3 px-4">{{__('ui.Return_Home')}}</a>
             </div>
         </div>
-        @endif
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 text-center mt-5 ps-5">
-                    <a href="{{route('home')}}" class="my-5 btn colorBtn p-3 px-4">{{__('ui.Return_Home')}}</a>
-                </div>
-            </div>
         </div>
-        
-    </x-layout>
+    </div>
+</div>  
+    
+</x-layout>

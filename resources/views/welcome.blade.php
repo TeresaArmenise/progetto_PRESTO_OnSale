@@ -10,21 +10,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="media\TVAnnuncio.png" alt="First slide">
+                <img class="d-block w-100 slideCarousel" src="media\TVAnnuncio.png" alt="First slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
                     <h5 class="text-dark">{{__('ui.title_carousel')}}</h5>
                     <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel')}}</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="media\Gaming.webp" alt="Second slide">
+                <img class="d-block w-100 slideCarousel" src="media\Gaming.webp" alt="Second slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
                     <h5 class="text-light text-end">{{__('ui.title_carousel_2')}}</h5>
                     <p class="fst-italic text-light text-end w-100">{{__('ui.undertitle_carousel_2')}}</p>
                 </div>
             </div>
-            <div class="carousel-item ">
-                <img class="d-block w-100" src="media\Annuncio1.png" alt="Third slide">
+            <div class="carousel-item">
+                <img class="d-block w-100 slideCarousel" src="media\Annuncio1.png" alt="Third slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
                     <h5 class="text-dark">{{__('ui.title_carousel_3')}}</h5>
                     <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_3')}}</p>
@@ -40,15 +40,15 @@
             <div class="carousel-item ">
                 <img class="d-block w-100" src="media\movies.webp" alt="Third slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
-                    <h5 class="text-dark">{{__('ui.title_carousel_5')}}</h5>
-                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_5')}}</p>
+                    <h5 class="text-dark text-end">{{__('ui.title_carousel_5')}}</h5>
+                    <p class="fst-italic text-dark text-end w-100">{{__('ui.undertitle_carousel_5')}}</p>
                 </div>
             </div>
             <div class="carousel-item ">
                 <img class="d-block w-100" src="media\vino.webp" alt="Third slide">
                 <div class="carousel-caption d-flex flex-column justify-content-center pb-5">
-                    <h5 class="text-dark">{{__('ui.title_carousel_6')}}</h5>
-                    <p class="fst-italic text-dark text-start">{{__('ui.undertitle_carousel_6')}}</p>
+                    <h5 class="text-dark text-end">{{__('ui.title_carousel_6')}}</h5>
+                    <p class="fst-italic text-dark text-end w-100">{{__('ui.undertitle_carousel_6')}}</p>
                 </div>
             </div>
         </div>
@@ -100,9 +100,9 @@
     {{-- @dd($categories) --}}
     
     <div class="container">
-        <div class="row justify-content-evenly">  
+        <div class="row justify-content-evenly gap-3">  
             @foreach ($categories as $category)
-            <div class="col-12 col-md-2 mx-3">
+            <div class="col-6 col-md-3 col-lg-2 customCard">
                 
                 <x-categoryCard 
                 :category="$category"
@@ -129,7 +129,7 @@
     <div class="container">
         <div class="row justify-content-evenly">  
             @forelse ($articles as $article)
-            <div class= "col-12 d-flex justify-content-evenly my-3">
+            <div class= "col-8 col-md-6 d-flex justify-content-evenly my-3">
                 <x-welcomeCard 
                 :article="$article"
                 />
