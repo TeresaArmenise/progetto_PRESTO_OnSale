@@ -46,6 +46,7 @@
                 <h2>{{$article->title}}</h2>
                 <h4>{{$article->category['name']}}</h4>
                 <p>{{$article->description}}</p>
+                <h5 class="fst-italic small">Autore: {{$article->user['name']}}</h5>
                 <h4 class="text-success">€ {{$article->price}}</h4>
                 
             </div> <!-- /col-sm-6 -->
