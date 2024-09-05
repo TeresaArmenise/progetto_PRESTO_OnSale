@@ -16,36 +16,44 @@
                     <h3>{{__('ui.Name')}}: {{$user->name}}</h3>
                     <h4>{{__('ui.email')}}: {{$user->email}}</h4>
                     <h5 class="fst-italic">{{__('ui.Registered')}}: {{$user->created_at->format('d/m/y')}} </h5>
-                    {{-- <form action="" method="POST">
+                    <form action="{{ route('usersDestroy') }}" method="POST">
                         @csrf
-                        @method('delete')
-                        <button type="submit" class="btn btn-outline-danger fw-bold mt-3">Elimina Profilo</button>
-                    </form> --}}
+                        @method('DELETE')
+                        <button type="submit" class="colorBtn btn fw-bold mt-4">Elimina Profilo</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-12 text-center mb-5">
+                <div class="col-12 text-center">
                     <h2 class="display-6">{{__('ui.My_articles')}}:</h2>
                 </div>
-                @foreach ($articles as $article)
-                <div class="col-10 col-md-4">
-    
-                <x-userCard
-
-                :article="$article"
-
-                />
-
-
+                @if ($articles->isEmpty())
+                <div class="container-fluid">
+                    <div class="row justify-content-center align-items-center text-center">
+                        <div class="col-12">
+                            <h1 class="fst-italic display-4 marginCustom">Non sono stati ancora creati articoli.</h1>
+                        </div>
+                        <div class="col-4 mt-5">
+                            <a href="{{route('create')}}">
+                                <button  class="custom-btn btn-11">+ {{__('ui.Add_Art')}}<div class="dot"></div></button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                @endforeach
-                
-                    
-                
+                @else
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        @foreach ($articles as $article)
+                        <div class="col-10 col-md-4">
+                            <x-userCard
+                            :article="$article"/>
+                        </div>
+                        @endforeach  
+                    </div>
+                 </div>
+                @endif
             </div>
         </div>
-
-
-    </x-layout>
+</x-layout>

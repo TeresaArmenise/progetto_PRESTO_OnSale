@@ -17,8 +17,20 @@
       <p class="card-text small text-success fw-bold"> {{__('ui.Article_app')}}</p>
       
       @endif
-      <div class="text-center">
-        <a href="{{route('show', compact('article'))}}" class="btn rounded-pill colorBtn">{{__('ui.Details')}}</a>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-5 pe-0 ">
+          <a href="{{route('show', compact('article'))}}" class="btn rounded-pill colorBtn">{{__('ui.Details')}}</a>
+        </div>
+        <div class="col-5 ps-0">
+          <form action="{{route('delete', $article->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+              <button class="colorBtn btn fw-bold">Elimina</button>
+            </form>
+          </div>
       </div>
     </div>
   </div>
+
+
+  

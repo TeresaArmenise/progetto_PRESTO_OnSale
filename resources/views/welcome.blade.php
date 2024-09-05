@@ -78,6 +78,24 @@
         </div> 
     </div>        
     @endif
+    @if (session()->has('errorAdmin'))
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-5 alert alert-danger text-center shadow rounded">
+                {{ session('errorAdmin') }}
+            </div>
+        </div> 
+    </div>        
+    @endif
+    @if (session()->has('deleteProfile'))
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-5 alert alert-danger text-center shadow rounded">
+                {{ session('deleteProfile') }}
+            </div>
+        </div> 
+    </div>        
+    @endif
     
     @auth
     <div class="link-area frame">
