@@ -56,6 +56,7 @@ return
 "Undo" => "Ripristina",
 "Created_Date" => "Data creazione",
 "Downgrade" => "Declassa",
+"Request_Date" => "Data richiesta",
 
 
 

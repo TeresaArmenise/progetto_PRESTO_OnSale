@@ -407,6 +407,11 @@ button {
 	flex-direction: column;
 }
 
+.fixHeight{
+	display: block !important;
+	padding-bottom: 18px !important;
+}
+
 																/* GENERIC  */
 
 .marginCustom{
@@ -546,8 +551,6 @@ button {
 		display: flex;
 		justify-content: center;
 	}
-
-												/* BYCategory  */
 	
 	.marginTop{
 		margin-top: 10vh;
@@ -571,6 +574,13 @@ button {
 		z-index: 1;
 		border: none;
 		right: -10px;
+	}
+
+													/* REVISOR  */
+
+	.marginShadow{
+		margin-left: 5px;
+		margin-right: 250px;
 	}
 
 }
@@ -663,6 +673,35 @@ button {
 		justify-content: center;
 		margin-bottom: 2vh;
 	}
+
+	.marginTop{
+		margin-top: 10vh;
+	}
+
+													/* SHOW  */
+
+	.carousel-control-prev-show{
+		position: absolute;
+		top: 290px;
+		background-color: transparent;
+		z-index: 1;
+		border: none;
+		left: -10px;
+	}
+
+	.carousel-control-next-show{
+		position: absolute;
+		top: 290px;
+		background-color: transparent;
+		z-index: 1;
+		border: none;
+		right: -10px;
+	}
+
+	.fixHeight{
+		display: block !important;
+		padding-bottom: 18px !important;
+	}
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -719,4 +758,17 @@ button {
 		top: 20vh;
 	}
 
+	.fixHeight{
+		display: block !important;
+		padding-bottom: 18px !important;
+	}
+
+}
+
+@media screen and (min-width: 1280px) {
+
+	.marginTop1280{
+		margin-top: 5vh;
+	}
+	
 }

@@ -4,7 +4,7 @@
         <div class="row px-5">
             <div class="text-center mb-5">
                 <div class="rounded mt-5">
-                    <h1 class="">{{__('ui.revisor_area')}}</h1>
+                    <h1 class="marginTop">{{__('ui.revisor_area')}}</h1>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
 
     {{-- IF SE CI SONO ARTICOLI DA VERIFICARE --}}
     @if ($article_to_check)
-    <div class="container shadow rounded">
+    <div class="container shadow rounded marginShadow">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 @if($article_to_check->images->count() > 0)

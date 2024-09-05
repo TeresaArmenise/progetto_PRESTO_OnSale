@@ -54,7 +54,7 @@
             @guest
                 <div class="col-2 customWidth col-lg-2 order-4 order-md-4 order-lg-4">
                     <div class="d-flex justify-content-evenly align-items-center">
-                        <a class="text-decoration-none text-light fst-italic me-2 me-md-0" href="{{route('login')}}">{{__('ui.Access')}}</a>
+                        <a class="text-decoration-none text-light fst-italic me-2 me-md-2" href="{{route('login')}}">{{__('ui.Access')}}</a>
                         <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">{{__('ui.Register')}}</a>
                     </div>
                 </div>

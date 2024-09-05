@@ -4,7 +4,7 @@
         <div class="container marginCustom">
             <div class="row ">
                 <div class="col-12 text-center">
-                    <h1 class="marginTop"> {{__('ui.prof_of')}} <div class="fst-italic colorCustom mt-2">{{Auth::user()->name}}</div> </h1>
+                    <h1 class="marginTop marginTop1280"> {{__('ui.prof_of')}} <div class="fst-italic colorCustom mt-2">{{Auth::user()->name}}</div> </h1>
                 </div>
             </div>
         </div>

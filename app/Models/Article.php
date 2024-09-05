@@ -35,15 +35,11 @@ class Article extends Model
 
     
     public function getSubtitle(){
-        if (strlen($this->title) > 25) {
-            return substr($this->title,0 , 25) . '...';
+        if (strlen($this->title) > 15) {
+            return substr($this->title,0 , 15) . '...';
         }else{
             return $this->title;
         }
-    }
-
-    public function getCreationTime(){
-        return $this->created_at->format('d/m/Y');
     }
 
     public function setAccepted($value){

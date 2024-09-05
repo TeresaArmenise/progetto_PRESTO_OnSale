@@ -8,7 +8,7 @@
         </div>
     </div>
     
-    <div class="container marginCustom">
+    <div class="container marginCustom shadow rounded">
         <div class="row">
             <div class="col-12 col-md-6">
                 
@@ -46,7 +46,7 @@
                 <h2>{{$article->title}}</h2>
                 <h4>{{$article->category['name']}}</h4>
                 <p>{{$article->description}}</p>
-                <p>€ {{$article->price}}</p>
+                <h4 class="text-success">€ {{$article->price}}</h4>
                 
             </div> <!-- /col-sm-6 -->
         </div> <!-- /row -->

@@ -31,7 +31,7 @@
                             <th scope="col">#</th>
                             <th scope="col">{{__("ui.Name")}}</th>
                             <th scope="col">{{__("ui.email")}}</th>
-                            <th scope="col">{{__("ui.Handle")}}</th>
+                            <th scope="col">{{__("ui.Request_Date")}}</th>
                             <th scope="col">{{__("ui.Acts")}}</th>
                         </tr>
                     </thead>
@@ -41,7 +41,7 @@
                             <th scope="row">{{$revisor->id}}</th>
                             <td>{{$revisor->name}}</td>
                             <td>{{$revisor->email}}</td>
-                            <td>{{$revisor->created_at}}</td>
+                            <td>{{$revisor->getRequestDate()}}</td>
                             <td>
                                 <form class="d-flex flex-column gap-3" action="{{route('approveRevisor', ['email' => $revisor->email])}}" method="POST">
                                     @csrf
@@ -64,7 +64,7 @@
                             <th scope="col">#</th>
                             <th scope="col">{{__("ui.Name")}}</th>
                             <th scope="col">{{__("ui.email")}}</th>
-                            <th scope="col" class="d-none d-sm-block">{{__("ui.Created_Date")}}</th>
+                            <th scope="col" class="d-none d-sm-block fixHeight">{{__("ui.Request_Date")}}</th>
                             <th scope="col">{{__("ui.Acts")}}</th>
                         </tr>
                     </thead>
@@ -76,7 +76,7 @@
                             <th scope="row">{{$revisor->id}}</th>
                             <td>{{$revisor->name}}</td>
                             <td>{{$revisor->email}}</td>
-                            <td class="d-none d-sm-block">{{$revisor->created_at}}</td>
+                            <td class="d-none d-sm-block fixHeight">{{$revisor->getRequestDate()}}</td>
                             <td>
                                 {{-- @dump($revisor) --}}
                                 <form class="d-flex flex-column gap-3" action="{{route('downgrade', ['revisor' => $revisor])}}" method="POST">
@@ -116,7 +116,7 @@
                             <td>{{$article->user->name}}</td>
                             {{-- <td>{{$article->user->email}}</td> --}}
                             <td>{{$article->title}}</td>
-                            <td class="d-none d-sm-block">€ {{$article->price}}</td>
+                            <td class="d-none d-sm-block fixHeight">€ {{$article->price}}</td>
                             @if($article['is_accepted']===null) 
                             <td>{{__("ui.Rev")}}</td>
                             @elseif($article['is_accepted']==false)

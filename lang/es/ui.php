@@ -54,6 +54,7 @@ return
 "Undo" => "Deshacer",
 "Created_Date" => "Data de creación",
 "Downgrade" => "Destituir",
+"Request_Date" => "Data de solicitud",
 
 
 
