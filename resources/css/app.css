@@ -11,7 +11,7 @@
 	position: absolute;
 	font-size: 100px;
 	color: black;
-	top: 150px;
+	top: 200px;
 	left: -65px;
 	z-index: 1;
 	background-color: transparent;
@@ -22,8 +22,8 @@
 	position: absolute;
 	font-size: 100px;
 	color: black;
-	top: 150px;
-	right: 125px;
+	top: 200px;
+	right: 40px;
 	z-index: 1;
 	background-color: transparent;
 	border: none;

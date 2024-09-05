@@ -115,10 +115,10 @@
                     @if($article_to_check->images->count() > 1)
                     <div>
                         <button class="carousel-control-prev-revisor" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="prev">
-                            <i class="bi bi-arrow-bar-left fs-3"></i>
+                            <i class="fa-solid fa-chevron-left fs-3"></i>
                         </button>
                         <button class="carousel-control-next-revisor" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="next">
-                            <i class="bi bi-arrow-bar-right fs-3"></i>
+                            <i class="fa-solid fa-chevron-right fs-3"></i>
                         </button>
                     </div>
                     @endif
