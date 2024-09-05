@@ -119,7 +119,7 @@ return
 "Return_Home" => "Return Home",
 "Go_Back" => "Go back",
 "Send" => "Send",
-'cancel_last' => 'Cancel last modification',
+'cancel_last' => 'Undo changes',
 
 //CAROUSEL
 'title_carousel' => 'Furniture Solutions',

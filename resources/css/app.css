@@ -11,7 +11,7 @@
 	position: absolute;
 	font-size: 100px;
 	color: black;
-	top: 150px;
+	top: 200px;
 	left: -65px;
 	z-index: 1;
 	background-color: transparent;
@@ -22,13 +22,30 @@
 	position: absolute;
 	font-size: 100px;
 	color: black;
-	top: 150px;
-	right: 125px;
+	top: 200px;
+	right: 40px;
 	z-index: 1;
 	background-color: transparent;
 	border: none;
 }
 
+.carousel-control-prev-show{
+	position: absolute;
+	top: 310px;
+	background-color: transparent;
+	z-index: 1;
+	border: none;
+	left: -10px;
+}
+
+.carousel-control-next-show{
+	position: absolute;
+	top: 310px;
+	background-color: transparent;
+	z-index: 1;
+	border: none;
+	right: -10px;
+}
 
 															/* CSS FOR NAVBAR  */
 
@@ -528,6 +545,32 @@ button {
 	.centered{
 		display: flex;
 		justify-content: center;
+	}
+
+												/* BYCategory  */
+	
+	.marginTop{
+		margin-top: 10vh;
+	}
+	
+													/* SHOW  */
+
+	.carousel-control-prev-show{
+		position: absolute;
+		top: 310px;
+		background-color: transparent;
+		z-index: 1;
+		border: none;
+		left: -10px;
+	}
+
+	.carousel-control-next-show{
+		position: absolute;
+		top: 310px;
+		background-color: transparent;
+		z-index: 1;
+		border: none;
+		right: -10px;
 	}
 
 }

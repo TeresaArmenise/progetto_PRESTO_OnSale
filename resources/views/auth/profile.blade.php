@@ -4,14 +4,14 @@
         <div class="container marginCustom">
             <div class="row ">
                 <div class="col-12 text-center">
-                    <h1 class="mt-5"> {{__('ui.prof_of')}} <div class="fst-italic colorCustom mt-2">{{Auth::user()->name}}</div> </h1>
+                    <h1 class="marginTop"> {{__('ui.prof_of')}} <div class="fst-italic colorCustom mt-2">{{Auth::user()->name}}</div> </h1>
                 </div>
             </div>
         </div>
 
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-6 text-center shadow rounded-pill py-5 border border-info-subtle">
+                <div class="col-12 col-md-6 text-center shadow rounded-pill py-5 border border-info-subtle">
                     <img src="https://picsum.photos/900" class="rounded-circle mb-2" alt="Foto di profilo {{$user->name}}" width="90rem">
                     <h3>{{__('ui.Name')}}: {{$user->name}}</h3>
                     <h4>{{__('ui.email')}}: {{$user->email}}</h4>
