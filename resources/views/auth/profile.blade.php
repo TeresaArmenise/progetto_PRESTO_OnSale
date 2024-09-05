@@ -46,13 +46,13 @@
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         @foreach ($articles as $article)
-                        <div class="col-10 col-md-4">
+                        <div class="col-10 col-md-4 mt-4">
                             <x-userCard
                             :article="$article"/>
                         </div>
                         @endforeach  
                     </div>
-                 </div>
+                </div>
                 @endif
             </div>
         </div>

@@ -69,7 +69,7 @@ nav{
 }
 
 .slideCarousel{
-	height: 50vh;
+	height: 40vh;
 }
 
 .carousel-caption {
@@ -770,5 +770,7 @@ button {
 	.marginTop1280{
 		margin-top: 5vh;
 	}
-	
+	.slideCarousel{
+		height: 60vh;
+	}
 }
