@@ -7,6 +7,29 @@
 	font-family: Lato;
 }
 
+.carousel-control-prev-revisor{
+	position: absolute;
+	font-size: 100px;
+	color: black;
+	top: 150px;
+	left: -65px;
+	z-index: 1;
+	background-color: transparent;
+	border: none;
+}
+
+.carousel-control-next-revisor{
+	position: absolute;
+	font-size: 100px;
+	color: black;
+	top: 150px;
+	right: 125px;
+	z-index: 1;
+	background-color: transparent;
+	border: none;
+}
+
+
 															/* CSS FOR NAVBAR  */
 
 li{

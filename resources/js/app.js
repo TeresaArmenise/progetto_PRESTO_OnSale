@@ -47,3 +47,36 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+// Funzione per aggiornare le valutazioni AI al cambio di immagine
+document.addEventListener('DOMContentLoaded', function () {
+    let carousel = document.getElementById('carouselExampleIndicatorsFade');
+
+    if (carousel) {
+        carousel.addEventListener('slid.bs.carousel', function (event) {
+            let activeIndex = event.to;
+
+            // Nascondi subito tutte le valutazioni AI
+            let allRatings = document.querySelectorAll('.carousel-item .col-6[id^="ratings-"]'); // Seleziona solo gli elementi di valutazione AI
+            allRatings.forEach(function (rating) {
+                rating.classList.add('d-none'); // Nascondi immediatamente solo le valutazioni
+            });
+
+            // Mostra la valutazione AI della slide attiva con un ritardo
+            let activeRatings = document.getElementById('ratings-' + activeIndex);
+            if (activeRatings) {
+                setTimeout(function () {
+                    activeRatings.classList.remove('d-none'); // Mostra con ritardo
+                }, 100);
+            }
+        });
+
+        // Mostra subito la valutazione della prima immagine al caricamento della pagina con un ritardo
+        let initialRatings = document.getElementById('ratings-0');
+        if (initialRatings) {
+            setTimeout(function () {
+                initialRatings.classList.remove('d-none');
+            }, 10);
+        }
+    }
+});
