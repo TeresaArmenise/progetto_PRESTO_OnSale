@@ -24,6 +24,9 @@ return
 "Results" => "Search results",
 "Our_Prodc" => "OUR PRODUCTS",
 "revisor_area" => "Revisor area",
+"Alr_Reg" => "Sei gia registrato?",
+"Not_Reg" => "Non sei ancora registrato?",
+"Click" => "Click here",
 
 //FOOTER 
 "Products" => "Products",
@@ -51,6 +54,7 @@ return
 "Undo" => "Undo",
 "Created_Date" => "Creation date",
 "Downgrade" => "Downgrade",
+
 
 
 

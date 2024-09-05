@@ -25,6 +25,9 @@ return
 "All_Products" => "Tutti i prodotti",
 "Results" => "Risultati della ricerca",
 "Our_Prodc" => "I NOSTRI PRODOTTI",
+"Alr_Reg" => "Sei già registrato?",
+"Not_Reg" => "Non sei ancora registrato?",
+"Click" => "Clicca qui",
 
 
 //FOOTER 
@@ -112,7 +115,7 @@ return
 "Prev" => "Precedente",
 "Next" => "Prossimo",
 "Return_Home" => "Torna alla Home",
-"Go_Back" => "Torna",
+"Go_Back" => "Torna indietro",
 "Send" => "Invia",
 'cancel_last' => "Anulla l'ultima modifica",
 

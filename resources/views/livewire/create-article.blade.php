@@ -72,11 +72,15 @@
                         </div>
                     </div>
                     @endif
-                    <div class="my-5 text-center">
-                        <button type="submit" class="btn btn-outline-primary colorBtn">{{__('ui.Add_Art')}}</button>
-                    </div>
-                    
-                </form>
+                    <div class="my-5 text-center d-flex justify-content-center">
+
+                            <button type="submit" class="btn colorBtn2">{{__('ui.Add_Art')}}</button>                    
+                    </form>
+                    <form action="{{route('home')}}" method="GET">
+                        @csrf
+                        <button type="submit" class="colorBtn btn">{{__('ui.Go_Back')}}</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

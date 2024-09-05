@@ -23,6 +23,9 @@ return
 "All_Products" => "Mira todos los productos",
 "Results" => "Resultados de la busquedad",
 "Our_Prodc" => "NUESTROS PRODUCTOS",
+"Alr_Reg" => "Sei gia registrato?",
+"Not_Reg" => "Non sei ancora registrato?",
+"Click" => "Haz click aquí",
 
 
 //FOOTER 
@@ -51,6 +54,7 @@ return
 "Undo" => "Deshacer",
 "Created_Date" => "Data de creación",
 "Downgrade" => "Destituir",
+
 
 
 

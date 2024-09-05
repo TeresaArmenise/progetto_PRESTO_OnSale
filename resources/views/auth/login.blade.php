@@ -22,7 +22,12 @@
                 <label  class="form-label">{{__('ui.password')}}</label>
                 <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-primary">{{__('ui.Access')}}</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary colorBtn text-center">{{__('ui.Access')}}</button>
+            </div>
+            <div class="text-center">
+                <p> {{__('ui.Not_Reg')}} <a href="{{route('register')}}">{{__('ui.Click')}}</a></p>
+            </div>
         </form>
         
     </div>

@@ -52,7 +52,7 @@
 
             {{-- LOGIN & REGISTER --}}
             @guest
-                <div class="col-2 col-lg-2 order-4 order-md-4 order-lg-4">
+                <div class="col-2 customWidth col-lg-2 order-4 order-md-4 order-lg-4">
                     <div class="d-flex justify-content-evenly align-items-center">
                         <a class="text-decoration-none text-light fst-italic me-2 me-md-0" href="{{route('login')}}">{{__('ui.Access')}}</a>
                         <a class="text-decoration-none text-light fst-italic" href="{{route('register')}}">{{__('ui.Register')}}</a>
@@ -72,7 +72,7 @@
                             <a href="{{route('profile')}}" class="smallResponsive">{{__('ui.Profile')}}</a>
                             <a href="{{route('myArticles')}}" class="smallResponsive">{{__('ui.My_articles')}}</a>
                             @if (Auth::user()->is_admin)
-                            <a href="{{route('adminArea')}}" class="smallResponsive">Admin Area</a>
+                            <a href="{{route('adminArea')}}" class="smallResponsive">{{__('ui.Ad_Ar')}}</a>
                             @endif
                             <form action="{{route('logout')}}" method="POST">
                                 @csrf
