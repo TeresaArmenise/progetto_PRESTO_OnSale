@@ -24,6 +24,9 @@ return
 "Results" => "Search results",
 "Our_Prodc" => "OUR PRODUCTS",
 "revisor_area" => "Revisor area",
+"Alr_Reg" => "Sei gia registrato?",
+"Not_Reg" => "Non sei ancora registrato?",
+"Click" => "Click here",
 
 //FOOTER 
 "Products" => "Products",
@@ -51,6 +54,8 @@ return
 "Undo" => "Undo",
 "Created_Date" => "Creation date",
 "Downgrade" => "Downgrade",
+"Request_Date" => "Request date",
+
 
 
 
@@ -115,7 +120,7 @@ return
 "Return_Home" => "Return Home",
 "Go_Back" => "Go back",
 "Send" => "Send",
-'cancel_last' => 'Cancel last modification',
+'cancel_last' => 'Undo changes',
 
 //CAROUSEL
 'title_carousel' => 'Furniture Solutions',

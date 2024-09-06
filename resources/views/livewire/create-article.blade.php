@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-4">
                         <label  class="form-label">{{__('ui.Price')}}</label>
-                        <input type="numeric" class="form-control @error('price') is-invalid @enderror" wire:model.blur="price">
+                        <input type="float" class="form-control @error('price') is-invalid @enderror" wire:model.blur="price">
                         
                         @error('price')
                         <p class="fst-italic text-danger">{{$message}}</p>
@@ -72,11 +72,15 @@
                         </div>
                     </div>
                     @endif
-                    <div class="my-5 text-center">
-                        <button type="submit" class="btn btn-outline-primary colorBtn">{{__('ui.Add_Art')}}</button>
-                    </div>
-                    
-                </form>
+                    <div class="my-5 text-center d-flex justify-content-center">
+
+                            <button type="submit" class="btn colorBtn2">{{__('ui.Add_Art')}}</button>                    
+                    </form>
+                    <form action="{{route('home')}}" method="GET">
+                        @csrf
+                        <button type="submit" class="colorBtn btn">{{__('ui.Go_Back')}}</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

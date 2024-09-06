@@ -73,4 +73,11 @@ class PublicController extends Controller
         ->with('downgrade', "Hai rimosso il revisore con mail : ");
         // $user->name"
     }
+    public function destroyProfile(Request $request)
+    {
+        $request->user()->delete();
+        Auth::logout();
+
+        return redirect('/')->with('deleteProfile', 'Il tuo profilo è stato eliminato con successo.');
+    }
 }

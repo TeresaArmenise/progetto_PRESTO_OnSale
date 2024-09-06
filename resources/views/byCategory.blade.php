@@ -2,12 +2,12 @@
     
     <x-nav/>
     <div class="container marginCustom">
-        <div class="row text-center">
+        <div class="row text-center justify-content-evenly">
             <div class="col-12 d-flex justify-content-center">
-                <h1>{{__("ui.$category->name")}}</h1>
+                <h1 class="marginTop marginTop1280">{{__("ui.$category->name")}}</h1>
             </div>
             @forelse ($articles as $article)
-            <div class= "col-12 col-md-3 mt-5 d-flex justify-content-evenly">
+            <div class= "col-12 col-md-4 mt-5 d-flex justify-content-evenly">
                 <x-card :article="$article" />
             </div>
             

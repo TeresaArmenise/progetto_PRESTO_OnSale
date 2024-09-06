@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="display-4 pt-t">
-                    <h1>{{__('ui.Access')}}</h1>
+                    <h1 class="marginTop marginTop1280">{{__('ui.Access')}}</h1>
                 </div>
             </div>
         </div>
@@ -22,7 +22,12 @@
                 <label  class="form-label">{{__('ui.password')}}</label>
                 <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-primary">{{__('ui.Access')}}</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary colorBtn text-center">{{__('ui.Access')}}</button>
+            </div>
+            <div class="text-center">
+                <p> {{__('ui.Not_Reg')}} <a href="{{route('register')}}">{{__('ui.Click')}}</a></p>
+            </div>
         </form>
         
     </div>

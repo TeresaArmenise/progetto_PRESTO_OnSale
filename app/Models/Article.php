@@ -25,7 +25,7 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function getSubstring(){
+    public function getSubdescription(){
         if (strlen($this->description) > 25) {
             return substr($this->description,0 , 25) . '...';
         }else{
@@ -33,8 +33,13 @@ class Article extends Model
         }
     }
 
-    public function getCreationTime(){
-        return $this->created_at->format('d/m/Y');
+    
+    public function getSubtitle(){
+        if (strlen($this->title) > 15) {
+            return substr($this->title,0 , 15) . '...';
+        }else{
+            return $this->title;
+        }
     }
 
     public function setAccepted($value){

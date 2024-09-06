@@ -45,7 +45,7 @@ class ResizeImage implements ShouldQueue
             public_path('/media/LogoNavBgNone.png'),
             width: 50,
             height: 50,
-            paddingX: 5,
+            paddingX: 0,
             paddingY: 5,
             paddingUnit: Unit::Percent
         )

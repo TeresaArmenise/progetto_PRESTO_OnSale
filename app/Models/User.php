@@ -57,4 +57,8 @@ class User extends Authenticatable
         $this->save();
         return true;
     }
+
+    public function getRequestDate(){
+        return $this->updated_at->format('d/m/Y');
+    }
 }

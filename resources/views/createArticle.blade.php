@@ -8,14 +8,6 @@
         </div>
     </div>
 
-
-        <div class="container">
-            <div class="row">
-                <div class="col-10 col-md-6 w-100">
-                    <a href="{{route('home')}}"><-- {{__('ui.Go_Back')}}</a>
-                </div>
-            </div>
-        </div>
     <livewire:create-article />
 
 

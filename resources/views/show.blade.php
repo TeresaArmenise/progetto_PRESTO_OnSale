@@ -8,9 +8,9 @@
         </div>
     </div>
     
-    <div class="container marginCustom">
-        <div class="row no-wrap">
-            <div class="col-sm-6">
+    <div class="container marginCustom shadow rounded">
+        <div class="row">
+            <div class="col-12 col-md-6">
                 
                 @if($article->images->count() > 0)
                 <div id="carouselExampleIndicatorsFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -29,13 +29,11 @@
                     </div>
                     
                     @if($article->images->count() > 1)
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">{{ __("ui.Prev") }}</span>
+                    <button class="carousel-control-prev-show" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="prev">
+                        <i class="fa-solid fa-chevron-left fs-3"></i>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">{{ __("ui.Next") }}</span>
+                    <button class="carousel-control-next-show" type="button" data-bs-target="#carouselExampleIndicatorsFade" data-bs-slide="next">
+                        <i class="fa-solid fa-chevron-right fs-3"></i>
                     </button>
                     @endif
                 </div>
@@ -48,7 +46,8 @@
                 <h2>{{$article->title}}</h2>
                 <h4>{{$article->category['name']}}</h4>
                 <p>{{$article->description}}</p>
-                <p>€ {{$article->price}}</p>
+                <h5 class="fst-italic small">Autore: {{$article->user['name']}}</h5>
+                <h4 class="text-success">€ {{$article->price}}</h4>
                 
             </div> <!-- /col-sm-6 -->
         </div> <!-- /row -->
@@ -56,10 +55,8 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <div class="col-6 mt-5 text-start">
-                    <a class="btn colorBtn " href="{{route('home')}}">{{__("ui.Return_Home")}}</a>
-                </div>
+            <div class="col-12 mt-5 text-center">
+                <a class="btn colorBtn " href="{{route('home')}}">{{__("ui.Return_Home")}}</a>
             </div>
         </div>
     </div>
