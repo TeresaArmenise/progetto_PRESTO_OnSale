@@ -20,9 +20,9 @@
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="fst-italic display-4 marginCustom">Non sono stati ancora creati articoli.</h1>
+                    <h1 class="fst-italic display-5 marginCustom">Non sono stati ancora creati articoli.</h1>
                 </div>
-                <div class="col-4 mt-5">
+                <div class="col-12 mt-5 text-center">
                     <a href="{{route('create')}}">
                         <button  class="custom-btn btn-11">+ {{__('ui.Add_Art')}}<div class="dot"></div></button>
                     </a>
