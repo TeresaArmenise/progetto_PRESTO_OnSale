@@ -23,8 +23,8 @@ return
 "All_Products" => "Mira todos los productos",
 "Results" => "Resultados de la busquedad",
 "Our_Prodc" => "NUESTROS PRODUCTOS",
-"Alr_Reg" => "Sei gia registrato?",
-"Not_Reg" => "Non sei ancora registrato?",
+"Alr_Reg" => "¿Ya estas registrado?",
+"Not_Reg" => "¿Aún no estas registrado?",
 "Click" => "Haz click aquí",
 
 

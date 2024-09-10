@@ -14,8 +14,8 @@
                 <x-card :article="$article" />
             </div>
             @empty  
-            <div class="col-12">
-                <h3>{{__('ui.No_Art')}}</h3>
+            <div class="col-12 text-center">
+                <h3 class="display-5">{{__('ui.No_Art')}}</h3>
             </div>
             @endforelse
             <div class="justify-content-center">
